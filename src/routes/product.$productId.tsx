@@ -1,6 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { ContactForm } from "@/components/site/ContactForm";
+import { Phone, Mail, MapPin, ShieldCheck, ArrowDown } from "lucide-react";
 import { company, getProduct, SITE_URL, type Product } from "@/data/products";
 
 function schema(product: Product) {
@@ -183,24 +185,28 @@ function ProductPage() {
             {product.fullDescription}
           </p>
 
-          <div className="mt-8 border border-border bg-surface p-4 sm:p-6">
-            <p className="label-caps text-teal">Direct Institutional Supply Desk</p>
+          <div className="mt-8 rounded-2xl border border-border/80 bg-surface/80 p-5 sm:p-6 shadow-2xs">
+            <div className="flex items-center gap-2 text-teal">
+              <ShieldCheck className="h-4 w-4" />
+              <span className="label-caps text-xs font-semibold">Direct Institutional Supply Desk</span>
+            </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              Request batch COA, product dossier and institutional quotation.
+              Request batch Certificate of Analysis (COA), technical dossier, and institutional rate contracts.
             </p>
             <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3">
-              <Link
-                to="/"
-                hash="contact"
-                className="w-full sm:w-auto bg-navy px-6 py-3 text-center text-sm font-semibold text-navy-foreground transition-colors hover:bg-clinical inline-flex items-center justify-center"
+              <a
+                href="#enquiry-form"
+                className="w-full sm:w-auto rounded-xl bg-navy px-6 py-3 text-center text-sm font-semibold text-navy-foreground transition-all duration-200 hover:bg-clinical hover:shadow-md inline-flex items-center justify-center gap-2"
               >
-                Request Batch COA & Quotation
-              </Link>
+                <span>Request Batch COA & Quotation</span>
+                <ArrowDown className="h-4 w-4 text-teal" />
+              </a>
               <a
                 href={`tel:${company.phone.replace(/\s/g, "")}`}
-                className="w-full sm:w-auto border border-navy px-6 py-3 text-center text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-navy-foreground inline-flex items-center justify-center"
+                className="w-full sm:w-auto rounded-xl border border-navy/30 bg-background px-6 py-3 text-center text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white inline-flex items-center justify-center gap-2"
               >
-                {company.phone}
+                <Phone className="h-4 w-4 text-teal" />
+                <span>{company.phone}</span>
               </a>
             </div>
           </div>
@@ -280,6 +286,82 @@ function ProductPage() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Product Enquiry & Procurement Form */}
+      <section id="enquiry-form" className="border-t border-border bg-gradient-to-b from-slate-50 via-teal-50/15 to-blue-50/20 scroll-mt-16 py-12 sm:py-16">
+        <div className="mx-auto grid max-w-[1400px] gap-8 px-4 sm:px-6 lg:px-8 lg:grid-cols-[1fr_1.4fr]">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-teal/5 px-3.5 py-1 text-xs font-semibold text-teal mb-3">
+              <ShieldCheck className="h-3.5 w-3.5" />
+              <span>Direct Formulation RFQ</span>
+            </div>
+            <h2 className="font-display text-2xl font-extrabold text-navy sm:text-3xl">
+              Procurement & Dossier Request for {product.name}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Submit your hospital tender requirements, rate-contract bids, or Certificate of Analysis (COA) requests. Our regulatory trade desk dispatches validated batch documentation within 24 hours.
+            </p>
+
+            <div className="mt-6 rounded-xl border border-border/80 bg-surface/80 p-4 sm:p-5 shadow-2xs space-y-3">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-muted-foreground">Formulation Name:</span>
+                <span className="font-bold text-navy">{product.name}</span>
+              </div>
+              <div className="flex items-center justify-between text-xs border-t border-border/60 pt-2.5">
+                <span className="text-muted-foreground">Active Composition:</span>
+                <span className="font-semibold text-clinical text-right">{product.composition}</span>
+              </div>
+              <div className="flex items-center justify-between text-xs border-t border-border/60 pt-2.5">
+                <span className="text-muted-foreground">Standard Packaging:</span>
+                <span className="font-semibold text-navy">{product.packaging}</span>
+              </div>
+              <div className="flex items-center justify-between text-xs border-t border-border/60 pt-2.5">
+                <span className="text-muted-foreground">Quality Benchmark:</span>
+                <span className="font-semibold text-teal">WHO-GMP Monograph Validated</span>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3 border-t border-border pt-5">
+              <div className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Direct Sales & Dispatch Line</p>
+                  <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
+                    {company.phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Mail className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Regulatory Dossiers & RFQ</p>
+                  <a href={`mailto:${company.email}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
+                    {company.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Manufacturing Plant & Registered Office</p>
+                  <p className="text-xs text-navy font-medium leading-relaxed">
+                    Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ContactForm
+            defaultProduct={`${product.name} (${product.strength} - ${product.packaging})`}
+            defaultEnquiryType="Product Dossier & COA Request"
+            title={`Procurement Request — ${product.name}`}
+            subtitle={`Dedicated regulatory desk for batch COAs, tenders, and institutional supply of ${product.name}.`}
+          />
         </div>
       </section>
 

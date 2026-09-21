@@ -20,17 +20,31 @@ interface FormState {
   message: string;
 }
 
-const initialFormState: FormState = {
-  fullName: "",
-  organisation: "",
-  email: "",
-  phone: "",
-  enquiryType: enquiryTypes[0],
-  message: "",
-};
+export interface ContactFormProps {
+  defaultProduct?: string;
+  defaultEnquiryType?: string;
+  title?: string;
+  subtitle?: string;
+}
 
-export function ContactForm() {
-  const [formData, setFormData] = useState<FormState>(initialFormState);
+export function ContactForm({
+  defaultProduct,
+  defaultEnquiryType,
+  title,
+  subtitle,
+}: ContactFormProps = {}) {
+  const getInitialState = (): FormState => ({
+    fullName: "",
+    organisation: "",
+    email: "",
+    phone: "",
+    enquiryType: defaultEnquiryType || enquiryTypes[0],
+    message: defaultProduct
+      ? `Requesting official quotation, batch Certificate of Analysis (COA), and institutional procurement terms for ${defaultProduct}.`
+      : "",
+  });
+
+  const [formData, setFormData] = useState<FormState>(getInitialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [submissionResult, setSubmissionResult] = useState<{
@@ -79,7 +93,7 @@ export function ContactForm() {
   };
 
   const resetForm = () => {
-    setFormData(initialFormState);
+    setFormData(getInitialState());
     setSubmissionResult(null);
     setErrorMsg(null);
   };
@@ -198,10 +212,10 @@ export function ContactForm() {
           <span className="label-caps text-xs">Direct Institutional Trade Desk</span>
         </div>
         <h4 className="mt-1 font-display text-lg font-bold text-navy">
-          Pharmaceutical Supply & Tender Request
+          {title || "Pharmaceutical Supply & Tender Request"}
         </h4>
         <p className="mt-1 text-xs text-muted-foreground">
-          Submissions are dispatched directly to our licensed trade operations officers and registered with a permanent reference ID.
+          {subtitle || "Submissions are dispatched directly to our licensed trade operations officers and registered with a permanent reference ID."}
         </p>
       </div>
 
