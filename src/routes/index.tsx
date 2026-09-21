@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
+import { MedicalTechHeroAnimation } from "@/components/site/MedicalTechHeroAnimation";
+import { InstitutionalFaq, institutionalFaqs } from "@/components/site/InstitutionalFaq";
+import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin } from "lucide-react";
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
@@ -40,6 +44,21 @@ export const Route = createFileRoute("/")({
           },
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: institutionalFaqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer,
+            },
+          })),
+        }),
+      },
     ],
   }),
   component: Index,
@@ -50,189 +69,496 @@ const capabilities = [
     k: "01",
     t: "WHO-GMP Schedule M Facility",
     d: "Cleanroom manufacturing blocks with validated HVAC, differential pressure monitoring and revised Schedule M documentation.",
+    icon: Building2,
+    badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    iconColor: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
   },
   {
     k: "02",
     t: "Institutional Hospital Supply",
     d: "Rate-contract fulfilment for hospitals, trusts and government tenders with batch traceability and COA on every consignment.",
+    icon: FlaskConical,
+    badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    iconColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
   },
   {
     k: "03",
     t: "PCD & Franchise Distribution",
     d: "Monopoly territory allotment, promotional inputs and protected pricing across pan-India distribution networks.",
+    icon: Network,
+    badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
+    iconColor: "bg-purple-500/10 text-purple-600 border-purple-500/20",
   },
   {
     k: "04",
     t: "Analytical Quality Control",
     d: "HPLC, UV-Vis, dissolution and ICP-MS heavy-metal screening with real-time and accelerated stability chambers.",
+    icon: Microscope,
+    badgeColor: "bg-amber-50 text-amber-700 border-amber-200",
+    iconColor: "bg-amber-500/10 text-amber-600 border-amber-500/20",
   },
 ];
 
 function Index() {
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hash = window.location.hash.replace("#", "");
+      const el = document.getElementById(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+          if (hash === "contact" || hash === "contact-form") {
+            const input = document.getElementById("cf-name") as HTMLInputElement | null;
+            input?.focus();
+          }
+        }, 150);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      {/* Hero */}
-      <section id="overview" className="relative border-b border-border bg-surface">
-        <div className="absolute inset-0 grid-lines opacity-60" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <p className="label-caps text-clinical">
-            Vanguard Medical · Vanguard Pharma · Est. Vadodara, India
-          </p>
-          <h1 className="mt-5 max-w-4xl font-display text-4xl font-extrabold leading-[1.08] text-navy md:text-6xl">
-            Certified clinical formulations engineered for institutional supply.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Vanguard Therapeutics Ltd. manufactures WHO-GMP Schedule M compliant
-            hematinics, neurology, gastroenterology and vestibular formulations for
-            hospitals, institutional buyers and PCD distribution partners.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Link
-              to="/"
-              hash="products"
-              className="bg-navy px-7 py-3.5 text-sm font-semibold text-navy-foreground transition-colors hover:bg-clinical"
-            >
-              View Formulations Portfolio
-            </Link>
-            <a
-              href={`tel:${company.phone.replace(/\s/g, "")}`}
-              className="border border-navy px-7 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-navy-foreground"
-            >
-              Trade Desk {company.phone}
-            </a>
-          </div>
-          <dl className="mt-16 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["5", "Authenticated formulations"],
-              ["100%", "Batch-wise COA release"],
-              ["24–36", "Months validated shelf life"],
-              ["ICP-MS", "Heavy metal screening"],
-            ].map(([v, l]) => (
-              <div key={l} className="bg-background px-6 py-7">
-                <dt className="font-display text-3xl font-extrabold text-clinical">{v}</dt>
-                <dd className="mt-1 text-sm text-muted-foreground">{l}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <section id="hero" className="relative overflow-hidden border-b border-border bg-gradient-to-b from-slate-50 via-teal-50/15 to-blue-50/20">
+        <div id="overview" className="sr-only" aria-hidden="true" />
+        {/* Subtle grid lines background overlay */}
+        <div className="pointer-events-none absolute inset-0 grid-lines opacity-40" aria-hidden />
 
-      {/* Products */}
-      <section id="products" className="mx-auto max-w-7xl px-6 py-20">
-        <p className="label-caps text-teal">Formulations Portfolio</p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold text-navy md:text-4xl">
-          Therapeutic range with full pharmacopoeial dossiers
-        </h2>
-        <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p) => (
-            <Link
-              key={p.id}
-              to="/product/$productId"
-              params={{ productId: p.id }}
-              className="group flex flex-col bg-background p-7 transition-colors hover:bg-surface"
-            >
-              <div className="flex items-center justify-between">
-                <span className="label-caps text-clinical">{p.type}</span>
-                <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                  {p.legalStatus === "Schedule H Prescription" ? "Rx · Schedule H" : "OTC"}
+        <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-14">
+            {/* Left Column (FIRST / UP): Headline, Narrative, CTAs & 3 Metrics */}
+            <div className="order-1 lg:col-span-6 flex flex-col justify-center">
+              {/* Overline with accent dash */}
+              <div className="flex items-center gap-2.5">
+                <span className="h-0.5 w-6 bg-teal rounded-full" />
+                <span className="label-caps text-teal text-xs font-bold tracking-wider">
+                  WHO-GMP CERTIFIED B2B SUPPLIER
                 </span>
               </div>
-              <img
-                src={p.image}
-                alt={`${p.name} pack shot`}
-                loading="lazy"
-                width={1024}
-                height={1024}
-                className="mt-5 aspect-square w-full bg-surface object-contain"
-              />
-              <h3 className="mt-5 font-display text-xl font-bold text-navy group-hover:text-clinical">
-                {p.name}
-              </h3>
-              <p className="mt-2 text-xs uppercase tracking-wider text-teal">{p.category}</p>
-              <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-                {p.shortDescription}
+
+              {/* Prominent Headline */}
+              <h1 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] font-extrabold leading-[1.12] tracking-tight text-navy">
+                Advancing Healthcare Through Quality &amp; Clinical Innovation
+              </h1>
+
+              {/* Narrative Subtitle */}
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground font-normal">
+                Vanguard Therapeutics Ltd. specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">HemaChelate</strong>, <strong className="text-navy font-semibold">NeuroCarn</strong>, <strong className="text-navy font-semibold">GastroSpore</strong> probiotics, and fast-dissolving tablets across India.
               </p>
-              <div className="mt-auto flex items-end justify-between pt-6">
-                <span className="font-display text-lg font-bold text-navy">
-                  ₹{p.price.toFixed(2)}
-                </span>
-                <span className="text-sm font-semibold text-clinical">
-                  Technical dossier →
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
 
-      {/* Quality */}
-      <section id="quality" className="border-y border-border bg-surface">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <p className="label-caps text-teal">Quality Compliance</p>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-extrabold text-navy md:text-4xl">
-            Documented compliance at every stage of manufacture
-          </h2>
-          <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-2">
-            {capabilities.map((c) => (
-              <div key={c.k} className="bg-background p-8">
-                <span className="label-caps text-clinical">{c.k}</span>
-                <h3 className="mt-3 font-display text-xl font-bold text-navy">{c.t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
+              {/* Dual Action Buttons Matching Website Theme (Navy & Clinical Accent) */}
+              <div className="mt-6 flex flex-wrap items-center gap-3.5">
+                <a
+                  href="#products"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("products")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-navy px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-clinical hover:shadow-lg cursor-pointer"
+                >
+                  <span>Explore Formulations</span>
+                  <span className="text-base">→</span>
+                </a>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    setTimeout(() => {
+                      document.getElementById("cf-name")?.focus();
+                    }, 350);
+                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-navy text-navy bg-white px-6 py-3.5 text-sm font-bold shadow-xs transition-all hover:bg-navy hover:text-white cursor-pointer"
+                >
+                  <span>Make an Enquiry</span>
+                </a>
               </div>
-            ))}
+
+              {/* 3 Metric Counters Matching User Reference */}
+              <div className="mt-8 pt-6 border-t border-border/80 grid grid-cols-3 gap-4 sm:gap-6">
+                <div>
+                  <p className="font-display text-2xl sm:text-3xl font-black text-navy tracking-tight">5+</p>
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">
+                    CORE FORMULATIONS
+                  </p>
+                </div>
+                <div>
+                  <p className="font-display text-2xl sm:text-3xl font-black text-navy tracking-tight">100%</p>
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">
+                    COA VALIDATED
+                  </p>
+                </div>
+                <div>
+                  <p className="font-display text-2xl sm:text-3xl font-black text-navy tracking-tight">Pan-India</p>
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">
+                    COLD CHAIN SUPPLY
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column (SECOND / DOWN): Pharmacy Dispensing Animation in Styled Card */}
+            <div className="order-2 lg:col-span-6 flex items-center justify-center">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border/80 bg-white shadow-xl p-4 sm:p-6 flex items-center justify-center">
+                <MedicalTechHeroAnimation />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Supply */}
-      <section id="supply" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-12 border border-border p-8 md:grid-cols-2 md:p-12">
-          <div>
-            <p className="label-caps text-teal">Institutional Supply</p>
-            <h2 className="mt-3 font-display text-3xl font-extrabold text-navy">
-              Trade desk for hospitals, tenders and PCD partners
+      {/* Core Institutional Capabilities */}
+      <section className="border-b border-border bg-white py-6 sm:py-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            <p className="label-caps text-teal text-xs">WHO-GMP &amp; Schedule M Certified</p>
+            <h2 className="mt-1 font-display text-xl sm:text-2xl font-extrabold text-navy sm:text-3xl">
+              Institutional Manufacturing Infrastructure
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Request batch Certificates of Analysis, product dossiers, rate contracts
-              or monopoly territory allotment. Our regulatory desk responds to
-              institutional enquiries within one working day.
-            </p>
           </div>
-          <dl className="divide-y divide-border border-t border-border">
-            {[
-              ["Manufacturing & Corporate Office", company.address],
-              ["Institutional Hotline", company.phone],
-              ["Regulatory & Sales Email", company.email],
-            ].map(([l, v]) => (
-              <div key={l} className="py-5">
-                <dt className="label-caps text-muted-foreground">{l}</dt>
-                <dd className="mt-1 text-base font-medium text-navy">{v}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+            {capabilities.map((c) => {
+              const Icon = c.icon;
+              return (
+                <div
+                  key={c.k}
+                  className="group relative rounded-xl border border-border p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md bg-gradient-to-b from-slate-50/80 to-white"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold text-muted-foreground">
+                      {c.k}
+                    </span>
+                    <div className={`flex h-8 w-8 items-center justify-center rounded-lg border ${c.iconColor}`}>
+                      <Icon className="h-4 w-4" />
+                    </div>
+                  </div>
+                  <h3 className="mt-3 font-display text-sm sm:text-base font-bold text-navy">
+                    {c.t}
+                  </h3>
+                  <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                    {c.d}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
+
+      {/* Products / Formulations Portfolio */}
+      <section id="products" className="mx-auto max-w-[1400px] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 scroll-mt-16">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
+          <div>
+            <p className="label-caps text-teal text-xs">Formulations Portfolio</p>
+            <h2 className="mt-2 font-display text-2xl font-extrabold text-navy sm:text-3xl">
+              Therapeutic range with full pharmacopoeial dossiers
+            </h2>
+          </div>
+          <span className="text-xs text-muted-foreground font-mono">
+            5 Active Institutional Lines
+          </span>
+        </div>
+
+        {/* 5-Column Formulation Cards with Consistent Corporate Styling */}
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
+          {products.map((p) => {
+            return (
+              <Link
+                key={p.id}
+                to="/product/$productId"
+                params={{ productId: p.id }}
+                className="group relative flex flex-col rounded-2xl border border-border/80 bg-gradient-to-b from-slate-50/50 via-white to-white p-4 transition-all duration-300 hover:border-teal/60 hover:shadow-lg hover:shadow-teal-900/5 hover:-translate-y-0.5"
+              >
+                {/* Product Packshot Frame with Soft Pedestal */}
+                <div className="relative flex h-36 sm:h-40 w-full items-center justify-center p-2">
+                  <div className="absolute inset-x-4 bottom-2 h-14 rounded-xl bg-slate-100/70 border border-border/50 -z-0" />
+                  <img
+                    src={p.image}
+                    alt={`${p.name} pack shot`}
+                    loading="lazy"
+                    width={400}
+                    height={400}
+                    className="relative z-10 h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Product Details */}
+                <div className="mt-3 flex flex-col flex-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-teal">
+                      {p.strength}
+                    </span>
+                    <span className="text-[10px] font-medium text-muted-foreground">{p.type}</span>
+                  </div>
+
+                  <h3 className="mt-2 font-display text-base font-extrabold text-navy group-hover:text-clinical transition-colors leading-snug">
+                    {p.name}
+                  </h3>
+
+                  <p className="mt-0.5 text-[11px] font-medium text-muted-foreground truncate">
+                    {p.category}
+                  </p>
+
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                    {p.shortDescription}
+                  </p>
+
+                  {/* View Full Monograph & RFQ Button */}
+                  <div className="mt-auto pt-4">
+                    <span className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-teal/30 bg-teal/5 py-2 px-2 text-center text-xs font-semibold text-teal transition-all group-hover:bg-teal group-hover:text-white group-hover:border-teal">
+                      <span>View Monograph &amp; RFQ</span>
+                      <span className="text-sm">→</span>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Tender & Rate Contract Inquiry Banner Matching Clinical Navy & Teal Theme */}
+        <div className="mt-10 rounded-2xl border border-teal-700/40 bg-gradient-to-r from-navy via-slate-900 to-teal-950 p-6 sm:p-8 text-white shadow-xl">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 sm:gap-6">
+            <div className="max-w-2xl">
+              <p className="label-caps text-teal-300 text-xs font-bold">
+                Institutional Tender Desk
+              </p>
+              <h3 className="mt-2 font-display text-lg sm:text-xl md:text-2xl font-bold text-white">
+                Have a specific tender requirement or rate contract inquiry?
+              </h3>
+              <p className="mt-1.5 text-xs sm:text-sm text-slate-300">
+                Our regulatory and institutional sales desk responds within one working day with CTD dossiers, batch availability and COA documentation.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                  setTimeout(() => {
+                    document.getElementById("cf-name")?.focus();
+                  }, 350);
+                }}
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-teal px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-teal-400 hover:text-navy cursor-pointer"
+              >
+                <span>Contact Trade Desk</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated About Us Section */}
+      <section id="about" className="border-t border-border bg-slate-50/70 scroll-mt-16 py-8 sm:py-10 md:py-12">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          {/* Top Row: Narrative & 4 Infrastructure Capabilities */}
+          <div className="grid gap-6 lg:grid-cols-12 lg:gap-8 items-start">
+            {/* Left: Narrative & CTA */}
+            <div className="lg:col-span-6 space-y-4">
+              <div>
+                <p className="label-caps text-teal text-xs font-semibold">
+                  WHO-GMP &amp; Schedule M Certified Manufacturing Plant
+                </p>
+                <h2 className="mt-1.5 font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-navy leading-snug">
+                  Advancing Pharmaceutical Precision from Vadodara to Pan-India Healthcare
+                </h2>
+                <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
+                  Operating from GIDC Industrial Estate, Vadodara (Gujarat), Vanguard Therapeutics Ltd. manufactures certified oral solutions, pediatric suspensions, and therapeutic syrups under computerized HVAC air classification, automated sterile compounding, and dedicated analytical quality release.
+                </p>
+              </div>
+
+              {/* Plant Audit / Inquiry CTA */}
+              <div className="flex flex-wrap items-center gap-3 pt-1">
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    setTimeout(() => {
+                      document.getElementById("cf-name")?.focus();
+                    }, 350);
+                  }}
+                  className="inline-flex items-center gap-2 bg-navy px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:bg-clinical cursor-pointer shadow-xs"
+                >
+                  <span>Request Facility Audit &amp; Rate Contract</span>
+                  <span>→</span>
+                </a>
+                <span className="text-[11px] text-muted-foreground">
+                  Audits welcome by institutional appointment.
+                </span>
+              </div>
+            </div>
+
+            {/* Right: 4 Capabilities (Compact 2x2 Grid) */}
+            <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="rounded-lg border border-border bg-background p-3.5 shadow-2xs">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-bold text-teal">01</span>
+                  <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Class 100 Cleanrooms</h4>
+                </div>
+                <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
+                  HEPA 0.3µm filtration, differential pressure zoning, and continuous temperature/RH tracking.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-border bg-background p-3.5 shadow-2xs">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-bold text-blue-600">02</span>
+                  <h4 className="font-display text-xs sm:text-sm font-bold text-navy">100,000L Compounding</h4>
+                </div>
+                <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
+                  Electropolished SS 316L reactors with high-shear homogenization and closed-loop transfer.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-border bg-background p-3.5 shadow-2xs">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-bold text-indigo-600">03</span>
+                  <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Analytical QA/QC Lab</h4>
+                </div>
+                <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
+                  In-house HPLC assay, UV-Vis spectrophotometry, ICP-MS heavy metals, and bioburden testing.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-border bg-background p-3.5 shadow-2xs">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-bold text-amber-600">04</span>
+                  <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Dossiers &amp; 100% COA</h4>
+                </div>
+                <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
+                  Full CTD dossier support, Zone IVb stability testing (24–36 months), and batch COA release.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Row: 2 Facility Photos Side-by-Side (Optimized Aspect Ratio & Spacing) */}
+          <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Photo 1: Automated Liquid Bottling & Packaging Line */}
+            <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xs">
+              <div className="relative aspect-16/9 w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/images/pharma-packaging-line.jpg"
+                  alt="Vanguard Therapeutics Automated Oral Liquid Bottling & Inspection Line"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-3 sm:p-3.5">
+                <p className="font-display text-xs font-bold text-navy">
+                  Automated High-Speed Oral Liquid Bottling &amp; Aseptic Packaging
+                </p>
+                <p className="mt-0.5 text-[11px] text-muted-foreground leading-snug">
+                  GIDC Industrial Estate, Vadodara. Automated multi-head filling, capper, and computerized inline inspection line.
+                </p>
+              </div>
+            </div>
+
+            {/* Photo 2: QC Lab */}
+            <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xs">
+              <div className="relative aspect-16/9 w-full overflow-hidden bg-slate-100">
+                <img
+                  src="/images/pharma-qc-lab.jpg"
+                  alt="Vanguard Therapeutics Analytical Quality Control & Stability Laboratory"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-3 sm:p-3.5">
+                <p className="font-display text-xs font-bold text-navy">
+                  In-House Pharmacopoeial Monograph Testing
+                </p>
+                <p className="mt-0.5 text-[11px] text-muted-foreground leading-snug">
+                  Equipped with High Performance Liquid Chromatography (HPLC) and continuous stability chambers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Institutional FAQs */}
+      <InstitutionalFaq />
 
       {/* Contact */}
-      <section id="contact" className="bg-secondary/60">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[1fr_1.4fr]">
+      <section id="contact" className="border-t border-border bg-gradient-to-b from-slate-50 via-teal-50/15 to-blue-50/20 scroll-mt-16 py-8 sm:py-10">
+        <div className="mx-auto grid max-w-[1400px] gap-8 px-4 sm:px-6 lg:px-8 lg:grid-cols-[1fr_1.4fr]">
           <div>
-            <p className="label-caps text-teal">Contact</p>
-            <h2 className="mt-3 font-display text-3xl font-extrabold text-navy">
+            <p className="label-caps text-teal text-xs font-semibold">Direct Trade Desk</p>
+            <h2 className="mt-2 font-display text-2xl font-extrabold text-navy sm:text-3xl">
               Send an institutional enquiry
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
               Complete the form and our regulatory and sales desk will respond
               within one working day with dossiers, COAs, rate contracts or
               territory details as required.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-              <li>{company.phone}</li>
-              <li>{company.email}</li>
-              <li>Mon–Sat · 09:30 – 18:30 IST</li>
-            </ul>
+
+            <div className="mt-6 space-y-3 border-t border-border pt-5">
+              <div className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Direct Sales &amp; Dispatch Line</p>
+                  <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
+                    {company.phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Mail className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Regulatory Dossiers &amp; RFQ</p>
+                  <a href={`mailto:${company.email}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
+                    {company.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Manufacturing Plant &amp; Registered Office</p>
+                  <p className="text-xs text-navy font-medium leading-relaxed">
+                    Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Facility Location Map */}
+            <div className="mt-4 overflow-hidden rounded-xl border border-border bg-card shadow-xs">
+              <div className="flex items-center justify-between border-b border-border bg-surface/80 px-3.5 py-2 text-xs">
+                <span className="flex items-center gap-1.5 font-semibold text-navy">
+                  <MapPin className="h-3.5 w-3.5 text-teal shrink-0" />
+                  <span>Plant Location Map</span>
+                </span>
+                <a
+                  href="https://maps.google.com/?q=GIDC+Industrial+Estate,+Vadodara,+Gujarat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 font-semibold text-clinical hover:underline text-[11px]"
+                >
+                  <span>Open Full Map</span>
+                  <span>↗</span>
+                </a>
+              </div>
+              <div className="relative aspect-16/9 w-full min-h-[190px] sm:min-h-[220px]">
+                <iframe
+                  title="Vanguard Therapeutics Facility Location"
+                  width="100%"
+                  height="100%"
+                  className="absolute inset-0 h-full w-full border-0"
+                  loading="lazy"
+                  src="https://maps.google.com/maps?q=GIDC+Industrial+Estate,+Vadodara,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                />
+              </div>
+            </div>
           </div>
           <ContactForm />
         </div>

@@ -188,3 +188,54 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+
+@keyframes clinicalScan {
+  0% {
+    top: 2%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    top: 95%;
+    opacity: 0;
+  }
+}
+
+@keyframes floatBottle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-clinical-scan {
+  animation: clinicalScan 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-float-bottle {
+  animation: floatBottle 4.5s ease-in-out infinite;
+}
+
+@keyframes tickerMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: tickerMarquee 35s linear infinite;
+}
+

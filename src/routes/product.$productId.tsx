@@ -140,8 +140,8 @@ function ProductPage() {
         </div>
       </nav>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-12 lg:grid-cols-2">
-        <div className="border border-border bg-surface p-6">
+      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:gap-12 sm:px-6 sm:py-12 lg:grid-cols-2">
+        <div className="border border-border bg-surface p-4 sm:p-6">
           <img
             src={product.image}
             alt={`${product.name} — ${product.composition}`}
@@ -159,45 +159,46 @@ function ProductPage() {
               {product.category}
             </span>
           </div>
-          <h1 className="mt-5 font-display text-3xl font-extrabold leading-tight text-navy md:text-4xl">
+          <h1 className="mt-5 font-display text-2xl font-extrabold leading-tight text-navy sm:text-3xl md:text-4xl">
             {product.name}
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-clinical">{product.composition}</p>
 
           <div className="mt-7 grid grid-cols-2 gap-px border border-border bg-border">
-            <div className="bg-background px-5 py-4">
+            <div className="bg-background px-4 py-3 sm:px-5 sm:py-4">
               <p className="label-caps text-muted-foreground">Reference MRP</p>
-              <p className="mt-1 font-display text-2xl font-extrabold text-navy">
+              <p className="mt-1 font-display text-xl sm:text-2xl font-extrabold text-navy">
                 ₹{product.price.toFixed(2)}
               </p>
             </div>
-            <div className="bg-background px-5 py-4">
+            <div className="bg-background px-4 py-3 sm:px-5 sm:py-4">
               <p className="label-caps text-muted-foreground">Standard Packaging</p>
-              <p className="mt-1 font-display text-2xl font-extrabold text-navy">
-                {product.strength}
+              <p className="mt-1 font-display text-base sm:text-lg font-bold text-navy">
+                {product.packaging}
               </p>
             </div>
           </div>
 
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            {product.description}
+            {product.fullDescription}
           </p>
 
-          <div className="mt-8 border border-border bg-surface p-6">
+          <div className="mt-8 border border-border bg-surface p-4 sm:p-6">
             <p className="label-caps text-teal">Direct Institutional Supply Desk</p>
             <p className="mt-2 text-sm text-muted-foreground">
               Request batch COA, product dossier and institutional quotation.
             </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href={`mailto:${company.email}?subject=Quotation request — ${product.name}`}
-                className="bg-navy px-6 py-3 text-sm font-semibold text-navy-foreground transition-colors hover:bg-clinical"
+            <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3">
+              <Link
+                to="/"
+                hash="contact"
+                className="w-full sm:w-auto bg-navy px-6 py-3 text-center text-sm font-semibold text-navy-foreground transition-colors hover:bg-clinical inline-flex items-center justify-center"
               >
                 Request Batch COA & Quotation
-              </a>
+              </Link>
               <a
                 href={`tel:${company.phone.replace(/\s/g, "")}`}
-                className="border border-navy px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-navy-foreground"
+                className="w-full sm:w-auto border border-navy px-6 py-3 text-center text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-navy-foreground inline-flex items-center justify-center"
               >
                 {company.phone}
               </a>

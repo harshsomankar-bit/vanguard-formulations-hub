@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ChatbotSupportWidget } from "@/components/site/ChatbotSupportWidget";
 
 function NotFoundComponent() {
   return (
@@ -103,7 +104,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=3" },
+      { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico?v=3" },
     ],
   }),
 
@@ -117,6 +119,9 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=3" />
+        <link rel="shortcut icon" href="/favicon.ico?v=3" />
         <HeadContent />
       </head>
       <body>
@@ -134,6 +139,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <ChatbotSupportWidget />
     </QueryClientProvider>
   );
 }
