@@ -12,16 +12,28 @@ const title =
   "Vanguard Therapeutics Ltd. | WHO-GMP Schedule M Certified Pharmaceutical Formulations";
 const description =
   "Institutional hospital supply and PCD distribution of WHO-GMP Schedule M certified formulations manufactured in Vadodara, Gujarat by Vanguard Therapeutics Ltd.";
+const keywords =
+  "pharmaceutical manufacturer, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Vadodara pharma company, oral liquid formulations, paracetamol syrup, iron bisglycinate chelate, levocarnitine syrup, bacillus clausii spores, betahistine tablets, melatonin CR, hospital tenders India, pharmaceutical exporter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
+      { name: "keywords", content: keywords },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: `${SITE_URL}/images/pharma-packaging-line.jpg` },
+      { property: "og:image:alt", content: "Vanguard Therapeutics WHO-GMP Automated Packaging & Formulations Facility" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Vanguard Therapeutics Ltd." },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: `${SITE_URL}/images/pharma-packaging-line.jpg` },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
@@ -29,11 +41,15 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": ["Organization", "MedicalOrganization"],
           name: company.name,
+          alternateName: ["Vanguard Pharma", "Vanguard Medical"],
           url: SITE_URL,
+          logo: `${SITE_URL}/favicon.svg`,
+          image: `${SITE_URL}/images/pharma-packaging-line.jpg`,
           telephone: company.phone,
           email: company.email,
+          description: description,
           address: {
             "@type": "PostalAddress",
             streetAddress: "Plot 42, GIDC Industrial Estate",
@@ -42,6 +58,39 @@ export const Route = createFileRoute("/")({
             postalCode: "390010",
             addressCountry: "IN",
           },
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: company.phone,
+            contactType: "sales and institutional trade",
+            areaServed: "IN",
+            availableLanguage: ["en", "hi", "gu"],
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Vanguard Therapeutics Core Pharmaceutical Formulations",
+          description: "WHO-GMP validated therapeutic formulations and dosage monographs",
+          itemListElement: products.map((prod, idx) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            item: {
+              "@type": "Product",
+              name: prod.name,
+              url: `${SITE_URL}/product/${prod.id}`,
+              description: prod.shortDescription,
+              image: `${SITE_URL}${prod.image}`,
+              offers: {
+                "@type": "Offer",
+                price: prod.price.toFixed(2),
+                priceCurrency: "INR",
+                availability: "https://schema.org/InStock",
+              },
+            },
+          })),
         }),
       },
       {
@@ -276,7 +325,7 @@ function Index() {
                   <div className="absolute inset-x-4 bottom-2 h-14 rounded-xl bg-slate-100/70 border border-border/50 -z-0" />
                   <img
                     src={p.image}
-                    alt={`${p.name} pack shot`}
+                    alt={`${p.name} (${p.composition}) — Vanguard Therapeutics Formulations`}
                     loading="lazy"
                     width={400}
                     height={400}

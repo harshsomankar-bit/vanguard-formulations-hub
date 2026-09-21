@@ -93,17 +93,28 @@ export const Route = createFileRoute("/product/$productId")({
     if (!p) return {};
     const title = `${p.name} | ${p.composition} | Vanguard Therapeutics`;
     const description = `Technical dossier for ${p.name} (${p.strength}) by Vanguard Therapeutics. ${p.shortDescription}`;
+    const productUrl = `${SITE_URL}/product/${p.id}`;
+    const productImageUrl = `${SITE_URL}${p.image}`;
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { name: "keywords", content: p.keywords },
+        { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
+        { property: "og:url", content: productUrl },
+        { property: "og:image", content: productImageUrl },
+        { property: "og:image:alt", content: `${p.name} (${p.composition}) - Vanguard Therapeutics Formulations` },
         { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Vanguard Therapeutics Ltd." },
+        { property: "og:locale", content: "en_IN" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        { name: "twitter:image", content: productImageUrl },
       ],
-      links: [{ rel: "canonical", href: `${SITE_URL}/product/${p.id}` }],
+      links: [{ rel: "canonical", href: productUrl }],
       scripts: [
         { type: "application/ld+json", children: JSON.stringify(schema(p)) },
       ],
