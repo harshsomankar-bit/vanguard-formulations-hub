@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { ContactForm } from "@/components/site/ContactForm";
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
@@ -211,6 +212,29 @@ function Index() {
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-secondary/60">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[1fr_1.4fr]">
+          <div>
+            <p className="label-caps text-teal">Contact</p>
+            <h2 className="mt-3 font-display text-3xl font-extrabold text-navy">
+              Send an institutional enquiry
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Complete the form and our regulatory and sales desk will respond
+              within one working day with dossiers, COAs, rate contracts or
+              territory details as required.
+            </p>
+            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+              <li>{company.phone}</li>
+              <li>{company.email}</li>
+              <li>Mon–Sat · 09:30 – 18:30 IST</li>
+            </ul>
+          </div>
+          <ContactForm />
         </div>
       </section>
 
