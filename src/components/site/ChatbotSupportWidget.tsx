@@ -7,7 +7,7 @@ export function ChatbotSupportWidget() {
 
   const cleanPhone = company.phone.replace(/[^0-9+]/g, "");
   const whatsappUrl = `https://wa.me/${cleanPhone.replace("+", "")}?text=${encodeURIComponent(
-    "Hello Redition Pharmaceutical Trade Desk, I would like to request an institutional quotation and batch availability."
+    "Hello Redition Pharma Trade Desk, I would like to request an institutional quotation and batch availability."
   )}`;
 
   const handleOpenForm = () => {

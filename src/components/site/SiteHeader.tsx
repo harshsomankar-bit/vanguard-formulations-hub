@@ -81,7 +81,7 @@ export function SiteHeader() {
           </span>
           <span className="leading-tight">
             <span className="block font-display text-base font-extrabold tracking-tight text-navy">
-              REDITION PHARMACEUTICAL
+              REDITION PHARMA
             </span>
             <span className="block text-[11px] tracking-[0.18em] text-muted-foreground">
               INSTITUTIONAL FORMULATIONS

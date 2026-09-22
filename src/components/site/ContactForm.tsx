@@ -124,7 +124,7 @@ export function ContactForm({
           </h3>
           
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Your enquiry has been securely recorded and routed to the Redition Pharmaceutical Institutional Trade Desk at{" "}
+            Your enquiry has been securely recorded and routed to the Redition Pharma Institutional Trade Desk at{" "}
             <span className="font-semibold text-foreground">{response.tradeDeskEmail}</span>. A confirmation notification has also been prepared for{" "}
             <span className="font-semibold text-foreground">{data.email}</span>.
           </p>

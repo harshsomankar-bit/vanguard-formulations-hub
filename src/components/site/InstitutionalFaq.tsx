@@ -15,7 +15,7 @@ export const institutionalFaqs: FaqItem[] = [
     category: "Regulatory & Standards",
     question: "What certifications and regulatory standards govern Redition's manufacturing facility?",
     answer:
-      "Redition Pharmaceutical operates a WHO-GMP and revised Schedule M certified liquid manufacturing facility in GIDC Industrial Estate, Vadodara, Gujarat. Our production blocks feature cleanrooms with differential pressure monitoring, validated HVAC systems with HEPA air handling, water-for-injection (WFI) generation loops, and rigorous compliance with IP/USP pharmacopoeial monographs.",
+      "Redition Pharma operates a WHO-GMP and revised Schedule M certified liquid manufacturing facility in GIDC Industrial Estate, Vadodara, Gujarat. Our production blocks feature cleanrooms with differential pressure monitoring, validated HVAC systems with HEPA air handling, water-for-injection (WFI) generation loops, and rigorous compliance with IP/USP pharmacopoeial monographs.",
     icon: ShieldCheck,
   },
   {

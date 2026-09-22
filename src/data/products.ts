@@ -37,8 +37,8 @@ export interface Product {
 export const SITE_URL = "https://vanguardtherapeutics.com";
 
 export const company = {
-  name: "Redition Pharmaceutical Ltd.",
-  brand: "Redition Pharmaceutical / Redition Pharma",
+  name: "Redition Pharma Ltd.",
+  brand: "Redition Pharma",
   address: "Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
   phone: "+91 98250 12345",
   email: "trade@reditionpharma.com",
@@ -72,7 +72,7 @@ export const products: Product[] = [
     description:
       "HemaChelate Oral Liquid delivers bisglycinate-chelated elemental iron shielded against ionization in gastric acid. It passes intact to the jejunal mucosa, avoiding free hydroxyl radical generation, upper GI burning, nausea, and intestinal dysbiosis.",
     keywords:
-      "hemachelate syrup, ferrous bisglycinate syrup, sugar free iron syrup, hematinic solution anemia, redition pharmaceutical iron",
+      "hemachelate syrup, ferrous bisglycinate syrup, sugar free iron syrup, hematinic solution anemia, redition pharma iron",
     bulletPoints: [
       "90.9% superior elemental iron bioavailability compared to ferrous sulfate and ascorbate salts.",
       "Electrically neutral chelate structure prevents free-radical mucosal injury and gastric distress.",
@@ -134,7 +134,7 @@ export const products: Product[] = [
     description:
       "NeuroCarn Pediatric Syrup provides therapeutic concentrations of endogenous dipeptide L-Carnosine. Formulated for pediatric neurodevelopmental protocols, it supports receptive and expressive language processing, frontal lobe synaptic transmission, and cerebral antioxidant defense.",
     keywords:
-      "neurocarn syrup, l-carnosine 200mg syrup, speech delay treatment syrup, pediatric neurodevelopment syrup, redition pharmaceutical carnosine",
+      "neurocarn syrup, l-carnosine 200mg syrup, speech delay treatment syrup, pediatric neurodevelopment syrup, redition pharma carnosine",
     bulletPoints: [
       "Crosses the Blood-Brain Barrier (BBB) to modulate GABAergic neurotransmission and reduce excitotoxicity.",
       "Clinically documented in peer-reviewed literature for receptive language and social interaction support in ASD.",
@@ -194,7 +194,7 @@ export const products: Product[] = [
     description:
       "GastroSpore Sachet delivers acid-resistant bacterial endospores that survive 100% of gastric transit. Synergized with enterocyte-fuel L-Glutamine, it accelerates the reconstitution of protective commensal microflora and restores gut-barrier integrity.",
     keywords:
-      "gastrospore sachet, spore probiotic sachet, l-glutamine gut sachet, antibiotic associated diarrhea sachet, redition pharmaceutical probiotic",
+      "gastrospore sachet, spore probiotic sachet, l-glutamine gut sachet, antibiotic associated diarrhea sachet, redition pharma probiotic",
     bulletPoints: [
       "Microencapsulated bacterial endospores exhibit 100% survival through gastric acid and bile salts.",
       "250mg L-Glutamine actively synthesizes mucosal tight junction proteins (Claudin-1 & Occludin).",
@@ -251,7 +251,7 @@ export const products: Product[] = [
     description:
       "VertiStop MD features a superdisintegrant matrix that dissolves on the tongue in under 15 seconds without water. Sublingual vascular absorption bypasses hepatic first-pass metabolism to deliver rapid suppression of the Chemoreceptor Trigger Zone (CTZ).",
     keywords:
-      "vertistop md tablet, prochlorperazine 5mg mouth dissolving, acute vertigo tablet, meniere disease treatment, redition pharmaceutical vertigo",
+      "vertistop md tablet, prochlorperazine 5mg mouth dissolving, acute vertigo tablet, meniere disease treatment, redition pharma vertigo",
     bulletPoints: [
       "Sublingual disintegration under 15 seconds allows rapid administration during acute emetic episodes.",
       "Bypasses first-pass hepatic clearance, delivering therapeutic plasma levels within 10 minutes.",
@@ -310,7 +310,7 @@ export const products: Product[] = [
     description:
       "SomnoPure Dual-Phase Tablet synchronizes circadian timing with central nervous system desensitization. The immediate phase initiates rapid sleep onset within 30 minutes, while the sustained-release matrix maintains nocturnal sleep continuity without morning hangover or dependence.",
     keywords:
-      "somnopure tablet, lactium melatonin controlled release, natural non habit forming sleep aid, circadian rhythm tablet, redition pharmaceutical somnopure",
+      "somnopure tablet, lactium melatonin controlled release, natural non habit forming sleep aid, circadian rhythm tablet, redition pharma somnopure",
     bulletPoints: [
       "Patented Alpha-Casozepine peptide binds GABA-A benzodiazepine sites without causing receptor downregulation or tolerance.",
       "Dual-phase release architecture resolves both sleep latency (falling asleep) and sleep maintenance (midnight awakening).",

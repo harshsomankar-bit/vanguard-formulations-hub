@@ -19,7 +19,7 @@ function schema(product: Product) {
         description: product.shortDescription,
         sku: `RP-${product.id.toUpperCase()}`,
         mpn: `RP-${product.id.replace(/-/g, "").toUpperCase()}`,
-        brand: { "@type": "Brand", name: "Redition Pharmaceutical" },
+        brand: { "@type": "Brand", name: "Redition Pharma" },
         manufacturer: {
           "@type": "Organization",
           name: company.name,
@@ -46,7 +46,7 @@ function schema(product: Product) {
         "@type": "MedicalWebPage",
         "@id": `${url}#medicalPage`,
         url,
-        name: `${product.name} | ${product.composition} | Redition Pharmaceutical`,
+        name: `${product.name} | ${product.composition} | Redition Pharma`,
         about: {
           "@type": "Drug",
           name: product.name,
@@ -91,8 +91,8 @@ export const Route = createFileRoute("/product/$productId")({
   head: ({ loaderData }) => {
     const p = loaderData as Product | undefined;
     if (!p) return {};
-    const title = `${p.name} | ${p.composition} | Redition Pharmaceutical`;
-    const description = `Technical dossier for ${p.name} (${p.strength}) by Redition Pharmaceutical. ${p.shortDescription}`;
+    const title = `${p.name} | ${p.composition} | Redition Pharma`;
+    const description = `Technical dossier for ${p.name} (${p.strength}) by Redition Pharma. ${p.shortDescription}`;
     const productUrl = `${SITE_URL}/product/${p.id}`;
     const productImageUrl = `${SITE_URL}${p.image}`;
     return {
@@ -105,9 +105,9 @@ export const Route = createFileRoute("/product/$productId")({
         { property: "og:description", content: description },
         { property: "og:url", content: productUrl },
         { property: "og:image", content: productImageUrl },
-        { property: "og:image:alt", content: `${p.name} (${p.composition}) - Redition Pharmaceutical Formulations` },
+        { property: "og:image:alt", content: `${p.name} (${p.composition}) - Redition Pharma Formulations` },
         { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "Redition Pharmaceutical Ltd." },
+        { property: "og:site_name", content: "Redition Pharma Ltd." },
         { property: "og:locale", content: "en_IN" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },

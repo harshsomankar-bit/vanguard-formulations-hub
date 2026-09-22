@@ -5,7 +5,7 @@ export function MedicalTechHeroAnimation() {
       <div className="relative aspect-square w-full mix-blend-multiply select-none">
         <img
           src="/pharmacy-counter.gif"
-          alt="Redition Pharmaceutical Pharmacy Dispensing Animation"
+          alt="Redition Pharma Pharmacy Dispensing Animation"
           className="h-full w-full object-contain"
         />
 
