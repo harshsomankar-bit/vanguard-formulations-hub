@@ -58,6 +58,27 @@ export const Route = createFileRoute("/")({
             postalCode: "390010",
             addressCountry: "IN",
           },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 22.3072,
+            longitude: 73.1812,
+          },
+          hasMap: "https://maps.google.com/maps?q=GIDC+Industrial+Estate,+Vadodara,+Gujarat",
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+              ],
+              opens: "09:00",
+              closes: "18:30",
+            },
+          ],
           contactPoint: {
             "@type": "ContactPoint",
             telephone: company.phone,

@@ -98,6 +98,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "geo.region", content: "IN-GJ" },
+      { name: "geo.placename", content: "Vadodara, Gujarat, India" },
+      { name: "geo.position", content: "22.3072;73.1812" },
+      { name: "ICBM", content: "22.3072, 73.1812" },
     ],
     links: [
       {
