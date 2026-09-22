@@ -7,6 +7,6 @@
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#grad)"/>
   <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.4"/>
-  <path d="M16 17 L24.5 17 L32 38 L39.5 17 L48 17 L35.5 47 L28.5 47 Z" fill="#ffffff"/>
+  <text x="32" y="45" font-family="Manrope, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle">R</text>
   <path d="M48 12 H52 V16 H56 V20 H52 V24 H48 V20 H44 V16 H48 Z" fill="#2dd4bf" transform="scale(0.5) translate(40, -2)"/>
 </svg>

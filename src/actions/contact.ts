@@ -37,7 +37,7 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
     const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
 
     console.log("=================================================");
-    console.log(`[VANGUARD TRADE DESK] NEW ENQUIRY RECEIVED: ${referenceId}`);
+    console.log(`[REDITION TRADE DESK] NEW ENQUIRY RECEIVED: ${referenceId}`);
     console.log(`Timestamp:    ${timestamp}`);
     console.log(`From Client:  ${data.fullName} <${data.email}>`);
     console.log(`Organisation: ${data.organisation}`);
@@ -60,14 +60,14 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
             Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
-            from: "Vanguard Trade Desk <notifications@resend.dev>",
+            from: "Redition Trade Desk <notifications@resend.dev>",
             to: [tradeDeskEmail],
             reply_to: data.email,
             subject: `[Trade Desk Enquiry] ${data.enquiryType} - ${data.organisation} (${referenceId})`,
             html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0;">
                 <div style="background-color: #0b1a30; color: #ffffff; padding: 16px; margin-bottom: 20px;">
-                  <h2 style="margin: 0; font-size: 18px; letter-spacing: 1px;">VANGUARD THERAPEUTICS LTD.</h2>
+                  <h2 style="margin: 0; font-size: 18px; letter-spacing: 1px;">REDITION PHARMACEUTICAL LTD.</h2>
                   <p style="margin: 4px 0 0 0; font-size: 12px; color: #14b8a6;">INSTITUTIONAL TRADE DESK</p>
                 </div>
                 <h3 style="color: #0b1a30; margin-top: 0;">New Client Enquiry [Ref: ${referenceId}]</h3>
@@ -84,7 +84,7 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
                   <p style="margin: 8px 0 0 0; color: #0f172a; white-space: pre-wrap;">${data.message}</p>
                 </div>
                 <p style="font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 12px;">
-                  Submitted on ${timestamp} via Vanguard Web Portal.
+                  Submitted on ${timestamp} via Redition Web Portal.
                 </p>
               </div>
             `,
@@ -99,19 +99,19 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
             Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
-            from: "Vanguard Therapeutics <notifications@resend.dev>",
+            from: "Redition Pharmaceutical <notifications@resend.dev>",
             to: [data.email],
             reply_to: tradeDeskEmail,
-            subject: `Enquiry Acknowledgement [${referenceId}] - Vanguard Therapeutics`,
+            subject: `Enquiry Acknowledgement [${referenceId}] - Redition Pharmaceutical`,
             html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0;">
                 <div style="background-color: #0b1a30; color: #ffffff; padding: 16px; margin-bottom: 20px;">
-                  <h2 style="margin: 0; font-size: 18px; letter-spacing: 1px;">VANGUARD THERAPEUTICS LTD.</h2>
+                  <h2 style="margin: 0; font-size: 18px; letter-spacing: 1px;">REDITION PHARMACEUTICAL LTD.</h2>
                   <p style="margin: 4px 0 0 0; font-size: 12px; color: #14b8a6;">INSTITUTIONAL TRADE & SUPPLY DESK</p>
                 </div>
                 <p style="color: #0b1a30; font-size: 15px;">Dear ${data.fullName},</p>
                 <p style="color: #334155; line-height: 1.6;">
-                  Thank you for contacting Vanguard Therapeutics Ltd. We have officially registered your enquiry under Reference Number <strong>${referenceId}</strong>.
+                  Thank you for contacting Redition Pharmaceutical Ltd. We have officially registered your enquiry under Reference Number <strong>${referenceId}</strong>.
                 </p>
                 <div style="background-color: #f0fdfa; border: 1px solid #ccfbf1; padding: 14px; margin: 20px 0;">
                   <p style="margin: 0 0 6px 0; font-size: 12px; font-weight: bold; color: #0f766e; text-transform: uppercase;">Enquiry Summary</p>
@@ -132,7 +132,7 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
 
         deliveryStatus = "sent";
       } catch (err) {
-        console.error("[VANGUARD] Failed to send email via Resend API:", err);
+        console.error("[REDITION] Failed to send email via Resend API:", err);
       }
     }
 
@@ -149,7 +149,7 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
           }),
         });
       } catch (err) {
-        console.error("[VANGUARD] Failed to post to webhook:", err);
+        console.error("[REDITION] Failed to post to webhook:", err);
       }
     }
 

@@ -77,11 +77,11 @@ export function SiteHeader() {
           className="flex items-center gap-3"
         >
           <span className="flex h-9 w-9 items-center justify-center border border-clinical bg-clinical text-clinical-foreground font-display text-lg font-extrabold shadow-xs">
-            V
+            R
           </span>
           <span className="leading-tight">
             <span className="block font-display text-base font-extrabold tracking-tight text-navy">
-              VANGUARD THERAPEUTICS
+              REDITION PHARMACEUTICAL
             </span>
             <span className="block text-[11px] tracking-[0.18em] text-muted-foreground">
               INSTITUTIONAL FORMULATIONS

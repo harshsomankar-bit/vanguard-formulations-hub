@@ -17,9 +17,9 @@ function schema(product: Product) {
         alternateName: product.alternateNames,
         image: product.images.map((i) => `${SITE_URL}${i}`),
         description: product.shortDescription,
-        sku: `VT-${product.id.toUpperCase()}`,
-        mpn: `VT-${product.id.replace(/-/g, "").toUpperCase()}`,
-        brand: { "@type": "Brand", name: "Vanguard Therapeutics" },
+        sku: `RP-${product.id.toUpperCase()}`,
+        mpn: `RP-${product.id.replace(/-/g, "").toUpperCase()}`,
+        brand: { "@type": "Brand", name: "Redition Pharmaceutical" },
         manufacturer: {
           "@type": "Organization",
           name: company.name,
@@ -46,7 +46,7 @@ function schema(product: Product) {
         "@type": "MedicalWebPage",
         "@id": `${url}#medicalPage`,
         url,
-        name: `${product.name} | ${product.composition} | Vanguard Therapeutics`,
+        name: `${product.name} | ${product.composition} | Redition Pharmaceutical`,
         about: {
           "@type": "Drug",
           name: product.name,
@@ -91,8 +91,8 @@ export const Route = createFileRoute("/product/$productId")({
   head: ({ loaderData }) => {
     const p = loaderData as Product | undefined;
     if (!p) return {};
-    const title = `${p.name} | ${p.composition} | Vanguard Therapeutics`;
-    const description = `Technical dossier for ${p.name} (${p.strength}) by Vanguard Therapeutics. ${p.shortDescription}`;
+    const title = `${p.name} | ${p.composition} | Redition Pharmaceutical`;
+    const description = `Technical dossier for ${p.name} (${p.strength}) by Redition Pharmaceutical. ${p.shortDescription}`;
     const productUrl = `${SITE_URL}/product/${p.id}`;
     const productImageUrl = `${SITE_URL}${p.image}`;
     return {
@@ -105,9 +105,9 @@ export const Route = createFileRoute("/product/$productId")({
         { property: "og:description", content: description },
         { property: "og:url", content: productUrl },
         { property: "og:image", content: productImageUrl },
-        { property: "og:image:alt", content: `${p.name} (${p.composition}) - Vanguard Therapeutics Formulations` },
+        { property: "og:image:alt", content: `${p.name} (${p.composition}) - Redition Pharmaceutical Formulations` },
         { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "Vanguard Therapeutics Ltd." },
+        { property: "og:site_name", content: "Redition Pharmaceutical Ltd." },
         { property: "og:locale", content: "en_IN" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },

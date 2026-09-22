@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-navy text-navy-foreground">
       <div className="mx-auto grid max-w-[1400px] gap-10 px-4 sm:px-6 lg:px-8 py-14 md:grid-cols-3">
         <div>
-          <p className="font-display text-lg font-extrabold">VANGUARD THERAPEUTICS LTD.</p>
+          <p className="font-display text-lg font-extrabold">REDITION PHARMACEUTICAL LTD.</p>
           <p className="mt-3 max-w-sm text-sm text-navy-foreground/70">
             WHO-GMP Schedule M certified manufacturer of institutional hospital
             formulations and PCD distribution portfolios.
@@ -45,7 +45,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-navy-foreground/10">
         <p className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 py-5 text-xs text-navy-foreground/60">
-          © 2026 Vanguard Therapeutics Ltd. All rights reserved. WHO-GMP Schedule M
+          © 2026 Redition Pharmaceutical Ltd. All rights reserved. WHO-GMP Schedule M
           certified manufacturing facility. Information is intended for registered
           medical practitioners and institutional buyers only.
         </p>

@@ -9,11 +9,11 @@ import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Mic
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
-  "Vanguard Therapeutics Ltd. | WHO-GMP Schedule M Certified Pharmaceutical Formulations";
+  "Redition Pharmaceutical Ltd. | WHO-GMP Schedule M Certified Pharmaceutical Formulations";
 const description =
-  "Institutional hospital supply and PCD distribution of WHO-GMP Schedule M certified formulations manufactured in Vadodara, Gujarat by Vanguard Therapeutics Ltd.";
+  "Institutional hospital supply and PCD distribution of WHO-GMP Schedule M certified formulations manufactured in Vadodara, Gujarat by Redition Pharmaceutical Ltd.";
 const keywords =
-  "pharmaceutical manufacturer, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Vadodara pharma company, oral liquid formulations, paracetamol syrup, iron bisglycinate chelate, levocarnitine syrup, bacillus clausii spores, betahistine tablets, melatonin CR, hospital tenders India, pharmaceutical exporter";
+  "redition pharmaceutical, redition pharma, pharmaceutical manufacturer, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Vadodara pharma company, oral liquid formulations, paracetamol syrup, iron bisglycinate chelate, levocarnitine syrup, bacillus clausii spores, betahistine tablets, melatonin CR, hospital tenders India, pharmaceutical exporter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:url", content: `${SITE_URL}/` },
       { property: "og:image", content: `${SITE_URL}/images/pharma-packaging-line.jpg` },
-      { property: "og:image:alt", content: "Vanguard Therapeutics WHO-GMP Automated Packaging & Formulations Facility" },
+      { property: "og:image:alt", content: "Redition Pharmaceutical WHO-GMP Automated Packaging & Formulations Facility" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Vanguard Therapeutics Ltd." },
+      { property: "og:site_name", content: "Redition Pharmaceutical Ltd." },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": ["Organization", "MedicalOrganization"],
           name: company.name,
-          alternateName: ["Vanguard Pharma", "Vanguard Medical"],
+          alternateName: ["Redition Pharmaceutical", "Redition Pharma", "ReditionPharmaceutical"],
           url: SITE_URL,
           logo: `${SITE_URL}/favicon.svg`,
           image: `${SITE_URL}/images/pharma-packaging-line.jpg`,
@@ -93,7 +93,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "Vanguard Therapeutics Core Pharmaceutical Formulations",
+          name: "Redition Pharmaceutical Core Formulations",
           description: "WHO-GMP validated therapeutic formulations and dosage monographs",
           itemListElement: products.map((prod, idx) => ({
             "@type": "ListItem",
@@ -215,7 +215,7 @@ function Index() {
 
               {/* Narrative Subtitle */}
               <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground font-normal">
-                Vanguard Therapeutics Ltd. specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">HemaChelate</strong>, <strong className="text-navy font-semibold">NeuroCarn</strong>, <strong className="text-navy font-semibold">GastroSpore</strong> probiotics, and fast-dissolving tablets across India.
+                Redition Pharmaceutical Ltd. specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">HemaChelate</strong>, <strong className="text-navy font-semibold">NeuroCarn</strong>, <strong className="text-navy font-semibold">GastroSpore</strong> probiotics, and fast-dissolving tablets across India.
               </p>
 
               {/* Dual Action Buttons Matching Website Theme (Navy & Clinical Accent) */}
@@ -346,7 +346,7 @@ function Index() {
                   <div className="absolute inset-x-4 bottom-2 h-14 rounded-xl bg-slate-100/70 border border-border/50 -z-0" />
                   <img
                     src={p.image}
-                    alt={`${p.name} (${p.composition}) — Vanguard Therapeutics Formulations`}
+                    alt={`${p.name} (${p.composition}) — Redition Pharmaceutical Formulations`}
                     loading="lazy"
                     width={400}
                     height={400}
@@ -437,7 +437,7 @@ function Index() {
                   Advancing Pharmaceutical Precision from Vadodara to Pan-India Healthcare
                 </h2>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                  Operating from GIDC Industrial Estate, Vadodara (Gujarat), Vanguard Therapeutics Ltd. manufactures certified oral solutions, pediatric suspensions, and therapeutic syrups under computerized HVAC air classification, automated sterile compounding, and dedicated analytical quality release.
+                  Operating from GIDC Industrial Estate, Vadodara (Gujarat), Redition Pharmaceutical Ltd. manufactures certified oral solutions, pediatric suspensions, and therapeutic syrups under computerized HVAC air classification, automated sterile compounding, and dedicated analytical quality release.
                 </p>
               </div>
 
@@ -514,7 +514,7 @@ function Index() {
               <div className="relative aspect-16/9 w-full overflow-hidden bg-slate-100">
                 <img
                   src="/images/pharma-packaging-line.jpg"
-                  alt="Vanguard Therapeutics Automated Oral Liquid Bottling & Inspection Line"
+                  alt="Redition Pharmaceutical Automated Oral Liquid Bottling & Inspection Line"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
@@ -534,7 +534,7 @@ function Index() {
               <div className="relative aspect-16/9 w-full overflow-hidden bg-slate-100">
                 <img
                   src="/images/pharma-qc-lab.jpg"
-                  alt="Vanguard Therapeutics Analytical Quality Control & Stability Laboratory"
+                  alt="Redition Pharmaceutical Analytical Quality Control & Stability Laboratory"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
@@ -620,7 +620,7 @@ function Index() {
               </div>
               <div className="relative aspect-16/9 w-full min-h-[190px] sm:min-h-[220px]">
                 <iframe
-                  title="Vanguard Therapeutics Facility Location"
+                  title="Redition Pharmaceutical Facility Location"
                   width="100%"
                   height="100%"
                   className="absolute inset-0 h-full w-full border-0"

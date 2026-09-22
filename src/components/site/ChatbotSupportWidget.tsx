@@ -7,7 +7,7 @@ export function ChatbotSupportWidget() {
 
   const cleanPhone = company.phone.replace(/[^0-9+]/g, "");
   const whatsappUrl = `https://wa.me/${cleanPhone.replace("+", "")}?text=${encodeURIComponent(
-    "Hello Vanguard Therapeutics Trade Desk, I would like to request an institutional quotation and batch availability."
+    "Hello Redition Pharmaceutical Trade Desk, I would like to request an institutional quotation and batch availability."
   )}`;
 
   const handleOpenForm = () => {
@@ -69,7 +69,7 @@ export function ChatbotSupportWidget() {
                     WHO-GMP · Central Dispatch
                   </p>
                   <h3 className="font-display text-sm sm:text-base font-extrabold text-white">
-                    Vanguard Trade Desk
+                    Redition Trade Desk
                   </h3>
                   <p className="text-[10px] sm:text-[11px] text-navy-foreground/75">
                     Vadodara Facility · Quick Support

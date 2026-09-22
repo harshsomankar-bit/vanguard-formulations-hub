@@ -105,7 +105,7 @@ export function ContactForm({
     // Pre-composed mailto string as fail-safe client confirmation
     const mailtoSubject = encodeURIComponent(`[${response.referenceId}] ${data.enquiryType} - ${data.organisation}`);
     const mailtoBody = encodeURIComponent(
-      `Hello Vanguard Trade Desk,\n\nI have submitted an institutional enquiry on your portal (Ref: ${response.referenceId}).\n\nOrganisation: ${data.organisation}\nContact Person: ${data.fullName}\nPhone: ${data.phone || "N/A"}\nEnquiry Type: ${data.enquiryType}\n\nRequirement Details:\n${data.message}\n\nPlease confirm receipt and provide standard quotation / lead times.\n\nThank you,\n${data.fullName}`,
+      `Hello Redition Trade Desk,\n\nI have submitted an institutional enquiry on your portal (Ref: ${response.referenceId}).\n\nOrganisation: ${data.organisation}\nContact Person: ${data.fullName}\nPhone: ${data.phone || "N/A"}\nEnquiry Type: ${data.enquiryType}\n\nRequirement Details:\n${data.message}\n\nPlease confirm receipt and provide standard quotation / lead times.\n\nThank you,\n${data.fullName}`,
     );
 
     return (
@@ -124,7 +124,7 @@ export function ContactForm({
           </h3>
           
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Your enquiry has been securely recorded and routed to the Vanguard Therapeutics Institutional Trade Desk at{" "}
+            Your enquiry has been securely recorded and routed to the Redition Pharmaceutical Institutional Trade Desk at{" "}
             <span className="font-semibold text-foreground">{response.tradeDeskEmail}</span>. A confirmation notification has also been prepared for{" "}
             <span className="font-semibold text-foreground">{data.email}</span>.
           </p>

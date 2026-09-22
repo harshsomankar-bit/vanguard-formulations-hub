@@ -13,9 +13,9 @@ export const institutionalFaqs: FaqItem[] = [
   {
     id: "certifications",
     category: "Regulatory & Standards",
-    question: "What certifications and regulatory standards govern Vanguard's manufacturing facility?",
+    question: "What certifications and regulatory standards govern Redition's manufacturing facility?",
     answer:
-      "Vanguard Therapeutics operates a WHO-GMP and revised Schedule M certified liquid manufacturing facility in GIDC Industrial Estate, Vadodara, Gujarat. Our production blocks feature cleanrooms with differential pressure monitoring, validated HVAC systems with HEPA air handling, water-for-injection (WFI) generation loops, and rigorous compliance with IP/USP pharmacopoeial monographs.",
+      "Redition Pharmaceutical operates a WHO-GMP and revised Schedule M certified liquid manufacturing facility in GIDC Industrial Estate, Vadodara, Gujarat. Our production blocks feature cleanrooms with differential pressure monitoring, validated HVAC systems with HEPA air handling, water-for-injection (WFI) generation loops, and rigorous compliance with IP/USP pharmacopoeial monographs.",
     icon: ShieldCheck,
   },
   {
@@ -45,7 +45,7 @@ export const institutionalFaqs: FaqItem[] = [
   {
     id: "contract-manufacturing",
     category: "Contract Manufacturing",
-    question: "Does Vanguard undertake third-party contract manufacturing for liquid formulations?",
+    question: "Does Redition undertake third-party contract manufacturing for liquid formulations?",
     answer:
       "Yes. We undertake specialized contract manufacturing and loan licensing for oral solutions, pediatric syrups, suspensions, and calibrated drops. We offer complete formulation scaling, primary packaging in amber PET/glass bottles, labeling compliance, and analytical testing under revised Schedule M protocols.",
     icon: FlaskConical,
@@ -53,7 +53,7 @@ export const institutionalFaqs: FaqItem[] = [
   {
     id: "storage-shelf-life",
     category: "Stability & Logistics",
-    question: "What is the validated shelf life and recommended storage for Vanguard oral formulations?",
+    question: "What is the validated shelf life and recommended storage for Redition oral formulations?",
     answer:
       "All liquid formulations undergo validated real-time and accelerated stability testing (Zone IVb conditions) providing 24 to 36 months of shelf life. Products should be stored in their original outer carton in a cool, dry area below 25°C protected from direct sunlight and freezing.",
     icon: Clock,
