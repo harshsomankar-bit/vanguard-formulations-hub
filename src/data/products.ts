@@ -621,4 +621,31 @@ export const products: Product[] = [
   },
 ];
 
-export const getProduct = (id: string) => products.find((p) => p.id === id);
+export const getProduct = (rawId: string) => {
+  if (!rawId) return undefined;
+  const id = decodeURIComponent(rawId).toLowerCase().trim();
+  
+  // 1. Direct match
+  const direct = products.find((p) => p.id === id);
+  if (direct) return direct;
+
+  // 2. Singular / Plural variations (e.g., 'etosec-mr-tablet' -> 'etosec-mr-tablets')
+  const withS = products.find((p) => p.id === `${id}s`);
+  if (withS) return withS;
+
+  const withoutS = products.find((p) => p.id.replace(/s$/, "") === id);
+  if (withoutS) return withoutS;
+
+  // 3. Short slug match (e.g., 'etosec-mr' -> 'etosec-mr-tablets', 'adnocar-ds' -> 'adnocar-ds-syrup')
+  const shortMatch = products.find((p) => {
+    const base = p.id.replace(/-(tablets|tablet|syrup|capsules|capsule)$/i, "");
+    return base === id || base === id.replace(/-(tablets|tablet|syrup|capsules|capsule)$/i, "");
+  });
+  if (shortMatch) return shortMatch;
+
+  // 4. Name or alternate name search
+  return products.find((p) => {
+    const normalizedName = p.name.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    return normalizedName.includes(id) || id.includes(normalizedName);
+  });
+};
