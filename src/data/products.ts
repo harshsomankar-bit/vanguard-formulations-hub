@@ -42,7 +42,8 @@ export const company = {
   founder: "Nilesh Kumar",
   address: "101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India",
   phone: "+91 79877 79819",
-  email: "trade@reditionpharma.com",
+  phone2: "+91 98935 97108",
+  email: "reditionpharma@gmail.com",
   fssai: "12116801000249",
 };
 
@@ -325,7 +326,78 @@ export const products: Product[] = [
     images: [
       "/images/products/predy-nt-1.png",
       "/images/products/predy-nt-2.png",
-      "/images/products/predy-nt-3d.png",
+    ],
+  },
+  {
+    id: "predy-nt-75-tablets",
+    name: "PREDY-NT 75/10 Tablets",
+    alternateNames: [
+      "PREDY NT 75",
+      "Pregabalin Nortriptyline Hydrochloride Tablets",
+      "Predy NT 75 10",
+      "Predy NT 75 Redition Pharma",
+    ],
+    strength: "10 x 10 Tablets",
+    type: "Film-Coated Tablets",
+    category: "Neuropathic Analgesia & CNS Neuromodulation",
+    composition:
+      "Pregabalin 75mg with Nortriptyline Hydrochloride 10mg Tablets",
+    activeIngredient:
+      "Pregabalin, Nortriptyline Hydrochloride",
+    dosageForm: "Film-Coated Tablet",
+    pharmacopoeia: "IP / In-House Validated Monograph",
+    therapeuticClass: "Dual Alpha-2-Delta Ligand & Tricyclic Neuropathic Analgesic",
+    legalStatus: "Schedule H Prescription",
+    price: 199.0,
+    ratingValue: "4.91",
+    reviewCount: "98",
+    shortDescription:
+      "Higher-potency dual-action neuropathic pain formulation combining Pregabalin (75mg) with Nortriptyline Hydrochloride (10mg) for robust management of moderate-to-severe diabetic neuropathy, post-herpetic neuralgia, and refractory radiculopathy.",
+    description:
+      "PREDY-NT 75/10 Tablets deliver an intensified neuropathic pain management protocol for patients requiring higher pregabalin dosing. Manufactured under strict WHO-GMP Schedule M standards by Redition Pharma, this formulation pairs full-dose Pregabalin (75mg) with Nortriptyline Hydrochloride (10mg) for synergistic voltage-gated calcium channel modulation and descending noradrenergic inhibitory pathway enhancement. Ideal for step-up therapy from PREDY-NT 37.5/10 or as first-line treatment in moderate-to-severe neuropathic pain.",
+    keywords:
+      "predy nt 75 tablets, pregabalin 75mg nortriptyline, predy nt 75 10, neuropathic pain tablets, redition pharma predy nt 75, schedule h neuropathic analgesic, hospital tender supply",
+    bulletPoints: [
+      "Full-Dose Pregabalin (75mg): Robust alpha-2-delta calcium channel modulation for moderate-to-severe neuropathic pain control.",
+      "Nortriptyline Hydrochloride (10mg): Reinforces descending noradrenergic inhibitory pain pathways and improves sleep architecture.",
+      "Step-Up Therapy Option: Ideal escalation from PREDY-NT 37.5/10 for patients with inadequate pain control at lower doses.",
+      "Authentic Batch Verification: Batch No. BC71477 with complete regulatory Certificate of Analysis (COA) compliance.",
+      "10 x 10 Tablets Packaging: Protected in moisture-barrier Alu-Alu blister foils inside UV-resistant clinical mono-carton.",
+    ],
+    indications: [
+      "Moderate-to-Severe Diabetic Peripheral Neuropathic Pain (DPNP)",
+      "Post-Herpetic Neuralgia (PHN)",
+      "Cervical & Lumbar Radiculopathy / Sciatica",
+      "Spinal Cord Injury Neuropathic Pain",
+      "Fibromyalgia & Chronic Central Pain Syndromes",
+      "Refractory Neuropathic Pain (Step-Up from Lower Dose)",
+    ],
+    packaging:
+      "10 Strips x 10 Film-Coated Tablets per carton (100 Tablets Box / Master Shipper: 60 Boxes)",
+    storage:
+      "Store below 25°C in a dry place. Protect from direct sunlight and moisture. Keep out of reach of children.",
+    shelfLife: "24 Months from manufacturing date",
+    mechanism:
+      "Pregabalin 75mg provides potent binding to the alpha-2-delta auxiliary subunit of voltage-gated calcium channels in presynaptic neurons, substantially decreasing calcium influx and suppressing excitatory neurotransmitter release (glutamate, substance P, and CGRP). Nortriptyline simultaneously blocks norepinephrine and serotonin reuptake, reinforcing descending inhibitory control over dorsal horn nociceptive transmission for comprehensive pain modulation.",
+    dosageGuide:
+      "As directed by the physician (Schedule H Prescription). Typically 1 tablet once or twice daily, swallowed whole with water. Do not crush or chew.",
+    faqs: [
+      {
+        q: "How does PREDY-NT 75/10 differ from PREDY-NT 37.5/10?",
+        a: "PREDY-NT 75/10 contains double the Pregabalin dose (75mg vs 37.5mg) for patients requiring stronger neuropathic pain control. The Nortriptyline component remains 10mg in both strengths. It is prescribed as a step-up when the lower strength provides insufficient relief.",
+      },
+      {
+        q: "What is the MRP of PREDY-NT 75/10?",
+        a: "The MRP is ₹199.00 per strip of 10 tablets (inclusive of all taxes). Institutional and tender pricing is available on request.",
+      },
+      {
+        q: "Can PREDY-NT 75/10 be prescribed as first-line therapy?",
+        a: "Yes. In patients with moderate-to-severe neuropathic pain, physicians may initiate PREDY-NT 75/10 directly based on clinical severity, prior treatment history, and tolerability assessment.",
+      },
+    ],
+    image: "/images/products/predy-nt-75-1.jpg",
+    images: [
+      "/images/products/predy-nt-75-1.jpg",
     ],
   },
   {
@@ -397,6 +469,154 @@ export const products: Product[] = [
     images: [
       "/images/products/adnocar-ds-1.png",
       "/images/products/adnocar-ds-2.png",
+      "/images/products/adnocar-ds-3.png",
+    ],
+  },
+  {
+    id: "etosec-mr-tablets",
+    name: "ETOSEC-MR Tablets",
+    alternateNames: [
+      "Etosec MR",
+      "Etoricoxib Thiocolchicoside Tablets",
+      "Etosec MR Redition Pharma",
+      "Etoricoxib 60mg Thiocolchicoside 4mg",
+    ],
+    strength: "10 x 27 Tablets",
+    type: "Film-Coated Tablets",
+    category: "Musculoskeletal Pain & Inflammation",
+    composition:
+      "Etoricoxib 60mg with Thiocolchicoside 4mg Tablets",
+    activeIngredient:
+      "Etoricoxib, Thiocolchicoside",
+    dosageForm: "Film-Coated Tablet",
+    pharmacopoeia: "IP / In-House Validated Monograph",
+    therapeuticClass: "Selective COX-2 Inhibitor & GABA-ergic Muscle Relaxant",
+    legalStatus: "Schedule H Prescription",
+    price: 280.0,
+    ratingValue: "4.88",
+    reviewCount: "74",
+    shortDescription:
+      "Dual-action musculoskeletal pain formulation combining selective COX-2 inhibitor Etoricoxib (60mg) with centrally-acting muscle relaxant Thiocolchicoside (4mg) for rapid relief of acute low back pain, cervical spondylosis, and inflammatory joint disorders.",
+    description:
+      "ETOSEC-MR Tablets deliver targeted anti-inflammatory and muscle relaxant therapy in a single formulation. Manufactured under WHO-GMP Schedule M standards by Redition Pharma, this combination pairs Etoricoxib — a highly selective cyclooxygenase-2 (COX-2) inhibitor with superior GI tolerability — with Thiocolchicoside, a centrally-acting GABA-ergic and glycinergic muscle relaxant that reduces pathological muscle spasm without sedation. Ideal for acute musculoskeletal conditions where both inflammation and muscle spasm contribute to pain.",
+    keywords:
+      "etosec mr tablets, etoricoxib thiocolchicoside, etosec mr redition pharma, muscle relaxant anti inflammatory, back pain tablets, cervical spondylosis treatment, schedule h prescription",
+    bulletPoints: [
+      "Selective COX-2 Inhibition (Etoricoxib 60mg): Potent anti-inflammatory and analgesic action with minimal gastric mucosal irritation compared to non-selective NSAIDs.",
+      "Centrally-Acting Muscle Relaxant (Thiocolchicoside 4mg): GABA-A and glycine receptor agonist providing rapid skeletal muscle relaxation without CNS sedation.",
+      "Dual-Target Mechanism: Simultaneously addresses inflammatory pain cascades and reflex muscle spasm for comprehensive musculoskeletal relief.",
+      "Convenient Once/Twice Daily Dosing: Etoricoxib's long 22-hour half-life enables sustained therapeutic coverage with fewer daily doses.",
+      "Authentic Batch Verification: Batch No. RTG225139, Mfg. Lic. No. 1538-B & 1538-OSP with complete regulatory Certificate of Analysis (COA) compliance.",
+      "10 x 27 Tablets Packaging: Alu-Alu moisture-barrier blister foils inside UV-resistant clinical mono-carton for institutional supply.",
+    ],
+    indications: [
+      "Acute & Chronic Low Back Pain with Muscle Spasm",
+      "Cervical Spondylosis & Cervicobrachial Syndrome",
+      "Osteoarthritis (OA) with Associated Muscle Rigidity",
+      "Rheumatoid Arthritis Flares with Periarticular Spasm",
+      "Post-Operative Orthopedic Pain & Rehabilitation",
+      "Ankylosing Spondylitis with Paraspinal Muscle Spasm",
+    ],
+    packaging:
+      "10 Strips x 27 Film-Coated Tablets per carton (270 Tablets Box)",
+    storage:
+      "Store below 25°C in a dry place. Protect from direct sunlight and moisture. Keep out of reach of children.",
+    shelfLife: "24 Months from manufacturing date",
+    mechanism:
+      "Etoricoxib selectively inhibits cyclooxygenase-2 (COX-2) at the site of inflammation, blocking prostaglandin E2 synthesis and reducing pain, swelling, and inflammatory hyperalgesia without significantly inhibiting COX-1-mediated gastric mucosal protection. Thiocolchicoside acts centrally as an agonist at GABA-A and glycine receptors in the spinal cord and supraspinal centers, reducing pathological muscle tone and spasm through inhibition of polysynaptic reflex arcs.",
+    dosageGuide:
+      "As directed by the physician (Schedule H Prescription). Typically 1 tablet once or twice daily after food with water. Maximum duration as per physician guidance.",
+    faqs: [
+      {
+        q: "What is ETOSEC-MR Tablets used for?",
+        a: "ETOSEC-MR is prescribed for musculoskeletal conditions involving both inflammation and muscle spasm, such as acute low back pain, cervical spondylosis, osteoarthritis with muscle rigidity, and post-operative orthopedic pain.",
+      },
+      {
+        q: "Is ETOSEC-MR safer on the stomach than traditional NSAIDs?",
+        a: "Yes. Etoricoxib is a selective COX-2 inhibitor, meaning it provides anti-inflammatory action while sparing COX-1, the enzyme responsible for protective gastric mucus production. This results in significantly lower GI side effects compared to non-selective NSAIDs like diclofenac or ibuprofen.",
+      },
+      {
+        q: "Does Thiocolchicoside cause drowsiness?",
+        a: "Unlike many muscle relaxants, Thiocolchicoside acts through GABA-ergic and glycinergic pathways without significant CNS sedation, making ETOSEC-MR suitable for patients who need to remain alert during daily activities.",
+      },
+    ],
+    image: "/images/products/etosec-mr-1.png",
+    images: [
+      "/images/products/etosec-mr-1.png",
+      "/images/products/etosec-mr-2.png",
+    ],
+  },
+  {
+    id: "qvery-tablets",
+    name: "QVERY Tablets",
+    alternateNames: [
+      "Qvery",
+      "Omega 3 CoQ10 Vitamin E L-Arginine Tablets",
+      "Qvery Tablets Redition Pharma",
+      "Qvery Rudration Pharma",
+    ],
+    strength: "1 x 10 Tablets",
+    type: "Film-Coated Nutraceutical Tablets",
+    category: "Cardiovascular & Cellular Energy Support",
+    composition:
+      "Omega-3 Fatty Acid 500mg, Coenzyme Q10 100mg, Vitamin E (as Acetate) 100 IU & L-Arginine 250mg Tablets",
+    activeIngredient:
+      "Omega-3 Fatty Acid (500mg), Coenzyme Q10 (100mg), Vitamin E as Acetate (100 IU), L-Arginine (250mg)",
+    dosageForm: "Film-Coated Tablet",
+    pharmacopoeia: "IP / In-House Validated Monograph",
+    therapeuticClass: "Cardiovascular Nutraceutical & Antioxidant",
+    legalStatus: "OTC Healthcare Formulation",
+    price: 180.0,
+    ratingValue: "4.85",
+    reviewCount: "62",
+    shortDescription:
+      "Advanced cardiovascular and cellular energy support combining Omega-3 Fatty Acids (EPA + DHA), Coenzyme Q10, Vitamin E, and L-Arginine for endothelial health, mitochondrial bioenergetics, and antioxidant defence.",
+    description:
+      "QVERY Tablets are a scientifically formulated nutraceutical designed to support cardiovascular function, vascular endothelial health, and mitochondrial energy metabolism. Omega-3 fatty acids (EPA + DHA) reduce triglycerides and systemic inflammation, Coenzyme Q10 fuels mitochondrial ATP synthesis in cardiac myocytes, Vitamin E provides lipid-soluble antioxidant protection against oxidative LDL modification, and L-Arginine serves as the direct precursor to nitric oxide (NO) for vasodilation and blood pressure regulation. Manufactured under WHO-GMP standards by Redition Pharma.",
+    keywords:
+      "qvery tablets, omega 3 coq10 tablets, l-arginine vitamin e tablets, cardiovascular health supplement, heart health tablets, redition pharma qvery, coenzyme q10 supplement",
+    bulletPoints: [
+      "Omega-3 Fatty Acid (500mg): Clinically proven to reduce serum triglycerides, lower inflammatory markers, and support cardiac rhythm stability.",
+      "Coenzyme Q10 (100mg): Essential cofactor in mitochondrial electron transport chain (Complex I–III), powering ATP synthesis in high-demand cardiac and skeletal muscle tissue.",
+      "L-Arginine (250mg): Direct biological precursor to Nitric Oxide (NO) via endothelial NOS — promotes vasodilation, improves blood flow, and supports healthy blood pressure.",
+      "Vitamin E as Acetate (100 IU): Potent lipid-soluble antioxidant that protects cell membranes and LDL particles from oxidative peroxidation damage.",
+      "Synergistic 4-in-1 Formulation: Multi-target cardiovascular support in a single convenient tablet for improved patient compliance.",
+    ],
+    indications: [
+      "Cardiovascular Health & Heart Protection",
+      "Dyslipidemia & Elevated Triglycerides (Adjunctive Therapy)",
+      "Endothelial Dysfunction & Hypertension Support",
+      "Exercise Performance & Post-Workout Recovery",
+      "Age-Related Mitochondrial Decline & Fatigue",
+      "Antioxidant Defence Against Oxidative Stress",
+    ],
+    packaging:
+      "1 Strip x 10 Film-Coated Tablets per carton",
+    storage:
+      "Store below 25°C in a dry place. Protect from direct sunlight, heat, and moisture. Keep out of reach of children.",
+    shelfLife: "24 Months from manufacturing date",
+    mechanism:
+      "Omega-3 PUFAs (EPA/DHA) integrate into cell membrane phospholipids, modulating inflammatory eicosanoid pathways (reducing PGE2, TXA2) and activating PPARα receptors to lower hepatic triglyceride synthesis. Coenzyme Q10 shuttles electrons between Complex I/II and Complex III in the mitochondrial respiratory chain, directly powering oxidative phosphorylation. L-Arginine is converted to L-Citrulline + Nitric Oxide by endothelial nitric oxide synthase (eNOS), triggering vascular smooth muscle relaxation and vasodilation. Vitamin E intercepts lipid peroxyl radicals in membranes, breaking the chain reaction of lipid peroxidation.",
+    dosageGuide:
+      "1 tablet once daily after a meal with water, or as directed by the physician. Can be taken long-term as a dietary supplement.",
+    faqs: [
+      {
+        q: "What is QVERY Tablets used for?",
+        a: "QVERY is a cardiovascular health supplement that supports heart function, healthy blood lipids, blood vessel flexibility, and cellular energy production through its combination of Omega-3, CoQ10, Vitamin E, and L-Arginine.",
+      },
+      {
+        q: "Is QVERY a prescription medicine?",
+        a: "No. QVERY is an OTC nutraceutical health supplement. However, patients on blood thinners or cardiac medications should consult their physician before starting supplementation.",
+      },
+      {
+        q: "Can QVERY Tablets be taken alongside statin therapy?",
+        a: "Yes. In fact, CoQ10 supplementation is often recommended alongside statins, as statins can deplete endogenous CoQ10 levels. The Omega-3 component provides complementary triglyceride-lowering benefits.",
+      },
+    ],
+    image: "/images/products/qvery-1.jpg",
+    images: [
+      "/images/products/qvery-1.jpg",
+      "/images/products/qvery-2.jpg",
     ],
   },
 ];

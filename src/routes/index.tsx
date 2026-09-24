@@ -254,7 +254,7 @@ function Index() {
               {/* 3 Metric Counters Matching User Reference */}
               <div className="mt-8 pt-6 border-t border-border/80 grid grid-cols-3 gap-4 sm:gap-6">
                 <div>
-                  <p className="font-display text-2xl sm:text-3xl font-black text-navy tracking-tight">5+</p>
+                  <p className="font-display text-2xl sm:text-3xl font-black text-navy tracking-tight">8+</p>
                   <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-wider leading-tight">
                     CORE FORMULATIONS
                   </p>
@@ -647,38 +647,51 @@ function Index() {
           {/* Bottom Banner: Quality Proof Bar + Request COA CTAs */}
           <div className="mt-8 rounded-2xl border border-border bg-card p-5 sm:p-7 shadow-xs">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-              {/* Left Badges */}
+              {/* Left Badges: Verified Plant & FSSAI Logos */}
               <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
-                    <ShieldCheck className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="font-display text-xs font-bold text-navy">WHO-GMP Compliant</p>
-                    <p className="text-[10px] text-muted-foreground">Revised Schedule M Plant</p>
+                {/* Wyyne Healthcare WHO-GMP / ISO 9001:2015 / IAF Certified Plant Badge */}
+                <div className="flex items-center gap-2 rounded-xl border border-border bg-white p-1.5 sm:p-2 shadow-2xs hover:border-teal/50 transition-colors">
+                  <img
+                    src="/images/certifications/wyyne-healthcare-whogmp-badge.png"
+                    alt="Verified Plant: Wyyne Healthcare (WHO-GMP) An ISO 9001:2015 & IAF Certified Company"
+                    width={492}
+                    height={98}
+                    className="h-9 sm:h-11 w-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="h-10 w-px bg-border hidden sm:block" />
+
+                {/* Official FSSAI Central License Logo & Number */}
+                <div className="flex items-center gap-3 rounded-xl border border-border bg-white px-3 py-2 shadow-2xs hover:border-teal/50 transition-colors">
+                  <img
+                    src="/images/certifications/fssai-logo.png"
+                    alt="FSSAI - Food Safety and Standards Authority of India"
+                    width={180}
+                    height={88}
+                    className="h-8 sm:h-9 w-auto object-contain"
+                    loading="lazy"
+                  />
+                  <div className="border-l border-border/80 pl-2.5">
+                    <p className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                      Central FSSAI Lic.
+                    </p>
+                    <p className="font-mono text-xs font-bold text-navy">
+                      {company.fssai}
+                    </p>
                   </div>
                 </div>
 
-                <div className="h-8 w-px bg-border hidden sm:block" />
+                <div className="h-10 w-px bg-border hidden xl:block" />
 
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
-                    <Award className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="font-display text-xs font-bold text-navy">FSSAI Lic. Validated</p>
-                    <p className="text-[10px] text-muted-foreground">Lic No. {company.fssai}</p>
-                  </div>
-                </div>
-
-                <div className="h-8 w-px bg-border hidden sm:block" />
-
-                <div className="flex items-center gap-3">
+                {/* Batch-Wise Release */}
+                <div className="hidden xl:flex items-center gap-2.5">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
                     <FileCheck2 className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="font-display text-xs font-bold text-navy">Batch-Wise Release</p>
+                    <p className="font-display text-xs font-bold text-navy">100% Batch Released</p>
                     <p className="text-[10px] text-muted-foreground">HPLC Assay &amp; Microbial COA</p>
                   </div>
                 </div>
@@ -892,6 +905,10 @@ function Index() {
                   <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Direct Sales &amp; Dispatch Line</p>
                   <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
                     {company.phone}
+                  </a>
+                  <span className="mx-2 text-border">|</span>
+                  <a href={`tel:${company.phone2.replace(/\s/g, "")}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
+                    {company.phone2}
                   </a>
                 </div>
               </div>

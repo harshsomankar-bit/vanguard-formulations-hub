@@ -82,11 +82,20 @@ export function ContactForm({
       });
     } catch (err: unknown) {
       console.error("Submission failed:", err);
-      setErrorMsg(
-        err instanceof Error
-          ? err.message
-          : "Failed to transmit enquiry. Please verify your connection or contact our trade desk directly.",
-      );
+      let friendly = "Failed to transmit enquiry. Please verify your connection or contact our trade desk directly.";
+      if (err instanceof Error) {
+        try {
+          const parsed = JSON.parse(err.message);
+          if (Array.isArray(parsed)) {
+            friendly = parsed.map((e: { message?: string }) => e.message || "Invalid field").join(". ") + ".";
+          } else {
+            friendly = parsed.message || err.message;
+          }
+        } catch {
+          friendly = err.message;
+        }
+      }
+      setErrorMsg(friendly);
     } finally {
       setIsSubmitting(false);
     }

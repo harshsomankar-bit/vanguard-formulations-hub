@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
 import { ProductImageSlider } from "@/components/site/ProductImageSlider";
-import { Phone, Mail, MapPin, ShieldCheck, ArrowDown, User } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldCheck, ArrowDown, User, MessageCircle } from "lucide-react";
 import { company, getProduct, SITE_URL, type Product } from "@/data/products";
 
 function schema(product: Product) {
@@ -195,6 +195,33 @@ function ProductPage() {
             {product.description}
           </p>
 
+          {/* Verified Manufacturing Facility & FSSAI Verification */}
+          <div className="mt-6 flex flex-wrap items-center gap-3 rounded-xl border border-border bg-slate-50/80 p-3">
+            <div className="flex items-center gap-2 rounded-lg bg-white p-1.5 shadow-2xs border border-border/80">
+              <img
+                src="/images/certifications/wyyne-healthcare-whogmp-badge.png"
+                alt="Wyyne Healthcare (WHO-GMP) An ISO 9001:2015 & IAF Certified Company"
+                width={492}
+                height={98}
+                className="h-8 w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex items-center gap-2 rounded-lg bg-white px-2.5 py-1.5 shadow-2xs border border-border/80">
+              <img
+                src="/images/certifications/fssai-logo.png"
+                alt="FSSAI"
+                width={180}
+                height={88}
+                className="h-6 w-auto object-contain"
+                loading="lazy"
+              />
+              <span className="border-l border-slate-300 pl-2 font-mono text-[11px] font-bold text-navy">
+                Lic. {company.fssai}
+              </span>
+            </div>
+          </div>
+
           <div className="mt-8 rounded-2xl border border-border/80 bg-surface/80 p-5 sm:p-6 shadow-2xs">
             <div className="flex items-center gap-2 text-teal">
               <ShieldCheck className="h-4 w-4" />
@@ -217,6 +244,15 @@ function ProductPage() {
               >
                 <Phone className="h-4 w-4 text-teal" />
                 <span>{company.phone}</span>
+              </a>
+              <a
+                href={`https://wa.me/917987779819?text=${encodeURIComponent(`Hello Redition Pharma, I would like to request a quotation and batch COA for ${product.name}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto rounded-xl border border-[#25D366]/40 bg-[#25D366]/5 px-6 py-3 text-center text-sm font-semibold text-navy transition-colors hover:bg-[#25D366] hover:text-white inline-flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="h-4 w-4 text-[#25D366]" />
+                <span>WhatsApp Trade Desk</span>
               </a>
             </div>
           </div>

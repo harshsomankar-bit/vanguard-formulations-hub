@@ -354,6 +354,13 @@ export function SiteHeader() {
               <span>Direct Hotline: {company.phone}</span>
             </a>
             <a
+              href={`tel:${company.phone2.replace(/\s/g, "")}`}
+              className="flex items-center gap-2 font-semibold text-navy hover:text-clinical"
+            >
+              <Phone className="h-3.5 w-3.5 text-teal" />
+              <span>{company.phone2}</span>
+            </a>
+            <a
               href={`mailto:${company.email}`}
               className="flex items-center gap-2 font-semibold text-navy hover:text-clinical"
             >

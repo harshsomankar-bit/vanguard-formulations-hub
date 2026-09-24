@@ -23,6 +23,14 @@ export interface ContactEnquiryResponse {
   message: string;
 }
 
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// EMAIL DELIVERY via FormSubmit.co (FREE — no signup / no API key)
+// First form submission triggers a one-time email confirmation.
+// After confirming, all submissions go to reditionpharma@gmail.com
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${company.email}`;
+
 export const sendContactEnquiry = createServerFn({ method: "POST" })
   .validator((data: unknown) => {
     return contactEnquirySchema.parse(data);
@@ -30,11 +38,9 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
   .handler(async ({ data }): Promise<ContactEnquiryResponse> => {
     const timestamp = new Date().toISOString();
     const randomHex = Math.random().toString(36).substring(2, 7).toUpperCase();
-    const referenceId = `VT-2026-ENQ-${randomHex}`;
+    const referenceId = `RP-2026-ENQ-${randomHex}`;
 
-    const tradeDeskEmail = process.env["CONTACT_EMAIL"] || company.email;
-    const resendApiKey = process.env["RESEND_API_KEY"];
-    const webhookUrl = process.env["CONTACT_WEBHOOK_URL"];
+    const tradeDeskEmail = company.email;
 
     console.log("=================================================");
     console.log(`[REDITION TRADE DESK] NEW ENQUIRY RECEIVED: ${referenceId}`);
@@ -49,108 +55,39 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
 
     let deliveryStatus: "sent" | "simulated" = "simulated";
 
-    // 1. If Resend API key is provided, send real emails to both client and trade desk
-    if (resendApiKey) {
-      try {
-        // Send email to Trade Desk
-        await fetch("https://api.resend.com/emails", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${resendApiKey}`,
-          },
-          body: JSON.stringify({
-            from: "Redition Trade Desk <notifications@resend.dev>",
-            to: [tradeDeskEmail],
-            reply_to: data.email,
-            subject: `[Trade Desk Enquiry] ${data.enquiryType} - ${data.organisation} (${referenceId})`,
-            html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0;">
-                <div style="background-color: #0b1a30; color: #ffffff; padding: 16px; margin-bottom: 20px;">
-                  <h2 style="margin: 0; font-size: 18px; letter-spacing: 1px;">REDITION PHARMA LTD.</h2>
-                  <p style="margin: 4px 0 0 0; font-size: 12px; color: #14b8a6;">INSTITUTIONAL TRADE DESK</p>
-                </div>
-                <h3 style="color: #0b1a30; margin-top: 0;">New Client Enquiry [Ref: ${referenceId}]</h3>
-                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-                  <tr><td style="padding: 8px 0; color: #64748b; width: 140px;">Reference ID:</td><td style="font-weight: bold; color: #0b1a30;">${referenceId}</td></tr>
-                  <tr><td style="padding: 8px 0; color: #64748b;">Client Name:</td><td style="font-weight: bold; color: #0b1a30;">${data.fullName}</td></tr>
-                  <tr><td style="padding: 8px 0; color: #64748b;">Organisation:</td><td style="font-weight: bold; color: #0b1a30;">${data.organisation}</td></tr>
-                  <tr><td style="padding: 8px 0; color: #64748b;">Email:</td><td><a href="mailto:${data.email}">${data.email}</a></td></tr>
-                  <tr><td style="padding: 8px 0; color: #64748b;">Phone:</td><td>${data.phone || "N/A"}</td></tr>
-                  <tr><td style="padding: 8px 0; color: #64748b;">Enquiry Type:</td><td style="color: #0f766e; font-weight: bold;">${data.enquiryType}</td></tr>
-                </table>
-                <div style="background-color: #f8fafc; border-left: 4px solid #14b8a6; padding: 12px 16px; margin-bottom: 20px;">
-                  <strong style="color: #334155; font-size: 13px;">Requirement Details:</strong>
-                  <p style="margin: 8px 0 0 0; color: #0f172a; white-space: pre-wrap;">${data.message}</p>
-                </div>
-                <p style="font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 12px;">
-                  Submitted on ${timestamp} via Redition Web Portal.
-                </p>
-              </div>
-            `,
-          }),
-        });
+    try {
+      const res = await fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[Trade Desk Enquiry] ${data.enquiryType} - ${data.organisation} (${referenceId})`,
+          _replyto: data.email,
+          _template: "table",
+          "Reference ID": referenceId,
+          "Client Name": data.fullName,
+          Organisation: data.organisation,
+          "Client Email": data.email,
+          Phone: data.phone || "Not provided",
+          "Enquiry Type": data.enquiryType,
+          "Requirement Details": data.message,
+          "Submitted At": timestamp,
+        }),
+      });
 
-        // Send confirmation email to the client
-        await fetch("https://api.resend.com/emails", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${resendApiKey}`,
-          },
-          body: JSON.stringify({
-            from: "Redition Pharma <notifications@resend.dev>",
-            to: [data.email],
-            reply_to: tradeDeskEmail,
-            subject: `Enquiry Acknowledgement [${referenceId}] - Redition Pharma`,
-            html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0;">
-                <div style="background-color: #0b1a30; color: #ffffff; padding: 16px; margin-bottom: 20px;">
-                  <h2 style="margin: 0; font-size: 18px; letter-spacing: 1px;">REDITION PHARMA LTD.</h2>
-                  <p style="margin: 4px 0 0 0; font-size: 12px; color: #14b8a6;">INSTITUTIONAL TRADE & SUPPLY DESK</p>
-                </div>
-                <p style="color: #0b1a30; font-size: 15px;">Dear ${data.fullName},</p>
-                <p style="color: #334155; line-height: 1.6;">
-                  Thank you for contacting Redition Pharma Ltd. We have officially registered your enquiry under Reference Number <strong>${referenceId}</strong>.
-                </p>
-                <div style="background-color: #f0fdfa; border: 1px solid #ccfbf1; padding: 14px; margin: 20px 0;">
-                  <p style="margin: 0 0 6px 0; font-size: 12px; font-weight: bold; color: #0f766e; text-transform: uppercase;">Enquiry Summary</p>
-                  <p style="margin: 3px 0; font-size: 13px; color: #134e4a;"><strong>Organisation:</strong> ${data.organisation}</p>
-                  <p style="margin: 3px 0; font-size: 13px; color: #134e4a;"><strong>Enquiry Classification:</strong> ${data.enquiryType}</p>
-                  <p style="margin: 3px 0; font-size: 13px; color: #134e4a;"><strong>SLA Response Window:</strong> Within 1 working day (24 hours)</p>
-                </div>
-                <p style="color: #334155; line-height: 1.6; font-size: 13px;">
-                  Our trade desk officer will review your dossier, tender, or commercial supply requirements and follow up with commercial rate-contracts or technical COA documents.
-                </p>
-                <p style="color: #64748b; font-size: 12px; margin-top: 24px; border-top: 1px solid #e2e8f0; padding-top: 12px;">
-                  For urgent hospital supply or urgent tender deadlines, call our direct line: ${company.phone} or reply directly to ${tradeDeskEmail}.
-                </p>
-              </div>
-            `,
-          }),
-        });
-
+      const result = (await res.json()) as { success?: string };
+      if (result.success === "true" || res.ok) {
         deliveryStatus = "sent";
-      } catch (err) {
-        console.error("[REDITION] Failed to send email via Resend API:", err);
+        console.log(
+          `[REDITION] ✅ Email sent via FormSubmit.co to ${tradeDeskEmail}`,
+        );
+      } else {
+        console.error("[REDITION] FormSubmit response:", result);
       }
-    }
-
-    // 2. If generic Webhook is configured, forward payload
-    if (webhookUrl) {
-      try {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            referenceId,
-            timestamp,
-            ...data,
-          }),
-        });
-      } catch (err) {
-        console.error("[REDITION] Failed to post to webhook:", err);
-      }
+    } catch (err) {
+      console.error("[REDITION] Failed to send via FormSubmit.co:", err);
     }
 
     return {

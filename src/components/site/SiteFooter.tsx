@@ -63,6 +63,15 @@ export function SiteFooter() {
             </li>
             <li>
               <a
+                href={`tel:${company.phone2.replace(/\s/g, "")}`}
+                className="hover:text-teal inline-flex items-center gap-2 transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5 text-teal shrink-0" />
+                <span>{company.phone2}</span>
+              </a>
+            </li>
+            <li>
+              <a
                 href={`mailto:${company.email}`}
                 className="hover:text-teal inline-flex items-center gap-2 transition-colors"
               >
@@ -81,6 +90,43 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
+      {/* Verified Plant & Regulatory Accreditations Strip */}
+      <div className="border-t border-navy-foreground/10 bg-black/20 py-5">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-teal">
+              Verified Manufacturing &amp; Licensing:
+            </span>
+            <div className="flex items-center gap-2 rounded-lg bg-white p-1.5 shadow-2xs">
+              <img
+                src="/images/certifications/wyyne-healthcare-whogmp-badge.png"
+                alt="Wyyne Healthcare (WHO-GMP) An ISO 9001:2015 & IAF Certified Company"
+                width={492}
+                height={98}
+                className="h-7 sm:h-8 w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex items-center gap-2 rounded-lg bg-white px-2.5 py-1.5 shadow-2xs">
+              <img
+                src="/images/certifications/fssai-logo.png"
+                alt="FSSAI"
+                width={180}
+                height={88}
+                className="h-6 sm:h-7 w-auto object-contain"
+                loading="lazy"
+              />
+              <span className="border-l border-slate-300 pl-2 font-mono text-[11px] font-bold text-slate-900">
+                Lic. {company.fssai}
+              </span>
+            </div>
+          </div>
+          <p className="text-[11px] text-navy-foreground/60">
+            WHO-GMP · Revised Schedule M · ISO 9001:2015 · IAF Accredited
+          </p>
+        </div>
+      </div>
+
       <div className="border-t border-navy-foreground/10">
         <p className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 py-5 text-xs text-navy-foreground/60">
           © 2026 Redition Pharma Ltd. All rights reserved. WHO-GMP Schedule M
