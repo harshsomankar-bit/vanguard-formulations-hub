@@ -82,12 +82,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "WHO-GMP Schedule M certified pharmaceutical formulations for institutional hospital supply and PCD distribution.",
+          "WHO-GMP Schedule M certified pharmaceutical formulations for institutional hospital supply and nationwide healthcare distribution.",
       },
       {
         name: "keywords",
         content:
-          "pharmaceutical formulations, WHO-GMP certified, Schedule M manufacturer, hospital tenders, PCD pharma franchise, Surat pharma company, Gujarat, tablets, health supplements",
+          "pharmaceutical formulations, WHO-GMP certified, Schedule M manufacturer, hospital tenders, healthcare distribution, Surat pharma company, Gujarat, tablets, health supplements",
       },
       { name: "author", content: "Redition Pharma Ltd." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
@@ -118,10 +118,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap",
       },
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=10" },
-      { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon.png?v=10" },
-      { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico?v=10" },
-      { rel: "apple-touch-icon", href: "/apple-touch-icon.png?v=10" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=11" },
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon.png?v=11" },
+      { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico?v=11" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png?v=11" },
     ],
   }),
 
@@ -135,11 +135,11 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png?v=10" />
-        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=10" />
-        <link rel="shortcut icon" href="/favicon.ico?v=10" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=10" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=11" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png?v=11" />
+        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=11" />
+        <link rel="shortcut icon" href="/favicon.ico?v=11" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=11" />
         <HeadContent />
       </head>
       <body>
