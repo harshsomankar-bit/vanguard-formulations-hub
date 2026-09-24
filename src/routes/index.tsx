@@ -500,7 +500,7 @@ function Index() {
             </div>
 
             {/* Tier 02: Sterile HVAC Cleanrooms & Alu-Alu Blistering */}
-            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-blue-500/60 hover:shadow-lg overflow-hidden">
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-teal/60 hover:shadow-lg overflow-hidden">
               {/* Facility Photographic Header */}
               <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
                 <img
@@ -514,8 +514,8 @@ function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-blue-400 border border-blue-400/40">
-                    <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-teal border border-teal/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal animate-pulse" />
                     TIER 02
                   </span>
                   <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
@@ -532,7 +532,7 @@ function Index() {
               {/* Card Body */}
               <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
                 <div>
-                  <h3 className="font-display text-base font-bold text-navy group-hover:text-blue-600 transition-colors leading-snug">
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-clinical transition-colors leading-snug">
                     Class 100 Cleanroom Automation
                   </h3>
                   <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
@@ -542,18 +542,18 @@ function Index() {
 
                 <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
                   <span className="text-muted-foreground font-medium">Air Filtration:</span>
-                  <span className="font-mono font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">WHO-GMP Class 100</span>
+                  <span className="font-mono font-bold text-teal bg-teal/10 border border-teal/20 px-2 py-0.5 rounded">WHO-GMP Class 100</span>
                 </div>
               </div>
             </div>
 
             {/* Tier 03: Multi-Point Dissolution & Stability */}
-            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-indigo-500/60 hover:shadow-lg overflow-hidden">
-              {/* Facility Photographic Header */}
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-teal/60 hover:shadow-lg overflow-hidden">
+              {/* Facility Photographic Header - Dedicated Dissolution & Climate Chamber Photo */}
               <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
                 <img
-                  src="/images/pharma-qc-lab.jpg"
-                  alt="Dissolution Testing and Stability Profiling"
+                  src="/images/pharma-dissolution-stability.jpg"
+                  alt="Multi-Point Tablet Dissolution Tester and ICH Climate Chamber"
                   width={640}
                   height={360}
                   decoding="async"
@@ -562,8 +562,8 @@ function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-indigo-400 border border-indigo-400/40">
-                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-teal border border-teal/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal animate-pulse" />
                     TIER 03
                   </span>
                   <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
@@ -580,7 +580,7 @@ function Index() {
               {/* Card Body */}
               <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
                 <div>
-                  <h3 className="font-display text-base font-bold text-navy group-hover:text-indigo-600 transition-colors leading-snug">
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-clinical transition-colors leading-snug">
                     Multi-Point Dissolution &amp; Stability
                   </h3>
                   <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
@@ -590,13 +590,13 @@ function Index() {
 
                 <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
                   <span className="text-muted-foreground font-medium">Climatic Zone:</span>
-                  <span className="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Zone IVb (30°C/75% RH)</span>
+                  <span className="font-mono font-bold text-teal bg-teal/10 border border-teal/20 px-2 py-0.5 rounded">Zone IVb (30°C/75% RH)</span>
                 </div>
               </div>
             </div>
 
             {/* Tier 04: Batch COA & Regulatory Release */}
-            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-emerald-600/60 hover:shadow-lg overflow-hidden">
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-teal/60 hover:shadow-lg overflow-hidden">
               {/* Facility Photographic Header */}
               <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
                 <img
@@ -610,8 +610,8 @@ function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-emerald-400 border border-emerald-400/40">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-teal border border-teal/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal animate-pulse" />
                     TIER 04
                   </span>
                   <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
@@ -628,7 +628,7 @@ function Index() {
               {/* Card Body */}
               <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
                 <div>
-                  <h3 className="font-display text-base font-bold text-navy group-hover:text-emerald-700 transition-colors leading-snug">
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-clinical transition-colors leading-snug">
                     Statutory Release with Batch COA
                   </h3>
                   <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
@@ -638,7 +638,7 @@ function Index() {
 
                 <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
                   <span className="text-muted-foreground font-medium">Documentation:</span>
-                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">100% Batch Released</span>
+                  <span className="font-mono font-bold text-teal bg-teal/10 border border-teal/20 px-2 py-0.5 rounded">100% Batch Released</span>
                 </div>
               </div>
             </div>
@@ -662,7 +662,7 @@ function Index() {
                 <div className="h-8 w-px bg-border hidden sm:block" />
 
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-blue-500/30 bg-blue-50/50 text-blue-600">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
                     <Award className="h-5 w-5" />
                   </div>
                   <div>
@@ -674,7 +674,7 @@ function Index() {
                 <div className="h-8 w-px bg-border hidden sm:block" />
 
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-indigo-500/30 bg-indigo-50/50 text-indigo-600">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
                     <FileCheck2 className="h-5 w-5" />
                   </div>
                   <div>
