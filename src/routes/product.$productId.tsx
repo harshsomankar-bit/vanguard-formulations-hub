@@ -244,7 +244,7 @@ function ProductPage() {
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-2">
         <div>
           <h2 className="font-display text-2xl font-extrabold text-navy">
-            Therapeutic Indications
+            Clinical Indications
           </h2>
           <ul className="mt-6 divide-y divide-border border-y border-border">
             {product.indications.map((i) => (
@@ -263,7 +263,7 @@ function ProductPage() {
             <Spec label="Active Ingredient" value={product.activeIngredient} />
             <Spec label="Dosage Form" value={product.dosageForm} />
             <Spec label="Pharmacopoeial Standard" value={product.pharmacopoeia} />
-            <Spec label="Therapeutic Class" value={product.therapeuticClass} />
+            <Spec label="Formulation Category" value={product.therapeuticClass} />
             <Spec label="Administration" value={product.dosageGuide} />
             <Spec label="Packaging Format" value={product.packaging} />
             <Spec

@@ -323,7 +323,7 @@ function Index() {
           <div>
             <p className="label-caps text-teal text-xs">Formulations Portfolio</p>
             <h2 className="mt-2 font-display text-2xl font-extrabold text-navy sm:text-3xl">
-              Therapeutic range with full pharmacopoeial dossiers
+              Formulations portfolio with complete dossiers
             </h2>
           </div>
           <span className="text-xs text-muted-foreground font-mono">
@@ -442,7 +442,7 @@ function Index() {
                   Advancing Pharmaceutical Precision from Vadodara to Pan-India Healthcare
                 </h2>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                  Operating from GIDC Industrial Estate, Vadodara (Gujarat), Redition Pharma Ltd. manufactures certified oral solutions, pediatric suspensions, and therapeutic syrups under computerized HVAC air classification, automated sterile compounding, and dedicated analytical quality release.
+                  Operating with certified facilities, Redition Pharma Ltd. delivers precision solid oral dosage tablets and pediatric healthcare formulations under computerized HVAC air classification, automated blister packaging, and dedicated analytical quality release.
                 </p>
               </div>
 
