@@ -597,10 +597,10 @@ function Index() {
                   WHO-GMP &amp; Schedule M Certified Manufacturing Plant
                 </p>
                 <h2 className="mt-1.5 font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-navy leading-snug">
-                  Advancing Pharmaceutical Precision from Vadodara to Pan-India Healthcare
+                  Advancing Pharmaceutical Precision from Surat to Pan-India Healthcare
                 </h2>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                  Founded and led by <strong>{company.founder}</strong>, Redition Pharma Ltd. delivers precision solid oral dosage tablets and pediatric healthcare formulations under computerized HVAC air classification, automated blister packaging, and dedicated analytical quality release.
+                  Founded and led by <strong>{company.founder}</strong>, Redition Pharma Ltd. delivers advanced molecular formulations — including neurovascular tablets (ADNOSINE-108, MACSINE-109), sustained-release analgesics (PREDY-NT), microcirculation complexes (QLONG-GOLD), and pediatric liquid suspensions (ADNOCAR-DS Syrup) — under computerized cleanroom standards, automated Alu-Alu blister packaging, and stringent monograph batch release.
                 </p>
                 <div className="mt-3 inline-flex items-center gap-2 rounded-lg border border-teal/20 bg-teal/5 px-3 py-1.5 text-xs text-navy">
                   <User className="h-3.5 w-3.5 text-teal shrink-0" />
@@ -638,17 +638,17 @@ function Index() {
                   <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Class 100 Cleanrooms</h4>
                 </div>
                 <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
-                  HEPA 0.3µm filtration, differential pressure zoning, and continuous temperature/RH tracking.
+                  HEPA 0.3µm air handling, differential pressure zoning, and positive-pressure environmental controls for sensitive nucleotides and dipeptides.
                 </p>
               </div>
 
               <div className="rounded-lg border border-border bg-background p-3.5 shadow-2xs">
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-xs font-bold text-blue-600">02</span>
-                  <h4 className="font-display text-xs sm:text-sm font-bold text-navy">100,000L Compounding</h4>
+                  <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Precision Compounding</h4>
                 </div>
                 <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
-                  Electropolished SS 316L reactors with high-shear homogenization and closed-loop transfer.
+                  Electropolished SS 316L pharmaceutical vessels with high-shear homogenization for stable lipid emulsions like ADNOCAR-DS Syrup.
                 </p>
               </div>
 
@@ -658,7 +658,7 @@ function Index() {
                   <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Analytical QA/QC Lab</h4>
                 </div>
                 <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
-                  In-house HPLC assay, UV-Vis spectrophotometry, ICP-MS heavy metals, and bioburden testing.
+                  In-house HPLC assay, USP dissolution kinetics for PREDY-NT, ICP-MS heavy metals, and microbiological bioburden release.
                 </p>
               </div>
 
@@ -668,7 +668,7 @@ function Index() {
                   <h4 className="font-display text-xs sm:text-sm font-bold text-navy">Dossiers &amp; 100% COA</h4>
                 </div>
                 <p className="mt-1.5 text-[11px] leading-relaxed text-muted-foreground">
-                  Full CTD dossier support, Zone IVb stability testing (24–36 months), and batch COA release.
+                  Complete technical monographs, Zone IVb stability validation (24–36 months), and batch-wise COA documentation with every order.
                 </p>
               </div>
             </div>
