@@ -6,7 +6,7 @@ import { company } from "@/data/products";
 const enquiryTypes = [
   "Institutional / Hospital Supply",
   "Government Tender",
-  "PCD / Franchise Distribution",
+  "Pharmacy & Wholesale Distribution",
   "Product Dossier & COA Request",
   "General Enquiry",
 ];

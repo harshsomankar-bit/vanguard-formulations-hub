@@ -454,101 +454,185 @@ function Index() {
             </p>
           </div>
 
-          {/* 4-Tier Interactive Clinical Cards Grid */}
-          <div className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          {/* 4-Tier Photographic Clinical Cards Grid */}
+          <div className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {/* Tier 01: Raw API Monograph & Bioactive Assay */}
-            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-teal hover:shadow-md">
-              <div>
-                <div className="flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal/10 text-teal group-hover:bg-teal group-hover:text-white transition-colors">
-                    <Microscope className="h-5 w-5" />
-                  </div>
-                  <span className="font-mono text-xs font-bold text-teal bg-teal/10 px-2 py-0.5 rounded-full">
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-teal/60 hover:shadow-lg overflow-hidden">
+              {/* Facility Photographic Header */}
+              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="/images/quality-raw-materials.jpg"
+                  alt="HPLC Active Assay Testing on Raw APIs"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-teal border border-teal/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal animate-pulse" />
                     TIER 01
                   </span>
+                  <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
+                    HPLC Assay
+                  </span>
                 </div>
-                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-clinical transition-colors">
-                  100% Tested Actives &amp; HPLC Assay
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  Pre-production assay of raw APIs and bioactive precursors — including Adenosine 5-Monophosphate (AMP), Decarboxylated L-Arginine, Pregabalin, EPA/DHA, and Benfotiamine — ensuring 100% monograph purity.
-                </p>
+                <div className="absolute bottom-2.5 left-3 right-3">
+                  <p className="text-[11px] font-medium text-white/80 tracking-wide uppercase">
+                    Analytical Ingestion Screening
+                  </p>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
-                <span className="text-muted-foreground">Monograph Benchmark:</span>
-                <span className="text-teal font-mono">≥ 99.5% Assay</span>
+
+              {/* Card Body */}
+              <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+                <div>
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-clinical transition-colors leading-snug">
+                    100% Tested Actives &amp; HPLC Assay
+                  </h3>
+                  <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
+                    Pre-production assay of raw APIs and bioactive precursors — including Adenosine 5-Monophosphate (AMP), Decarboxylated L-Arginine, Pregabalin, EPA/DHA, and Benfotiamine — ensuring 100% monograph purity.
+                  </p>
+                </div>
+
+                <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
+                  <span className="text-muted-foreground font-medium">Monograph Assay:</span>
+                  <span className="font-mono font-bold text-teal bg-teal/10 px-2 py-0.5 rounded">≥ 99.5% Purity</span>
+                </div>
               </div>
             </div>
 
             {/* Tier 02: Sterile HVAC Cleanrooms & Alu-Alu Blistering */}
-            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-blue-500 hover:shadow-md">
-              <div>
-                <div className="flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <Building2 className="h-5 w-5" />
-                  </div>
-                  <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-blue-500/60 hover:shadow-lg overflow-hidden">
+              {/* Facility Photographic Header */}
+              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="/images/pharma-cleanroom.jpg"
+                  alt="ISO 5 Sterile Compounding Cleanroom"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-blue-400 border border-blue-400/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
                     TIER 02
                   </span>
+                  <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
+                    ISO Class 5
+                  </span>
                 </div>
-                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-blue-600 transition-colors">
-                  Class 100 Cleanroom Automation
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  Solid oral dose and oral liquid compounding in Grade C/D cleanrooms with HEPA 0.3µm filtration, differential pressure zoning, and automated moisture-barrier Alu-Alu packaging to avoid contamination.
-                </p>
+                <div className="absolute bottom-2.5 left-3 right-3">
+                  <p className="text-[11px] font-medium text-white/80 tracking-wide uppercase">
+                    Sterile Compounding Suites
+                  </p>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
-                <span className="text-muted-foreground">Air Classification:</span>
-                <span className="text-blue-600 font-mono">WHO-GMP Class 100</span>
+
+              {/* Card Body */}
+              <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+                <div>
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-blue-600 transition-colors leading-snug">
+                    Class 100 Cleanroom Automation
+                  </h3>
+                  <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
+                    Solid oral dose and oral liquid compounding in Grade C/D cleanrooms with HEPA 0.3µm filtration, differential pressure zoning, and automated moisture-barrier Alu-Alu packaging to avoid contamination.
+                  </p>
+                </div>
+
+                <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
+                  <span className="text-muted-foreground font-medium">Air Filtration:</span>
+                  <span className="font-mono font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">WHO-GMP Class 100</span>
+                </div>
               </div>
             </div>
 
             {/* Tier 03: Multi-Point Dissolution & Stability */}
-            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-indigo-500 hover:shadow-md">
-              <div>
-                <div className="flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                    <Activity className="h-5 w-5" />
-                  </div>
-                  <span className="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full">
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-indigo-500/60 hover:shadow-lg overflow-hidden">
+              {/* Facility Photographic Header */}
+              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="/images/pharma-qc-lab.jpg"
+                  alt="Dissolution Testing and Stability Profiling"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-indigo-400 border border-indigo-400/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
                     TIER 03
                   </span>
+                  <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
+                    Dissolution Profiling
+                  </span>
                 </div>
-                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-indigo-600 transition-colors">
-                  Multi-Point Dissolution &amp; Stability
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  Every batch — including sustained-release dissolution profiling for PREDY-NT, stability profiling for ADNOSINE-108, and oxidation assays for ADNOCAR-DS — is validated under Zone IVb climate chambers.
-                </p>
+                <div className="absolute bottom-2.5 left-3 right-3">
+                  <p className="text-[11px] font-medium text-white/80 tracking-wide uppercase">
+                    Pharmacokinetic Validation
+                  </p>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
-                <span className="text-muted-foreground">Climatic Zone:</span>
-                <span className="text-indigo-600 font-mono">Zone IVb (30°C/75% RH)</span>
+
+              {/* Card Body */}
+              <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+                <div>
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-indigo-600 transition-colors leading-snug">
+                    Multi-Point Dissolution &amp; Stability
+                  </h3>
+                  <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
+                    Every batch — including sustained-release dissolution profiling for PREDY-NT, stability profiling for ADNOSINE-108, and oxidation assays for ADNOCAR-DS — is validated under Zone IVb climate chambers.
+                  </p>
+                </div>
+
+                <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
+                  <span className="text-muted-foreground font-medium">Climatic Zone:</span>
+                  <span className="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Zone IVb (30°C/75% RH)</span>
+                </div>
               </div>
             </div>
 
             {/* Tier 04: Batch COA & Regulatory Release */}
-            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-emerald-600 hover:shadow-md">
-              <div>
-                <div className="flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                    <FileCheck2 className="h-5 w-5" />
-                  </div>
-                  <span className="font-mono text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+            <div className="group flex flex-col rounded-2xl border border-border bg-card shadow-xs transition-all duration-300 hover:border-emerald-600/60 hover:shadow-lg overflow-hidden">
+              {/* Facility Photographic Header */}
+              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900">
+                <img
+                  src="/images/quality-batch-coa.jpg"
+                  alt="Verified Certificate of Analysis Regulatory Release"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/85 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-bold tracking-wider text-emerald-400 border border-emerald-400/40">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     TIER 04
                   </span>
+                  <span className="rounded-md bg-black/40 backdrop-blur-md px-2 py-0.5 text-[10px] font-mono text-white/90 border border-white/20">
+                    Schedule M
+                  </span>
                 </div>
-                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-emerald-600 transition-colors">
-                  Statutory Release with Batch COA
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  Complete compliance with revised Schedule M and FSSAI statutory standards. Official Certificate of Analysis (COA) documents heavy metal ICP-MS screening, bioburden clearance, and assay potency with each dispatch.
-                </p>
+                <div className="absolute bottom-2.5 left-3 right-3">
+                  <p className="text-[11px] font-medium text-white/80 tracking-wide uppercase">
+                    Statutory Batch Clearance
+                  </p>
+                </div>
               </div>
-              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
-                <span className="text-muted-foreground">Documentation:</span>
-                <span className="text-emerald-700 font-mono">100% Batch Released</span>
+
+              {/* Card Body */}
+              <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+                <div>
+                  <h3 className="font-display text-base font-bold text-navy group-hover:text-emerald-700 transition-colors leading-snug">
+                    Statutory Release with Batch COA
+                  </h3>
+                  <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
+                    Complete compliance with revised Schedule M and FSSAI statutory standards. Official Certificate of Analysis (COA) documents heavy metal ICP-MS screening, bioburden clearance, and assay potency with each dispatch.
+                  </p>
+                </div>
+
+                <div className="mt-5 pt-3.5 border-t border-border/80 flex items-center justify-between text-[11px]">
+                  <span className="text-muted-foreground font-medium">Documentation:</span>
+                  <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">100% Batch Released</span>
+                </div>
               </div>
             </div>
           </div>
@@ -558,8 +642,8 @@ function Index() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               {/* Left Badges */}
               <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal text-white">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
                   <div>
@@ -570,8 +654,8 @@ function Index() {
 
                 <div className="h-8 w-px bg-border hidden sm:block" />
 
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-blue-500/30 bg-blue-50/50 text-blue-600">
                     <Award className="h-5 w-5" />
                   </div>
                   <div>
@@ -582,8 +666,8 @@ function Index() {
 
                 <div className="h-8 w-px bg-border hidden sm:block" />
 
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-white">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-indigo-500/30 bg-indigo-50/50 text-indigo-600">
                     <FileCheck2 className="h-5 w-5" />
                   </div>
                   <div>

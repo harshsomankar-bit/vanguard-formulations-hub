@@ -1,6 +1,6 @@
 # Redition Pharma Ltd.
 
-> WHO-GMP Schedule M certified pharmaceutical formulations manufacturer specializing in neurovascular formulations, neuropathic analgesics, metabolic remodeling complexes, and adult vitality tablets for institutional hospital supply and pan-India PCD distribution.
+> WHO-GMP Schedule M certified pharmaceutical formulations manufacturer specializing in neurovascular formulations, neuropathic analgesics, metabolic remodeling complexes, and adult vitality tablets for institutional hospital supply and nationwide healthcare distribution.
 
 ## Company Overview
 - **Legal Entity**: Redition Pharma Ltd.
@@ -13,7 +13,7 @@
 
 ## Core Capabilities & Services
 - **Institutional Hospital Supply**: Rate contracts, hospital formulary tie-ups, multi-tier tenders, and dedicated institutional batch reserve.
-- **PCD Pharma Franchise**: Monopoly district rights, promotional inputs, marketing dossiers, and protected pricing across India.
+- **Nationwide Healthcare Distribution**: Commercial pharmacy supply, tender procurement corridors, and direct institutional delivery.
 - **Quality & Analytics**: In-house HPLC monograph testing, automated visual inspection, real-time differential pressure cleanroom monitoring, and batch Certificate of Analysis (COA) issued for 100% of shipments.
 - **Logistics**: Validated cold-chain and temperature-controlled dispatch across pan-India transport corridors.
 
