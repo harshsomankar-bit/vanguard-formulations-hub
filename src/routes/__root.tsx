@@ -130,7 +130,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preload",
         as: "image",
-        href: "/pharmacy-counter-static.jpg",
+        href: "/pharmacy-counter.gif",
         fetchPriority: "high",
       },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=11" },
