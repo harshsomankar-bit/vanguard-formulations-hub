@@ -195,8 +195,9 @@ function Index() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      {/* Hero Section */}
-      <section id="hero" className="relative overflow-hidden border-b border-border bg-gradient-to-b from-slate-50 via-teal-50/15 to-blue-50/20">
+      <main id="main-content">
+        {/* Hero Section */}
+        <section id="hero" className="relative overflow-hidden border-b border-border bg-gradient-to-b from-slate-50 via-teal-50/15 to-blue-50/20">
         <div id="overview" className="sr-only" aria-hidden="true" />
         {/* Subtle grid lines background overlay */}
         <div className="pointer-events-none absolute inset-0 grid-lines opacity-40" aria-hidden />
@@ -687,8 +688,15 @@ function Index() {
 
                 {/* Batch-Wise Release */}
                 <div className="hidden xl:flex items-center gap-2.5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/5 text-teal">
-                    <FileCheck2 className="h-5 w-5" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-teal/30 bg-white p-1 shadow-2xs">
+                    <img
+                      src="/images/certifications/batch-released-icon.jpg"
+                      alt="100% Batch Released COA Verified"
+                      width={40}
+                      height={40}
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <div>
                     <p className="font-display text-xs font-bold text-navy">100% Batch Released</p>
@@ -966,6 +974,7 @@ function Index() {
           <ContactForm />
         </div>
       </section>
+      </main>
 
       <SiteFooter />
     </div>

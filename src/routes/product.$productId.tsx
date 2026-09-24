@@ -140,7 +140,8 @@ function ProductPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
-      <nav className="border-b border-border bg-surface">
+      <main id="main-content">
+        <nav className="border-b border-border bg-surface">
         <div className="mx-auto max-w-7xl px-6 py-3 text-xs text-muted-foreground">
           <Link to="/" className="hover:text-clinical">
             Home
@@ -420,6 +421,7 @@ function ProductPage() {
           />
         </div>
       </section>
+      </main>
 
       <SiteFooter />
     </div>

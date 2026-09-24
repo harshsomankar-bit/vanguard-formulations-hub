@@ -4,8 +4,8 @@ export function MedicalTechHeroAnimation() {
       {/* Animation Canvas */}
       <div className="relative aspect-square w-full mix-blend-multiply select-none">
         <img
-          src="/pharmacy-counter.gif"
-          alt="Redition Pharma Pharmacy Dispensing Animation"
+          src="/pharmacy-counter-static.jpg"
+          alt="Redition Pharma Pharmacy Dispensing Consultation"
           width={440}
           height={440}
           fetchPriority="high"
