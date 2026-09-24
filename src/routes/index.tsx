@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
 import { MedicalTechHeroAnimation } from "@/components/site/MedicalTechHeroAnimation";
 import { InstitutionalFaq, institutionalFaqs } from "@/components/site/InstitutionalFaq";
-import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin, User, MessageCircle } from "lucide-react";
+import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin, User, MessageCircle, FileCheck2, Award, Sparkles, Activity } from "lucide-react";
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
@@ -432,127 +432,169 @@ function Index() {
         </div>
       </section>
 
-      {/* Quality Policy & Assurance Section (Matches Reference Design & Formulations Analysis) */}
-      <section id="quality" className="border-t border-border bg-white scroll-mt-16 py-12 sm:py-16 md:py-20">
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 items-center">
-            {/* Left: Cleanroom Manufacturing Image with Floating Quality Badge */}
-            <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-md">
-                <div className="relative aspect-4/3 sm:aspect-1/1 w-full overflow-hidden">
-                  <img
-                    src="/images/pharma-packaging-line.jpg"
-                    alt="Redition Pharma WHO-GMP Certified High-Speed Cleanroom & Blister Packaging Line"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                    loading="lazy"
-                  />
-                  {/* Subtle cleanroom overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+      {/* Bespoke Pharmacopoeial Quality & Clinical Assurance Hub (Integrated with Website Theme) */}
+      <section id="quality" className="relative border-t border-border bg-slate-50/60 scroll-mt-16 py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Subtle grid background matching site styling */}
+        <div className="pointer-events-none absolute inset-0 grid-lines opacity-25" aria-hidden />
 
-                  {/* Floating Badge at Bottom (Matches image) */}
-                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between gap-2 rounded-xl border border-white/60 bg-white/95 p-3 shadow-lg backdrop-blur-md">
-                    <div className="flex items-center gap-2.5">
-                      <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-600 text-white shadow-xs">
-                        <ShieldCheck className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <p className="font-display text-xs sm:text-sm font-bold text-slate-900 leading-tight">
-                          WHO-GMP Certified
-                        </p>
-                        <p className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">
-                          100% Tested &amp; Safe Formulations
-                        </p>
-                      </div>
-                    </div>
-                    <span className="shrink-0 rounded-full border border-emerald-300 bg-emerald-50 px-2.5 py-1 text-[10px] sm:text-xs font-bold text-emerald-800">
-                      Govt Approved
-                    </span>
+        <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5">
+              <span className="h-0.5 w-6 bg-teal rounded-full" />
+              <span className="label-caps text-teal text-xs font-bold tracking-wider">
+                PHARMACOPOEIAL QUALITY SYSTEM
+              </span>
+            </div>
+            <h2 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight leading-tight">
+              4-Tier Analytical Validation &amp; Safety Release
+            </h2>
+            <p className="mt-3 text-xs sm:text-sm md:text-base leading-relaxed text-muted-foreground">
+              Every pharmaceutical tablet and pediatric liquid suspension from Redition Pharma undergoes rigorous multi-stage qualification — from raw active HPLC assay to continuous Zone IVb stability testing and statutory COA certification.
+            </p>
+          </div>
+
+          {/* 4-Tier Interactive Clinical Cards Grid */}
+          <div className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {/* Tier 01: Raw API Monograph & Bioactive Assay */}
+            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-teal hover:shadow-md">
+              <div>
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal/10 text-teal group-hover:bg-teal group-hover:text-white transition-colors">
+                    <Microscope className="h-5 w-5" />
                   </div>
+                  <span className="font-mono text-xs font-bold text-teal bg-teal/10 px-2 py-0.5 rounded-full">
+                    TIER 01
+                  </span>
                 </div>
+                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-clinical transition-colors">
+                  100% Tested Actives &amp; HPLC Assay
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  Pre-production assay of raw APIs and bioactive precursors — including Adenosine 5-Monophosphate (AMP), Decarboxylated L-Arginine, Pregabalin, EPA/DHA, and Benfotiamine — ensuring 100% monograph purity.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
+                <span className="text-muted-foreground">Monograph Benchmark:</span>
+                <span className="text-teal font-mono">≥ 99.5% Assay</span>
               </div>
             </div>
 
-            {/* Right: Quality Promise Narrative & 4 Formulations Analysis Commitments */}
-            <div className="lg:col-span-7 space-y-6">
+            {/* Tier 02: Sterile HVAC Cleanrooms & Alu-Alu Blistering */}
+            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-blue-500 hover:shadow-md">
               <div>
-                <p className="flex items-center gap-2 font-display text-xs sm:text-sm font-bold tracking-widest uppercase text-emerald-700">
-                  <span className="h-0.5 w-6 bg-emerald-600 rounded-full" />
-                  <span>OUR QUALITY PROMISE</span>
-                  <span className="h-0.5 w-6 bg-emerald-600 rounded-full" />
-                </p>
-                <h2 className="mt-2 font-display text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 leading-tight">
-                  How We Ensure Safe &amp; Effective Medicines
-                </h2>
-                <p className="mt-3 text-xs sm:text-sm md:text-base leading-relaxed text-slate-600">
-                  At Redition Pharma, quality is simple and transparent — every single medicine is made with tested pure ingredients in certified clean plants and verified before dispatch.
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <Building2 className="h-5 w-5" />
+                  </div>
+                  <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">
+                    TIER 02
+                  </span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-blue-600 transition-colors">
+                  Class 100 Cleanroom Automation
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  Solid oral dose and oral liquid compounding in Grade C/D cleanrooms with HEPA 0.3µm filtration, differential pressure zoning, and automated moisture-barrier Alu-Alu packaging to avoid contamination.
                 </p>
               </div>
+              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
+                <span className="text-muted-foreground">Air Classification:</span>
+                <span className="text-blue-600 font-mono">WHO-GMP Class 100</span>
+              </div>
+            </div>
 
-              {/* 4 Steps Tailored to Redition Medicines Analysis */}
-              <div className="space-y-4 pt-1">
-                {/* 01: Ingredients Analysis */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
-                    01
+            {/* Tier 03: Multi-Point Dissolution & Stability */}
+            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-indigo-500 hover:shadow-md">
+              <div>
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                    <Activity className="h-5 w-5" />
+                  </div>
+                  <span className="font-mono text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full">
+                    TIER 03
                   </span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-indigo-600 transition-colors">
+                  Multi-Point Dissolution &amp; Stability
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  Every batch — including sustained-release dissolution profiling for PREDY-NT, stability profiling for ADNOSINE-108, and oxidation assays for ADNOCAR-DS — is validated under Zone IVb climate chambers.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
+                <span className="text-muted-foreground">Climatic Zone:</span>
+                <span className="text-indigo-600 font-mono">Zone IVb (30°C/75% RH)</span>
+              </div>
+            </div>
+
+            {/* Tier 04: Batch COA & Regulatory Release */}
+            <div className="group relative flex flex-col justify-between rounded-xl border border-border bg-card p-5 sm:p-6 shadow-xs transition-all hover:border-emerald-600 hover:shadow-md">
+              <div>
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <FileCheck2 className="h-5 w-5" />
+                  </div>
+                  <span className="font-mono text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+                    TIER 04
+                  </span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-navy group-hover:text-emerald-600 transition-colors">
+                  Statutory Release with Batch COA
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  Complete compliance with revised Schedule M and FSSAI statutory standards. Official Certificate of Analysis (COA) documents heavy metal ICP-MS screening, bioburden clearance, and assay potency with each dispatch.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-semibold text-navy">
+                <span className="text-muted-foreground">Documentation:</span>
+                <span className="text-emerald-700 font-mono">100% Batch Released</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Banner: Quality Proof Bar + Request COA CTAs */}
+          <div className="mt-8 rounded-2xl border border-border bg-card p-5 sm:p-7 shadow-xs">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              {/* Left Badges */}
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal text-white">
+                    <ShieldCheck className="h-5 w-5" />
+                  </div>
                   <div>
-                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
-                      100% Tested Pure Ingredients &amp; Bioactive Assay
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
-                      We check and test all raw materials and active pharmaceutical ingredients — including Adenosine 5-Monophosphate (AMP), Decarboxylated L-Arginine, Pregabalin, EPA/DHA, and Benfotiamine — in our laboratory before manufacturing starts, ensuring maximum purity and potency.
-                    </p>
+                    <p className="font-display text-xs font-bold text-navy">WHO-GMP Compliant</p>
+                    <p className="text-[10px] text-muted-foreground">Revised Schedule M Plant</p>
                   </div>
                 </div>
 
-                {/* 02: Clean & Automated Manufacturing */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
-                    02
-                  </span>
+                <div className="h-8 w-px bg-border hidden sm:block" />
+
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
+                    <Award className="h-5 w-5" />
+                  </div>
                   <div>
-                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
-                      Clean &amp; Automated Manufacturing
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
-                      Produced in sterile WHO-GMP certified cleanrooms with positive-pressure HVAC filtration, automatic rotary tablet compression, and humidity-barrier Alu-Alu blister packaging to completely avoid contamination.
-                    </p>
+                    <p className="font-display text-xs font-bold text-navy">FSSAI Lic. Validated</p>
+                    <p className="text-[10px] text-muted-foreground">Lic No. {company.fssai}</p>
                   </div>
                 </div>
 
-                {/* 03: Every Batch Lab-Tested */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
-                    03
-                  </span>
-                  <div>
-                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
-                      Every Batch Lab-Tested Before Dispatch
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
-                      Finished tablets and oral pediatric liquid formulations (ADNOSINE-108, MACSINE-109, PREDY-NT, QLONG-GOLD, and ADNOCAR-DS) are thoroughly tested via HPLC assay, dissolution rate, and Zone IVb shelf-life stability before commercial release.
-                    </p>
-                  </div>
-                </div>
+                <div className="h-8 w-px bg-border hidden sm:block" />
 
-                {/* 04: Government Approved with COA */}
-                <div className="flex items-start gap-3.5 sm:gap-4">
-                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
-                    04
-                  </span>
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-white">
+                    <FileCheck2 className="h-5 w-5" />
+                  </div>
                   <div>
-                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
-                      Government Approved with Test Reports (COA)
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
-                      Full compliance with FDA, revised Schedule M, and FSSAI statutory standards. We provide official Certificate of Analysis (COA) batch test reports, heavy metal screen, and microbial clearance with every order.
-                    </p>
+                    <p className="font-display text-xs font-bold text-navy">Batch-Wise Release</p>
+                    <p className="text-[10px] text-muted-foreground">HPLC Assay &amp; Microbial COA</p>
                   </div>
                 </div>
               </div>
 
-              {/* Action Buttons matching Reference Image */}
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+              {/* Right Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
                 <a
                   href="#contact"
                   onClick={(e) => {
@@ -564,19 +606,19 @@ function Index() {
                       document.getElementById("cf-name")?.focus();
                     }, 350);
                   }}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 sm:px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-emerald-700 hover:shadow-lg cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-navy px-5 sm:px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-xs transition-all hover:bg-clinical cursor-pointer"
                 >
                   <span>Request Quality Test Report (COA)</span>
                   <span>→</span>
                 </a>
 
                 <a
-                  href="https://wa.me/917987779819?text=Hello%20Redition%20Pharma,%20I%20would%20like%20to%20request%20a%20Quality%20Test%20Report%20(COA)%20and%20monograph%20dossier."
+                  href={`https://wa.me/917987779819?text=${encodeURIComponent("Hello Redition Pharma, I would like to request a Quality Test Report (COA) and batch monograph dossier.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700 hover:text-emerald-700 transition-colors py-2"
+                  className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-xs sm:text-sm font-semibold text-navy hover:border-[#25D366] hover:text-[#128C7E] transition-all"
                 >
-                  <MessageCircle className="h-4 w-4 text-[#25D366] fill-[#25D366]/20" />
+                  <MessageCircle className="h-4 w-4 text-[#25D366]" />
                   <span>Ask Quality Desk on WhatsApp</span>
                 </a>
               </div>
