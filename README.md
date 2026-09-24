@@ -1,17 +1,17 @@
-# Vanguard Clinical Hub
+# Redition Clinical Hub
 
 # MASTER PROMPT: INSTITUTIONAL MEDICAL & PHARMACEUTICAL PRODUCT WEBSITE
 
 You are a Senior Web Engineer, UI/UX Designer, and Technical Healthcare SEO Architect.
 
 Build a modern, high-precision institutional medical and pharmaceutical product website for:
-- Company Name: **Vanguard Therapeutics Ltd.**
-- Brand Identifier: **Vanguard Medical / Vanguard Pharma**
-- Primary Domain: **https://vanguardtherapeutics.com**
+- Company Name: **Redition Pharma Ltd.**
+- Brand Identifier: **Redition Pharma / Redition Pharma**
+- Primary Domain: **https://reditionpharma.com**
 - Business Focus: **WHO-GMP Schedule M Certified Formulations, Institutional Hospital Supply & PCD Distribution**
 - Manufacturing / Corporate Office: **Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010, India**
 - Institutional Hotline / Trade Desk: **+91 98250 12345**
-- Official Regulatory / Sales Email: **trade@vanguardtherapeutics.com**
+- Official Regulatory / Sales Email: **trade@reditionpharma.com**
 
 ---
 
@@ -85,7 +85,7 @@ export const products: Product[] = [
     reviewCount: "86",
     shortDescription: "Third-generation amino-acid chelated hematinic formulation offering 90.9% fractional absorption with neutral gastric transit and zero constipation.",
     description: "HemaChelate Oral Liquid delivers bisglycinate-chelated elemental iron shielded against ionization in gastric acid. It passes intact to the jejunal mucosa, avoiding free hydroxyl radical generation, upper GI burning, nausea, and intestinal dysbiosis.",
-    keywords: "hemachelate syrup, ferrous bisglycinate syrup, sugar free iron syrup, hematinic solution anemia, vanguard therapeutics iron",
+    keywords: "hemachelate syrup, ferrous bisglycinate syrup, sugar free iron syrup, hematinic solution anemia, Redition Pharma iron",
     bulletPoints: [
       "90.9% superior elemental iron bioavailability compared to ferrous sulfate and ascorbate salts.",
       "Electrically neutral chelate structure prevents free-radical mucosal injury and gastric distress.",
@@ -136,7 +136,7 @@ export const products: Product[] = [
     reviewCount: "112",
     shortDescription: "Bioavailable L-Carnosine dipeptide oral suspension engineered to cross the blood-brain barrier for pediatric speech, cognition, and synaptic stabilization.",
     description: "NeuroCarn Pediatric Syrup provides therapeutic concentrations of endogenous dipeptide L-Carnosine. Formulated for pediatric neurodevelopmental protocols, it supports receptive and expressive language processing, frontal lobe synaptic transmission, and cerebral antioxidant defense.",
-    keywords: "neurocarn syrup, l-carnosine 200mg syrup, speech delay treatment syrup, pediatric neurodevelopment syrup, vanguard therapeutics carnosine",
+    keywords: "neurocarn syrup, l-carnosine 200mg syrup, speech delay treatment syrup, pediatric neurodevelopment syrup, Redition Pharma carnosine",
     bulletPoints: [
       "Crosses the Blood-Brain Barrier (BBB) to modulate GABAergic neurotransmission and reduce excitotoxicity.",
       "Clinically documented in peer-reviewed literature for receptive language and social interaction support in ASD.",
@@ -183,7 +183,7 @@ export const products: Product[] = [
     reviewCount: "74",
     shortDescription: "Thermostable spore-forming probiotic formulation with mucosal substrate L-Glutamine for rapid resolution of dysbiosis and intestinal tight-junction repair.",
     description: "GastroSpore Sachet delivers acid-resistant bacterial endospores that survive 100% of gastric transit. Synergized with enterocyte-fuel L-Glutamine, it accelerates the reconstitution of protective commensal microflora and restores gut-barrier integrity.",
-    keywords: "gastrospore sachet, spore probiotic sachet, l-glutamine gut sachet, antibiotic associated diarrhea sachet, vanguard therapeutics probiotic",
+    keywords: "gastrospore sachet, spore probiotic sachet, l-glutamine gut sachet, antibiotic associated diarrhea sachet, Redition Pharma probiotic",
     bulletPoints: [
       "Microencapsulated bacterial endospores exhibit 100% survival through gastric acid and bile salts.",
       "250mg L-Glutamine actively synthesizes mucosal tight junction proteins (Claudin-1 & Occludin).",
@@ -230,7 +230,7 @@ export const products: Product[] = [
     reviewCount: "98",
     shortDescription: "Fast-disintegrating sublingual tablet engineered for rapid abortive therapy in acute vertigo attacks, vestibular labyrinthitis, and severe nausea.",
     description: "VertiStop MD features a superdisintegrant matrix that dissolves on the tongue in under 15 seconds without water. Sublingual vascular absorption bypasses hepatic first-pass metabolism to deliver rapid suppression of the Chemoreceptor Trigger Zone (CTZ).",
-    keywords: "vertistop md tablet, prochlorperazine 5mg mouth dissolving, acute vertigo tablet, meniere disease treatment, vanguard therapeutics vertigo",
+    keywords: "vertistop md tablet, prochlorperazine 5mg mouth dissolving, acute vertigo tablet, meniere disease treatment, Redition Pharma vertigo",
     bulletPoints: [
       "Sublingual disintegration under 15 seconds allows rapid administration during acute emetic episodes.",
       "Bypasses first-pass hepatic clearance, delivering therapeutic plasma levels within 10 minutes.",
@@ -277,7 +277,7 @@ export const products: Product[] = [
     reviewCount: "63",
     shortDescription: "Non-sedative dual-phase sleep architecture formulation combining GABA-modulating alpha-casozepine peptides with biphasic melatonin for restorative sleep.",
     description: "SomnoPure Dual-Phase Tablet synchronizes circadian timing with central nervous system desensitization. The immediate phase initiates rapid sleep onset within 30 minutes, while the sustained-release matrix maintains nocturnal sleep continuity without morning hangover or dependence.",
-    keywords: "somnopure tablet, lactium melatonin controlled release, natural non habit forming sleep aid, circadian rhythm tablet, vanguard therapeutics somnopure",
+    keywords: "somnopure tablet, lactium melatonin controlled release, natural non habit forming sleep aid, circadian rhythm tablet, Redition Pharma somnopure",
     bulletPoints: [
       "Patented Alpha-Casozepine peptide binds GABA-A benzodiazepine sites without causing receptor downregulation or tolerance.",
       "Dual-phase release architecture resolves both sleep latency (falling asleep) and sleep maintenance (midnight awakening).",
@@ -345,7 +345,7 @@ function generateInstitutionalBody(product) {
       
 
 
-        VANGUARD THERAPEUTICS
+        Redition Pharma
         WHO-GMP Schedule M Certified Formulations
       
 
@@ -576,7 +576,7 @@ ${f.a}
     
 
 
-      © 2026 Vanguard Therapeutics Ltd. All Rights Reserved. WHO-GMP Schedule M Certified Manufacturing Facility.
+      © 2026 Redition Pharma Ltd. All Rights Reserved. WHO-GMP Schedule M Certified Manufacturing Facility.
     
 
 `;
@@ -586,10 +586,10 @@ products.forEach(product => {
   const productDir = path.join(distDir, "product", product.id);
   fs.mkdirSync(productDir, { recursive: true });
 
-  const productUrl = `https://vanguardtherapeutics.com/product/${product.id}`;
-  const imageUrl = `https://vanguardtherapeutics.com${product.image}`;
-  const title = `${product.name} | ${product.composition} | Vanguard Therapeutics`;
-  const metaDesc = `Technical dossier for ${product.name} (${product.strength}) by Vanguard Therapeutics. ${product.shortDescription}`;
+  const productUrl = `https://reditionpharma.com/product/${product.id}`;
+  const imageUrl = `https://reditionpharma.com${product.image}`;
+  const title = `${product.name} | ${product.composition} | Redition Pharma`;
+  const metaDesc = `Technical dossier for ${product.name} (${product.strength}) by Redition Pharma. ${product.shortDescription}`;
 
   const jsonLdGraph = {
     "@context": "https://schema.org",
@@ -599,16 +599,16 @@ products.forEach(product => {
         "@id": `${productUrl}#product`,
         "name": product.name,
         "alternateName": product.alternateNames,
-        "image": product.images.map(img => `https://vanguardtherapeutics.com${img}`),
+        "image": product.images.map(img => `https://reditionpharma.com${img}`),
         "description": product.shortDescription,
         "sku": `VT-${product.id.toUpperCase()}`,
         "mpn": `VT-${product.id.replace(/-/g, '').toUpperCase()}`,
-        "brand": { "@type": "Brand", "name": "Vanguard Therapeutics" },
+        "brand": { "@type": "Brand", "name": "Redition Pharma" },
         "manufacturer": {
           "@type": "Organization",
-          "name": "Vanguard Therapeutics Ltd.",
-          "url": "https://vanguardtherapeutics.com",
-          "logo": "https://vanguardtherapeutics.com/logo.png"
+          "name": "Redition Pharma Ltd.",
+          "url": "https://reditionpharma.com",
+          "logo": "https://reditionpharma.com/logo.png"
         },
         "category": product.category,
         "offers": {
@@ -645,8 +645,8 @@ products.forEach(product => {
         "@type": "BreadcrumbList",
         "@id": `${productUrl}#breadcrumb`,
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vanguardtherapeutics.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Formulations", "item": "https://vanguardtherapeutics.com/#products" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://reditionpharma.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Formulations", "item": "https://reditionpharma.com/#products" },
           { "@type": "ListItem", "position": 3, "name": product.name, "item": productUrl }
         ]
       },
@@ -694,27 +694,27 @@ ${semanticBody}
 #### `public/sitemap.xml`:
 ```xml
 
-    https://vanguardtherapeutics.com/
+    https://reditionpharma.com/
     2026-09-21
     daily
     1.0
-    https://vanguardtherapeutics.com/product/hema-chelate-syrup
+    https://reditionpharma.com/product/hema-chelate-syrup
     2026-09-21
     daily
     1.0
-    https://vanguardtherapeutics.com/product/neuro-carn-syrup
+    https://reditionpharma.com/product/neuro-carn-syrup
     2026-09-21
     daily
     1.0
-    https://vanguardtherapeutics.com/product/gastro-spore-sachet
+    https://reditionpharma.com/product/gastro-spore-sachet
     2026-09-21
     daily
     1.0
-    https://vanguardtherapeutics.com/product/vertistop-md-tablet
+    https://reditionpharma.com/product/vertistop-md-tablet
     2026-09-21
     daily
     1.0
-    https://vanguardtherapeutics.com/product/somnopure-cr-tablet
+    https://reditionpharma.com/product/somnopure-cr-tablet
     2026-09-21
     daily
     1.0
@@ -725,7 +725,7 @@ ${semanticBody}
 User-agent: *
 Allow: /
 
-Sitemap: https://vanguardtherapeutics.com/sitemap.xml
+Sitemap: https://reditionpharma.com/sitemap.xml
 ```
 
 #### `public/.htaccess`:
