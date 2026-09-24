@@ -5,7 +5,7 @@
 ## Company Overview
 - **Legal Entity**: Redition Pharma Ltd.
 - **Operating Brand**: Redition Pharma
-- **Manufacturing Plant**: Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010, India
+- **Registered Office**: 101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India
 - **Quality Certifications**: WHO-GMP, Revised Schedule M, ISO 9001:2015, GLP (Good Laboratory Practice)
 - **Direct Trade Desk**: trade@reditionpharma.com
 - **Direct Dispatch Line**: +91 98250 12345
@@ -50,6 +50,15 @@
 - **MRP**: ₹1650.00
 - **URL**: https://reditionpharma.com/product/qlong-gold-tablets
 - **Key Advantage**: Dual nitric oxide precursors with Biopeprine-enhanced bioavailability for microvascular circulation, physical stamina, and adaptogenic vitality.
+
+### 5. ADNOCAR-DS™ Syrup
+- **Category**: Pediatric Neurodevelopment & Cognitive Vitality (Health Supplement)
+- **Composition**: Each 5ml contains L-Carnosine 200mg, DHA 550mg, EPA 200mg, Vitamin B6 150mg, Vitamin D3 1500 IU & Co-Enzyme Q10 100mg in flavoured mango base
+- **Dosage Form**: 200 ml Amber PET Bottle in Protective Mono-Carton (Mango Flavour)
+- **MRP**: ₹890.00
+- **URL**: https://reditionpharma.com/product/adnocar-ds-syrup
+- **Key Advantage**: Targeted 6-in-1 neurotrophic cognitive supplement combining high-dose DHA/EPA with L-Carnosine and Co-Q10 for speech delay support, synaptogenesis, and mitochondrial energy metabolism in children and adolescents.
+- **FSSAI License**: 12116801000249 | Manufactured at WHO-GMP / ISO / IAF certified facility
 
 ## Institutional Inquiry Protocol
 - Rate contract quotations and tender dossiers are processed within 24 hours.

@@ -39,9 +39,10 @@ export const SITE_URL = "https://reditionpharma.com";
 export const company = {
   name: "Redition Pharma Ltd.",
   brand: "Redition Pharma",
-  address: "Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
+  address: "101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India",
   phone: "+91 98250 12345",
   email: "trade@reditionpharma.com",
+  fssai: "12116801000249",
 };
 
 export const products: Product[] = [
@@ -324,6 +325,77 @@ export const products: Product[] = [
       "/images/products/predy-nt-1.png",
       "/images/products/predy-nt-2.png",
       "/images/products/predy-nt-3d.png",
+    ],
+  },
+  {
+    id: "adnocar-ds-syrup",
+    name: "ADNOCAR-DS™ Syrup",
+    alternateNames: [
+      "ADNOCAR DS Syrup",
+      "ADNOCAR-DS",
+      "L-Carnosine DHA EPA Syrup",
+      "Adnocar Syrup Redition Pharma",
+    ],
+    strength: "200 ml",
+    type: "Health Supplement / Dietary Oral Liquid Formulation",
+    category: "Pediatric Neurodevelopment & Cognitive Vitality",
+    composition:
+      "Each 5ml contains: L-Carnosine 200mg, DHA (Docosahexaenoic Acid) 550mg, EPA (Eicosapentaenoic Acid) 200mg, Vitamin B6 150mg, Vitamin D3 1500 IU & Co-Enzyme Q10 100mg in flavoured base (Mango Flavour)",
+    activeIngredient:
+      "L-Carnosine, Docosahexaenoic Acid (DHA), Eicosapentaenoic Acid (EPA), Pyridoxine (Vitamin B6), Cholecalciferol (Vitamin D3), Ubidecarenone (Co-Enzyme Q10)",
+    dosageForm: "Oral Liquid / Syrup (Mango Flavour)",
+    pharmacopoeia: "FSSAI Dietary Supplement / In-House Validated Monograph",
+    therapeuticClass: "Neurotrophic, Cognitive Development & Mitochondrial Antioxidant Supplement",
+    legalStatus: "OTC Healthcare Formulation",
+    price: 890.0,
+    ratingValue: "4.96",
+    reviewCount: "118",
+    shortDescription:
+      "Advanced 6-in-1 neurodevelopmental oral syrup with L-Carnosine 200mg, high-potency DHA 550mg, EPA 200mg, Co-Q10 100mg, Vitamin B6 & Vitamin D3 in delicious mango flavour for cognitive growth and neuronal health.",
+    description:
+      "ADNOCAR-DS™ Syrup is an advanced clinical health supplement engineered to support pediatric and adolescent neurocognitive development, attention span, speech enhancement, and cellular energy synthesis. Powered by high-concentration Docosahexaenoic Acid (DHA 550mg) and Eicosapentaenoic Acid (EPA 200mg) for synaptogenesis and cell membrane fluidity, synergized with L-Carnosine (200mg) to shield neural tissues from oxidative carbonyl stress. Co-Enzyme Q10 (100mg) fuels mitochondrial ATP synthesis across cerebral cortex networks, while Pyridoxine (Vitamin B6) and Vitamin D3 (1500 IU) support neurotransmitter metabolism and neuroimmune balance in a delicious, patient-friendly mango-flavoured base.",
+    keywords:
+      "adnocar ds syrup, l-carnosine dha epa syrup, speech delay syrup, pediatric cognitive syrup, coq10 brain health syrup redition pharma, adnocar-ds mango flavour",
+    bulletPoints: [
+      "High-potency Omega-3 PUFAs: 550mg DHA + 200mg EPA per 5ml for synaptic growth and brain lipid architecture.",
+      "L-Carnosine 200mg defends against glycation, lipid peroxidation, and neuroinflammation in developing brains.",
+      "Co-Enzyme Q10 (100mg) fuels neuronal mitochondrial bioenergetics and cellular energy generation.",
+      "Fortified with Vitamin B6 (150mg) and Vitamin D3 (1500 IU) for monoamine neurotransmitter synthesis.",
+      "Patient-compliant delicious mango flavour, manufactured in WHO-GMP / ISO / IAF certified facilities.",
+      "FSSAI License No. 12116801000249 registered dietary supplement.",
+    ],
+    indications: [
+      "Pediatric speech, vocabulary, and communication delays",
+      "Attention deficit, hyperactivity, and focus enhancement",
+      "Cognitive development, learning aptitude, and memory consolidation",
+      "Neuroprotection against oxidative stress and neuronal mitochondrial exhaustion",
+      "Nutritional optimization during peak neurodevelopmental milestones",
+    ],
+    packaging: "200 ml Amber PET bottle in tamper-evident protective outer carton",
+    storage: "Store in a cool, dry & dark place. Protect from direct light and moisture. Shake well before use.",
+    shelfLife: "24 Months from date of manufacture",
+    mechanism:
+      "DHA (Docosahexaenoic Acid) integrates into neuronal phospholipid bilayers, modulating membrane elasticity, synaptic vesicle docking, and rhodopsin activation. EPA downregulates eicosanoid inflammatory cascades. L-Carnosine acts as a targeted dipeptide antioxidant protecting microglial and neuronal mitochondrial membranes from malondialdehyde and advanced lipoxidation end-products (ALEs). Co-Enzyme Q10 acts as the fundamental mobile electron shuttle in mitochondrial respiratory Complexes I/II to III, maximizing cortical ATP supply.",
+    dosageGuide:
+      "Children (2–12 years): 2.5 ml to 5 ml once or twice daily, or as directed by the Dietician/Pediatrician. Shake bottle thoroughly before each administration.",
+    faqs: [
+      {
+        q: "What makes ADNOCAR-DS™ Syrup uniquely potent for pediatric speech and cognitive milestones?",
+        a: "Unlike conventional multivitamins, ADNOCAR-DS™ delivers an evidence-based clinical synergy of 200mg L-Carnosine with 550mg DHA and 200mg EPA, co-formulated with 100mg Co-Q10, directly supporting neurosynaptic remodeling and speech development.",
+      },
+      {
+        q: "What flavour is ADNOCAR-DS™ Syrup and how palatable is it for young children?",
+        a: "It features a premium natural mango flavour carefully formulated to mask fish oil/marine notes, ensuring high compliance among children and adolescents.",
+      },
+      {
+        q: "Is ADNOCAR-DS™ safe for long-term daily dietary supplementation?",
+        a: "Yes. It is formulated in accordance with ICMR 2020 guidelines and manufactured under WHO-GMP, ISO, and IAF quality standards with FSSAI Lic No. 12116801000249.",
+      },
+    ],
+    image: "/images/products/adnocar-ds-1.png",
+    images: [
+      "/images/products/adnocar-ds-1.png",
+      "/images/products/adnocar-ds-2.png",
     ],
   },
 ];
