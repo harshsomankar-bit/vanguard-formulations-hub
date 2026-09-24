@@ -463,6 +463,9 @@ function Index() {
                 <img
                   src="/images/quality-raw-materials.jpg"
                   alt="HPLC Active Assay Testing on Raw APIs"
+                  width={640}
+                  height={360}
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
@@ -508,6 +511,9 @@ function Index() {
                 <img
                   src="/images/pharma-cleanroom.jpg"
                   alt="ISO 5 Sterile Compounding Cleanroom"
+                  width={640}
+                  height={360}
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
@@ -553,6 +559,9 @@ function Index() {
                 <img
                   src="/images/pharma-qc-lab.jpg"
                   alt="Dissolution Testing and Stability Profiling"
+                  width={640}
+                  height={360}
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
@@ -598,6 +607,9 @@ function Index() {
                 <img
                   src="/images/quality-batch-coa.jpg"
                   alt="Verified Certificate of Analysis Regulatory Release"
+                  width={640}
+                  height={360}
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
@@ -808,6 +820,9 @@ function Index() {
                 <img
                   src="/images/pharma-packaging-line.jpg"
                   alt="Redition Pharma Automated Blister Packaging & Inspection Line"
+                  width={640}
+                  height={360}
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
@@ -828,6 +843,9 @@ function Index() {
                 <img
                   src="/images/pharma-qc-lab.jpg"
                   alt="Redition Pharma Analytical Quality Control & Stability Laboratory"
+                  width={640}
+                  height={360}
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />

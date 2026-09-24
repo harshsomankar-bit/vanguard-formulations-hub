@@ -115,8 +115,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         crossOrigin: "anonymous",
       },
       {
+        rel: "preload",
+        as: "style",
+        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap",
+      },
+      {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap",
+      },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/pharmacy-counter.gif",
+        fetchPriority: "high",
       },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=11" },
       { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon.png?v=11" },

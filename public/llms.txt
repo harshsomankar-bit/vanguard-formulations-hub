@@ -1,66 +1,31 @@
 # Redition Pharma Ltd.
 
-> WHO-GMP Schedule M certified pharmaceutical formulations manufacturer specializing in neurovascular formulations, neuropathic analgesics, metabolic remodeling complexes, and adult vitality tablets for institutional hospital supply and nationwide healthcare distribution.
+> Redition Pharma Ltd. is a WHO-GMP and Revised Schedule M certified pharmaceutical formulation manufacturer based in Surat, Gujarat, India, specializing in high-potency neurovascular therapeutics, neuropathic analgesics, microvascular protectors, and institutional hospital supply.
 
-## Company Overview
-- **Legal Entity**: Redition Pharma Ltd.
-- **Operating Brand**: Redition Pharma
-- **Registered Office**: 101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India
-- **Quality Certifications**: WHO-GMP, Revised Schedule M, ISO 9001:2015, GLP (Good Laboratory Practice)
-- **Direct Trade Desk**: trade@reditionpharma.com
-- **Direct Dispatch Line**: +91 79877 79819
-- **Official Website**: https://reditionpharma.com
-
-## Core Capabilities & Services
-- **Institutional Hospital Supply**: Rate contracts, hospital formulary tie-ups, multi-tier tenders, and dedicated institutional batch reserve.
-- **Nationwide Healthcare Distribution**: Commercial pharmacy supply, tender procurement corridors, and direct institutional delivery.
-- **Quality & Analytics**: In-house HPLC monograph testing, automated visual inspection, real-time differential pressure cleanroom monitoring, and batch Certificate of Analysis (COA) issued for 100% of shipments.
-- **Logistics**: Validated cold-chain and temperature-controlled dispatch across pan-India transport corridors.
+Redition Pharma operates advanced Grade C/D automated manufacturing facilities with 100% monograph HPLC pre-production assays, Zone IVb stability validation, and statutory batch-wise Certificate of Analysis (COA) compliance.
 
 ## Core Pharmaceutical Formulations
 
-### 1. ADNOSINE-108 Tablets
-- **Category**: Neurovascular & Mitochondrial Bioenergetics
-- **Composition**: Adenosine 5-Monophosphate (AMP) 2.5mg, L-Arginine Decarboxylated 2.5mg & L-Carnosine 25.0mg
-- **Dosage Form**: Film-Coated Tablet (10 x 1 x 10 Tablets in Moisture-Barrier Blister Pack)
-- **MRP**: ₹1450.00
-- **URL**: https://reditionpharma.com/product/adnosine-108-tablets
-- **Key Advantage**: Tri-pathway neuro-mitochondrial formulation that replenishes cellular ATP reserves, enhances endothelial microvascular perfusion via decarboxylated L-arginine, and halts advanced glycation end-products (AGEs) along nerve fibers via L-carnosine.
+- [ADNOSINE-108 Tablets](https://reditionpharma.com/product/adnosine-108): Adenosine 5-Monophosphate (AMP) 2.5mg, Decarboxylated L-Arginine 2.5mg, and L-Carnosine 25.0mg for neurovascular microcirculation and cellular ATP revitalization.
+- [MACSINE-109 Tablets](https://reditionpharma.com/product/macsine-109): 9-in-1 multi-mechanism neurotrophic complex (Alpha Lipoic Acid 100mg, Benfotiamine 100mg, Methylcobalamin 1500mcg) for diabetic neuropathy and myelin remodeling.
+- [PREDY-NT 37.5/10 Tablets](https://reditionpharma.com/product/predy-nt): Schedule H neuropathic analgesic combining sustained-release Pregabalin (37.5mg) with Nortriptyline HCl (10mg) for 24-hour nerve pain relief.
+- [QLONG-GOLD Tablets](https://reditionpharma.com/product/qlong-gold): Dual nitric oxide precursor and bioenergetic adaptogen tablet with Biopeprine bioavailability enhancer.
+- [ADNOCAR-DS Syrup](https://reditionpharma.com/product/adnocar-ds): High-concentration pediatric neurodevelopment syrup (L-Carnosine 200mg, DHA 550mg, EPA 200mg, Co-Q10 100mg per 5ml) for cognitive and language support (FSSAI Lic. 12116801000249).
 
-### 2. MACSINE-109 Tablets
-- **Category**: Diabetic Neuropathy & Axonal Myelin Remodeling
-- **Composition**: Alpha Lipoic Acid 100mg, Benfotiamine 100mg, Calcium Carbonate 500mg, Chromium Picolinate 200mcg, Folic Acid 1.5mg, Inositol 100mg, Methylcobalamin 1500mcg, Pyridoxine HCl 3mg & Vitamin D3 1000 IU
-- **Dosage Form**: Film-Coated Tablet (10 x 1 x 10 Blister Pack)
-- **MRP**: ₹1380.00
-- **URL**: https://reditionpharma.com/product/macsine-109-tablets
-- **Key Advantage**: Comprehensive 9-in-1 neurotrophic complex stimulating myelin basic protein synthesis, controlling neuropathic paresthesia, and protecting endoneurial microvessels.
+## Manufacturing & Quality Infrastructure
 
-### 3. PREDY-NT 37.5/10 Tablets
-- **Category**: Neuropathic Analgesia & CNS Neuromodulation (Schedule H)
-- **Composition**: Pregabalin (Sustained Release) 37.5mg with Nortriptyline Hydrochloride 10mg Tablets
-- **Dosage Form**: Sustained-Release Film-Coated Tablet (10 x 10 Tablets)
-- **MRP**: ₹150.00
-- **URL**: https://reditionpharma.com/product/predy-nt-tablets
-- **Key Advantage**: Dual-action neuropathic analgesia combining sustained-release Pregabalin with Nortriptyline HCl for 24-hour relief of peripheral neuropathy, sciatica, and post-herpetic neuralgia with minimal sedation.
+- [4-Tier Quality Validation System](https://reditionpharma.com/#quality): Monograph HPLC testing, ISO Class 5 cleanrooms, Zone IVb climatic stability chambers, and statutory batch COA certification.
+- [WHO-GMP Schedule M Facility](https://reditionpharma.com/#about): Comprehensive oral solid dose and pediatric oral suspension manufacturing facility in Surat, Gujarat.
+- [Quality Test Report & COA Verification](https://reditionpharma.com/#contact): Batch release documentation, microbial assays, and heavy metal screening reports for institutional clients.
 
-### 4. QLONG-GOLD Tablets
-- **Category**: Endothelial Nitric Oxide & Adult Vitality
-- **Composition**: L-Arginine, L-Citrulline, Fenugreek Extract, Biopeprine, Tribulus Terrestris, Hypericum Perforatum, Pine Bark Extract, Mucuna Pruriens, Zinc and Vitamin D2
-- **Dosage Form**: Tablet (10 x 10 Tablets)
-- **MRP**: ₹1650.00
-- **URL**: https://reditionpharma.com/product/qlong-gold-tablets
-- **Key Advantage**: Dual nitric oxide precursors with Biopeprine-enhanced bioavailability for microvascular circulation, physical stamina, and adaptogenic vitality.
+## Institutional & Commercial Supply
 
-### 5. ADNOCAR-DS™ Syrup
-- **Category**: Pediatric Neurodevelopment & Cognitive Vitality (Health Supplement)
-- **Composition**: Each 5ml contains L-Carnosine 200mg, DHA 550mg, EPA 200mg, Vitamin B6 150mg, Vitamin D3 1500 IU & Co-Enzyme Q10 100mg in flavoured mango base
-- **Dosage Form**: 200 ml Amber PET Bottle in Protective Mono-Carton (Mango Flavour)
-- **MRP**: ₹890.00
-- **URL**: https://reditionpharma.com/product/adnocar-ds-syrup
-- **Key Advantage**: Targeted 6-in-1 neurotrophic cognitive supplement combining high-dose DHA/EPA with L-Carnosine and Co-Q10 for speech delay support, synaptogenesis, and mitochondrial energy metabolism in children and adolescents.
-- **FSSAI License**: 12116801000249 | Manufactured at WHO-GMP / ISO / IAF certified facility
+- [Hospital Formulary & Tender Procurement](https://reditionpharma.com/#contact): Rate contracts, hospital formulary tie-ups, multi-tier state tenders, and dedicated institutional batch allocation.
+- [Nationwide Distribution Network](https://reditionpharma.com/#distribution): Cold-chain and temperature-controlled logistics across key pan-India hospital corridors.
+- [Regulatory & Licensing Dossier](https://reditionpharma.com/#about): Central FSSAI License, WHO-GMP Certificate, and Revised Schedule M compliance documentation.
 
-## Institutional Inquiry Protocol
-- Rate contract quotations and tender dossiers are processed within 24 hours.
-- Contact: trade@reditionpharma.com | +91 79877 79819
-- Batch documentation (COA, method validation, stability data) available upon formal institutional verification.
+## Contact & Trade Enquiries
+
+- [Official Portal](https://reditionpharma.com): Corporate overview, formulation monograph details, and distributor portal.
+- [Direct Trade Desk](mailto:trade@reditionpharma.com): Priority institutional hospital and government supply desk.
+- [Direct WhatsApp Dispatch](https://wa.me/917987779819): Immediate dispatch coordinator and batch monograph verification desk.

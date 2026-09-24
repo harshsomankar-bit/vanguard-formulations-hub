@@ -6,6 +6,10 @@ export function MedicalTechHeroAnimation() {
         <img
           src="/pharmacy-counter.gif"
           alt="Redition Pharma Pharmacy Dispensing Animation"
+          width={440}
+          height={440}
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-contain"
         />
 
