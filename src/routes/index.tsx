@@ -52,18 +52,18 @@ export const Route = createFileRoute("/")({
           description: description,
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Plot 42, GIDC Industrial Estate",
-            addressLocality: "Vadodara",
+            streetAddress: "101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market",
+            addressLocality: "Surat",
             addressRegion: "Gujarat",
-            postalCode: "390010",
+            postalCode: "395010",
             addressCountry: "IN",
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: 22.3072,
-            longitude: 73.1812,
+            latitude: 21.2036,
+            longitude: 72.8625,
           },
-          hasMap: "https://maps.google.com/maps?q=GIDC+Industrial+Estate,+Vadodara,+Gujarat",
+          hasMap: "https://maps.google.com/maps?q=Bombay+Market,+Punagam+Chorasi,+Surat,+Gujarat+395010",
           openingHoursSpecification: [
             {
               "@type": "OpeningHoursSpecification",
@@ -598,23 +598,23 @@ function Index() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Manufacturing Plant &amp; Registered Office</p>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Registered Corporate Office</p>
                   <p className="text-xs text-navy font-medium leading-relaxed">
-                    Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010
+                    {company.address}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Facility Location Map */}
+            {/* Corporate Location Map - Bombay Market, Surat */}
             <div className="mt-4 overflow-hidden rounded-xl border border-border bg-card shadow-xs">
               <div className="flex items-center justify-between border-b border-border bg-surface/80 px-3.5 py-2 text-xs">
                 <span className="flex items-center gap-1.5 font-semibold text-navy">
                   <MapPin className="h-3.5 w-3.5 text-teal shrink-0" />
-                  <span>Plant Location Map</span>
+                  <span>Office Location Map (Bombay Market, Surat)</span>
                 </span>
                 <a
-                  href="https://maps.google.com/?q=GIDC+Industrial+Estate,+Vadodara,+Gujarat"
+                  href="https://maps.google.com/?q=Bombay+Market,+Punagam+Chorasi,+Surat,+Gujarat+395010"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 font-semibold text-clinical hover:underline text-[11px]"
@@ -625,12 +625,12 @@ function Index() {
               </div>
               <div className="relative aspect-16/9 w-full min-h-[190px] sm:min-h-[220px]">
                 <iframe
-                  title="Redition Pharma Facility Location"
+                  title="Redition Pharma Registered Office Location - Bombay Market, Surat"
                   width="100%"
                   height="100%"
                   className="absolute inset-0 h-full w-full border-0"
                   loading="lazy"
-                  src="https://maps.google.com/maps?q=GIDC+Industrial+Estate,+Vadodara,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Bombay+Market,+Punagam+Chorasi,+Surat,+Gujarat+395010&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 />
               </div>
             </div>

@@ -357,9 +357,9 @@ function ProductPage() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Manufacturing Plant & Registered Office</p>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Registered Corporate Office</p>
                   <p className="text-xs text-navy font-medium leading-relaxed">
-                    Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010
+                    {company.address}
                   </p>
                 </div>
               </div>

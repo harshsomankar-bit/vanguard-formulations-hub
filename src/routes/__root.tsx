@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "keywords",
         content:
-          "pharmaceutical formulations, WHO-GMP certified, Schedule M manufacturer, hospital tenders, PCD pharma franchise, Vadodara pharma, oral liquids, tablets, dry syrups",
+          "pharmaceutical formulations, WHO-GMP certified, Schedule M manufacturer, hospital tenders, PCD pharma franchise, Surat pharma company, Gujarat, tablets, health supplements",
       },
       { name: "author", content: "Redition Pharma Ltd." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
@@ -99,9 +99,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "geo.region", content: "IN-GJ" },
-      { name: "geo.placename", content: "Vadodara, Gujarat, India" },
-      { name: "geo.position", content: "22.3072;73.1812" },
-      { name: "ICBM", content: "22.3072, 73.1812" },
+      { name: "geo.placename", content: "Surat, Gujarat, India" },
+      { name: "geo.position", content: "21.2036;72.8625" },
+      { name: "ICBM", content: "21.2036, 72.8625" },
     ],
     links: [
       {

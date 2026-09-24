@@ -72,7 +72,7 @@ export function ChatbotSupportWidget() {
                     Redition Trade Desk
                   </h3>
                   <p className="text-[10px] sm:text-[11px] text-navy-foreground/75">
-                    Vadodara Facility · Quick Support
+                    Corporate Office · Quick Support
                   </p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export function ChatbotSupportWidget() {
                       Chat on WhatsApp
                     </h4>
                     <p className="mt-0.5 text-[10px] sm:text-[11px] text-muted-foreground">
-                      Instant connection with Vadodara desk
+                      Instant connection with Trade Desk
                     </p>
                   </div>
                 </div>

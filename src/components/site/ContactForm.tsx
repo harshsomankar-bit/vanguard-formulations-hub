@@ -164,7 +164,7 @@ export function ContactForm({
           <div>
             <p className="font-medium text-foreground">Official SLA Response Time</p>
             <p className="mt-0.5">
-              Our Vadodara Trade Desk typically processes hospital tenders, rate contracts, and COA requests within <strong>1 business day</strong>.
+              Our Trade Desk typically processes hospital tenders, rate contracts, and COA requests within <strong>1 business day</strong>.
             </p>
           </div>
         </div>
