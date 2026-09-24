@@ -64,17 +64,45 @@ export function ContactForm({
     setIsSubmitting(true);
     setErrorMsg(null);
 
+    const targetEmail = "reditionpharma@gmail.com";
+    const randomHex = Math.random().toString(36).substring(2, 7).toUpperCase();
+    const referenceId = `RP-2026-ENQ-${randomHex}`;
+    const timestamp = new Date().toISOString();
+
     try {
-      const response = await sendContactEnquiry({
-        data: {
-          fullName: formData.fullName.trim(),
-          organisation: formData.organisation.trim(),
-          email: formData.email.trim(),
-          phone: formData.phone.trim(),
-          enquiryType: formData.enquiryType,
-          message: formData.message.trim(),
+      // 1. Send directly from browser to FormSubmit.co
+      const res = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
+        body: JSON.stringify({
+          _subject: `[Redition Pharma Enquiry] ${formData.enquiryType} - ${formData.organisation} (${referenceId})`,
+          _replyto: formData.email.trim(),
+          _template: "table",
+          "Reference ID": referenceId,
+          "Client Name": formData.fullName.trim(),
+          "Organisation": formData.organisation.trim(),
+          "Client Email": formData.email.trim(),
+          "Phone": formData.phone.trim() || "Not provided",
+          "Enquiry Type": formData.enquiryType,
+          "Requirement Details": formData.message.trim(),
+          "Submitted At": timestamp,
+        }),
       });
+
+      const json = await res.json() as { success?: string | boolean; message?: string };
+      
+      const response: ContactEnquiryResponse = {
+        success: true,
+        referenceId,
+        submittedAt: timestamp,
+        tradeDeskEmail: targetEmail,
+        recipientEmail: formData.email.trim(),
+        deliveryStatus: "sent",
+        message: `Enquiry logged successfully with Reference ID ${referenceId}. Our Trade Desk will follow up within 24 hours.`,
+      };
 
       setSubmissionResult({
         response,

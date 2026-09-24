@@ -686,21 +686,27 @@ function Index() {
 
                 <div className="h-10 w-px bg-border hidden xl:block" />
 
-                {/* Batch-Wise Release */}
-                <div className="hidden xl:flex items-center gap-2.5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-teal/30 bg-white p-1 shadow-2xs">
-                    <img
-                      src="/images/certifications/batch-released-icon.jpg"
-                      alt="100% Batch Released COA Verified"
-                      width={40}
-                      height={40}
-                      className="h-full w-full object-contain"
-                      loading="lazy"
-                    />
+                {/* Batch-Wise Release Verified Seal */}
+                <div className="hidden xl:flex items-center gap-3 rounded-xl border border-border bg-white px-3 py-2 shadow-2xs hover:border-teal/50 transition-colors">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-200/70 text-teal shadow-2xs">
+                    <svg viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                      {/* Document outline */}
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" className="stroke-teal" />
+                      {/* Folded corner */}
+                      <polyline points="14 2 14 8 20 8" className="stroke-teal" />
+                      {/* Analytical Chromatogram Curve Lines */}
+                      <path d="M7 16h1.5l1.5-3 1.5 4 1-2h2" className="stroke-teal" strokeWidth="1.5" />
+                      {/* Verified Green Badge Stamp */}
+                      <circle cx="17.5" cy="17.5" r="4" className="fill-emerald-500 stroke-white" strokeWidth="1.5" />
+                      <path d="m16 17.5 1 1 2-2" className="stroke-white" strokeWidth="1.5" />
+                    </svg>
                   </div>
                   <div>
-                    <p className="font-display text-xs font-bold text-navy">100% Batch Released</p>
-                    <p className="text-[10px] text-muted-foreground">HPLC Assay &amp; Microbial COA</p>
+                    <div className="flex items-center gap-1.5">
+                      <p className="font-display text-xs font-bold text-navy">100% Batch Released</p>
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    </div>
+                    <p className="text-[10px] font-medium text-muted-foreground">HPLC Assay &amp; Microbial COA</p>
                   </div>
                 </div>
               </div>

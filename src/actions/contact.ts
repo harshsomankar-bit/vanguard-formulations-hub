@@ -25,8 +25,8 @@ export interface ContactEnquiryResponse {
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // EMAIL DELIVERY via FormSubmit.co (FREE — no signup / no API key)
-// First form submission triggers a one-time email confirmation.
-// After confirming, all submissions go to reditionpharma@gmail.com
+// Target recipient: company.email (reditionpharma@gmail.com)
+// First submission triggers a one-time activation link to this inbox.
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${company.email}`;
