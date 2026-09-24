@@ -13,7 +13,7 @@ const title =
 const description =
   "Institutional hospital supply and PCD distribution of WHO-GMP Schedule M certified formulations manufactured in Vadodara, Gujarat by Redition Pharma Ltd.";
 const keywords =
-  "redition pharma, adnosine 108 tablets, macsine 109 tablets, predy nt tablets, qlong gold, adenosine 5-monophosphate tablets, pregabalin sustained release nortriptyline, alpha lipoic acid benfotiamine, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Vadodara pharma company, neuropathic pain formulations, hospital tenders India, pharmaceutical exporter";
+  "redition pharma, adnosine 108 tablets, macsine 109 tablets, predy nt tablets, qlong gold, adnocar ds syrup, l-carnosine dha epa syrup, pediatric neurodevelopment syrup, adenosine 5-monophosphate tablets, pregabalin sustained release nortriptyline, alpha lipoic acid benfotiamine, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Surat pharma company, neuropathic pain formulations, hospital tenders India, pharmaceutical exporter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -215,7 +215,7 @@ function Index() {
 
               {/* Narrative Subtitle */}
               <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground font-normal">
-                Redition Pharma Ltd. specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">HemaChelate</strong>, <strong className="text-navy font-semibold">NeuroCarn</strong>, <strong className="text-navy font-semibold">GastroSpore</strong> probiotics, and fast-dissolving tablets across India.
+                Redition Pharma Ltd. specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">ADNOSINE-108</strong>, <strong className="text-navy font-semibold">MACSINE-109</strong>, <strong className="text-navy font-semibold">PREDY-NT</strong>, <strong className="text-navy font-semibold">QLONG-GOLD</strong>, and <strong className="text-navy font-semibold">ADNOCAR-DS Syrup</strong> across India.
               </p>
 
               {/* Dual Action Buttons Matching Website Theme (Navy & Clinical Accent) */}
