@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
 import { MedicalTechHeroAnimation } from "@/components/site/MedicalTechHeroAnimation";
 import { InstitutionalFaq, institutionalFaqs } from "@/components/site/InstitutionalFaq";
-import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin, User } from "lucide-react";
+import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin, User, MessageCircle } from "lucide-react";
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
@@ -427,6 +427,159 @@ function Index() {
                 <span>Contact Trade Desk</span>
                 <span>→</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quality Policy & Assurance Section (Matches Reference Design & Formulations Analysis) */}
+      <section id="quality" className="border-t border-border bg-white scroll-mt-16 py-12 sm:py-16 md:py-20">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 items-center">
+            {/* Left: Cleanroom Manufacturing Image with Floating Quality Badge */}
+            <div className="lg:col-span-5">
+              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-md">
+                <div className="relative aspect-4/3 sm:aspect-1/1 w-full overflow-hidden">
+                  <img
+                    src="/images/pharma-packaging-line.jpg"
+                    alt="Redition Pharma WHO-GMP Certified High-Speed Cleanroom & Blister Packaging Line"
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Subtle cleanroom overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Floating Badge at Bottom (Matches image) */}
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between gap-2 rounded-xl border border-white/60 bg-white/95 p-3 shadow-lg backdrop-blur-md">
+                    <div className="flex items-center gap-2.5">
+                      <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-600 text-white shadow-xs">
+                        <ShieldCheck className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="font-display text-xs sm:text-sm font-bold text-slate-900 leading-tight">
+                          WHO-GMP Certified
+                        </p>
+                        <p className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">
+                          100% Tested &amp; Safe Formulations
+                        </p>
+                      </div>
+                    </div>
+                    <span className="shrink-0 rounded-full border border-emerald-300 bg-emerald-50 px-2.5 py-1 text-[10px] sm:text-xs font-bold text-emerald-800">
+                      Govt Approved
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Quality Promise Narrative & 4 Formulations Analysis Commitments */}
+            <div className="lg:col-span-7 space-y-6">
+              <div>
+                <p className="flex items-center gap-2 font-display text-xs sm:text-sm font-bold tracking-widest uppercase text-emerald-700">
+                  <span className="h-0.5 w-6 bg-emerald-600 rounded-full" />
+                  <span>OUR QUALITY PROMISE</span>
+                  <span className="h-0.5 w-6 bg-emerald-600 rounded-full" />
+                </p>
+                <h2 className="mt-2 font-display text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 leading-tight">
+                  How We Ensure Safe &amp; Effective Medicines
+                </h2>
+                <p className="mt-3 text-xs sm:text-sm md:text-base leading-relaxed text-slate-600">
+                  At Redition Pharma, quality is simple and transparent — every single medicine is made with tested pure ingredients in certified clean plants and verified before dispatch.
+                </p>
+              </div>
+
+              {/* 4 Steps Tailored to Redition Medicines Analysis */}
+              <div className="space-y-4 pt-1">
+                {/* 01: Ingredients Analysis */}
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
+                    01
+                  </span>
+                  <div>
+                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
+                      100% Tested Pure Ingredients &amp; Bioactive Assay
+                    </h3>
+                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
+                      We check and test all raw materials and active pharmaceutical ingredients — including Adenosine 5-Monophosphate (AMP), Decarboxylated L-Arginine, Pregabalin, EPA/DHA, and Benfotiamine — in our laboratory before manufacturing starts, ensuring maximum purity and potency.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 02: Clean & Automated Manufacturing */}
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
+                    02
+                  </span>
+                  <div>
+                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
+                      Clean &amp; Automated Manufacturing
+                    </h3>
+                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
+                      Produced in sterile WHO-GMP certified cleanrooms with positive-pressure HVAC filtration, automatic rotary tablet compression, and humidity-barrier Alu-Alu blister packaging to completely avoid contamination.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 03: Every Batch Lab-Tested */}
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
+                    03
+                  </span>
+                  <div>
+                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
+                      Every Batch Lab-Tested Before Dispatch
+                    </h3>
+                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
+                      Finished tablets and oral pediatric liquid formulations (ADNOSINE-108, MACSINE-109, PREDY-NT, QLONG-GOLD, and ADNOCAR-DS) are thoroughly tested via HPLC assay, dissolution rate, and Zone IVb shelf-life stability before commercial release.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 04: Government Approved with COA */}
+                <div className="flex items-start gap-3.5 sm:gap-4">
+                  <span className="font-mono text-lg sm:text-xl font-black text-emerald-600 shrink-0 mt-0.5">
+                    04
+                  </span>
+                  <div>
+                    <h3 className="font-display text-sm sm:text-base font-bold text-slate-900">
+                      Government Approved with Test Reports (COA)
+                    </h3>
+                    <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
+                      Full compliance with FDA, revised Schedule M, and FSSAI statutory standards. We provide official Certificate of Analysis (COA) batch test reports, heavy metal screen, and microbial clearance with every order.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons matching Reference Image */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    setTimeout(() => {
+                      const select = document.getElementById("cf-enquiry") as HTMLSelectElement | null;
+                      if (select) select.value = "COA & Batch Analysis Report";
+                      document.getElementById("cf-name")?.focus();
+                    }, 350);
+                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 sm:px-6 py-3 text-xs sm:text-sm font-bold text-white shadow-md transition-all hover:bg-emerald-700 hover:shadow-lg cursor-pointer"
+                >
+                  <span>Request Quality Test Report (COA)</span>
+                  <span>→</span>
+                </a>
+
+                <a
+                  href="https://wa.me/917987779819?text=Hello%20Redition%20Pharma,%20I%20would%20like%20to%20request%20a%20Quality%20Test%20Report%20(COA)%20and%20monograph%20dossier."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700 hover:text-emerald-700 transition-colors py-2"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#25D366] fill-[#25D366]/20" />
+                  <span>Ask Quality Desk on WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

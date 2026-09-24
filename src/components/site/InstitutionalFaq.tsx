@@ -55,7 +55,6 @@ export function InstitutionalFaq() {
 
   return (
     <section id="faq" className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 scroll-mt-16">
-      <div id="quality" className="sr-only" aria-hidden="true" />
 
       {/* Header matching user reference */}
       <div className="text-center mb-8 sm:mb-12">
