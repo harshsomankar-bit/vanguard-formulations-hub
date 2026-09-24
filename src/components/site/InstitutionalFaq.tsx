@@ -21,16 +21,16 @@ export const institutionalFaqs: FaqItem[] = [
       "Yes. 100% of Redition Pharma formulations are manufactured in state-of-the-art facilities compliant with WHO-GMP standards and revised Schedule M guidelines. Our production facilities maintain differential-pressure cleanroom suites, validated HVAC systems with HEPA air filtration, automated blister packaging lines, and strict adherence to validated IP/USP and nutraceutical monographs.",
   },
   {
-    id: "third-party-pcd",
-    question: "Does Redition Pharma offer Third-Party Manufacturing or PCD Pharma Franchises?",
+    id: "institutional-supply",
+    question: "What healthcare sectors and supply channels does Redition Pharma cater to?",
     answer:
-      "Yes. Redition Pharma provides third-party contract manufacturing, loan licensing, and exclusive PCD pharma franchise distribution across designated territories throughout India. Franchise partners receive exclusive district monopoly rights, promotional inputs, product visual aids, technical dossiers, and guaranteed pan-India dispatch.",
+      "Redition Pharma supplies its authenticated formulations directly to multi-specialty hospitals, institutional healthcare networks, clinical pharmacies, and authorized pharmaceutical distribution partners across India.",
   },
   {
     id: "packaging-delivery",
     question: "What are the packaging and delivery timelines for bulk orders?",
     answer:
-      "Standard orders for existing tablet and oral liquid formulations (in Alu-Alu and moisture-barrier blister packs or amber PET bottles with heavy-duty master shipper cartons) are processed and dispatched within 24 to 48 hours of order confirmation. For custom contract manufacturing batches or institutional tender milestones, deliveries are fulfilled per the contracted delivery schedule.",
+      "Standard orders for existing tablet and oral liquid formulations (in Alu-Alu and moisture-barrier blister packs or amber PET bottles with heavy-duty master shipper cartons) are processed and dispatched within 24 to 48 hours of order confirmation. For scheduled hospital tender allocations or institutional deliveries, consignments are fulfilled per the contracted delivery schedule.",
   },
   {
     id: "coa-release",

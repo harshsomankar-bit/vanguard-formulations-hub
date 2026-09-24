@@ -5,15 +5,15 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
 import { MedicalTechHeroAnimation } from "@/components/site/MedicalTechHeroAnimation";
 import { InstitutionalFaq, institutionalFaqs } from "@/components/site/InstitutionalFaq";
-import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin } from "lucide-react";
+import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Microscope, Phone, Mail, MapPin, User } from "lucide-react";
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
   "Redition Pharma Ltd. | WHO-GMP Schedule M Certified Pharmaceutical Formulations";
 const description =
-  "Institutional hospital supply and PCD distribution of WHO-GMP Schedule M certified formulations manufactured in Vadodara, Gujarat by Redition Pharma Ltd.";
+  "Institutional hospital supply and direct healthcare distribution of WHO-GMP certified formulations by Redition Pharma Ltd.";
 const keywords =
-  "redition pharma, adnosine 108 tablets, macsine 109 tablets, predy nt tablets, qlong gold, adnocar ds syrup, l-carnosine dha epa syrup, pediatric neurodevelopment syrup, adenosine 5-monophosphate tablets, pregabalin sustained release nortriptyline, alpha lipoic acid benfotiamine, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Surat pharma company, neuropathic pain formulations, hospital tenders India, pharmaceutical exporter";
+  "redition pharma, adnosine 108 tablets, macsine 109 tablets, predy nt tablets, qlong gold, adnocar ds syrup, l-carnosine dha epa syrup, pediatric neurodevelopment syrup, adenosine 5-monophosphate tablets, pregabalin sustained release nortriptyline, alpha lipoic acid benfotiamine, WHO-GMP Schedule M, hospital supply, institutional pharma, Surat pharma company, neuropathic pain formulations, hospital tenders India, pharmaceutical exporter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,6 +44,11 @@ export const Route = createFileRoute("/")({
           "@type": ["Organization", "MedicalOrganization"],
           name: company.name,
           alternateName: ["Redition Pharma", "Redition Pharma Ltd."],
+          founder: {
+            "@type": "Person",
+            name: company.founder,
+            jobTitle: "Founder & Managing Director",
+          },
           url: SITE_URL,
           logo: `${SITE_URL}/favicon.svg`,
           image: `${SITE_URL}/images/pharma-packaging-line.jpg`,
@@ -153,8 +158,8 @@ const capabilities = [
   },
   {
     k: "03",
-    t: "PCD & Franchise Distribution",
-    d: "Monopoly territory allotment, promotional inputs and protected pricing across pan-India distribution networks.",
+    t: "Pan-India Supply & Logistics",
+    d: "Direct dispatch corridors, robust cold-chain logistics, and dedicated batch reservation for institutional partners nationwide.",
     icon: Network,
     badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
     iconColor: "bg-purple-500/10 text-purple-600 border-purple-500/20",
@@ -442,8 +447,12 @@ function Index() {
                   Advancing Pharmaceutical Precision from Vadodara to Pan-India Healthcare
                 </h2>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                  Operating with certified facilities, Redition Pharma Ltd. delivers precision solid oral dosage tablets and pediatric healthcare formulations under computerized HVAC air classification, automated blister packaging, and dedicated analytical quality release.
+                  Founded and led by <strong>{company.founder}</strong>, Redition Pharma Ltd. delivers precision solid oral dosage tablets and pediatric healthcare formulations under computerized HVAC air classification, automated blister packaging, and dedicated analytical quality release.
                 </p>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-lg border border-teal/20 bg-teal/5 px-3 py-1.5 text-xs text-navy">
+                  <User className="h-3.5 w-3.5 text-teal shrink-0" />
+                  <span><strong>Founder:</strong> {company.founder}</span>
+                </div>
               </div>
 
               {/* Plant Audit / Inquiry CTA */}
@@ -575,6 +584,16 @@ function Index() {
             </p>
 
             <div className="mt-6 space-y-3 border-t border-border pt-5">
+              <div className="flex items-start gap-3">
+                <User className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Founder &amp; Managing Director</p>
+                  <p className="font-display text-sm font-bold text-navy">
+                    {company.founder}
+                  </p>
+                </div>
+              </div>
+
               <div className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
                 <div>

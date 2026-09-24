@@ -39,6 +39,7 @@ export const SITE_URL = "https://reditionpharma.com";
 export const company = {
   name: "Redition Pharma Ltd.",
   brand: "Redition Pharma",
+  founder: "Nilesh Kumar",
   address: "101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India",
   phone: "+91 79877 79819",
   email: "trade@reditionpharma.com",

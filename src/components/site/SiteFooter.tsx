@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, User } from "lucide-react";
 import { company, products } from "@/data/products";
 
 export function SiteFooter() {
@@ -29,7 +29,7 @@ export function SiteFooter() {
           </Link>
           <p className="mt-1 max-w-sm text-sm text-navy-foreground/70">
             WHO-GMP Schedule M certified manufacturer of institutional hospital
-            formulations and PCD distribution portfolios.
+            formulations and authenticated healthcare portfolios.
           </p>
           <p className="mt-4 text-sm text-navy-foreground/70">{company.address}</p>
         </div>
@@ -48,6 +48,10 @@ export function SiteFooter() {
         <div>
           <p className="label-caps text-teal">Trade Desk</p>
           <ul className="mt-4 space-y-2.5 text-sm text-navy-foreground/80">
+            <li className="inline-flex items-center gap-2 text-white font-medium">
+              <User className="h-3.5 w-3.5 text-teal shrink-0" />
+              <span>Founder: {company.founder}</span>
+            </li>
             <li>
               <a
                 href={`tel:${company.phone.replace(/\s/g, "")}`}

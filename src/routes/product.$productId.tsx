@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
 import { ProductImageSlider } from "@/components/site/ProductImageSlider";
-import { Phone, Mail, MapPin, ShieldCheck, ArrowDown } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldCheck, ArrowDown, User } from "lucide-react";
 import { company, getProduct, SITE_URL, type Product } from "@/data/products";
 
 function schema(product: Product) {
@@ -334,6 +334,16 @@ function ProductPage() {
             </div>
 
             <div className="mt-6 space-y-3 border-t border-border pt-5">
+              <div className="flex items-start gap-3">
+                <User className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Founder &amp; Managing Director</p>
+                  <p className="font-display text-sm font-bold text-navy">
+                    {company.founder}
+                  </p>
+                </div>
+              </div>
+
               <div className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
                 <div>
