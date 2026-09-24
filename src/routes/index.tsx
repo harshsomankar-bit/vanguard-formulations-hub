@@ -215,7 +215,7 @@ function Index() {
 
               {/* Prominent Headline */}
               <h1 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] font-extrabold leading-[1.12] tracking-tight text-navy">
-                Advancing Healthcare Through Quality &amp; Clinical Innovation
+                Next-Generation Molecular Formulations for Precision Healthcare
               </h1>
 
               {/* Narrative Subtitle */}
