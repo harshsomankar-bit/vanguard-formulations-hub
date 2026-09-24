@@ -32,9 +32,9 @@ export const sendContactEnquiry = createServerFn({ method: "POST" })
     const randomHex = Math.random().toString(36).substring(2, 7).toUpperCase();
     const referenceId = `VT-2026-ENQ-${randomHex}`;
 
-    const tradeDeskEmail = process.env.CONTACT_EMAIL || company.email;
-    const resendApiKey = process.env.RESEND_API_KEY;
-    const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
+    const tradeDeskEmail = process.env["CONTACT_EMAIL"] || company.email;
+    const resendApiKey = process.env["RESEND_API_KEY"];
+    const webhookUrl = process.env["CONTACT_WEBHOOK_URL"];
 
     console.log("=================================================");
     console.log(`[REDITION TRADE DESK] NEW ENQUIRY RECEIVED: ${referenceId}`);

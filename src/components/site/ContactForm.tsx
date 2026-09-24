@@ -38,7 +38,7 @@ export function ContactForm({
     organisation: "",
     email: "",
     phone: "",
-    enquiryType: defaultEnquiryType || enquiryTypes[0],
+    enquiryType: defaultEnquiryType || enquiryTypes[0] || "General Formulation Enquiry",
     message: defaultProduct
       ? `Requesting official quotation, batch Certificate of Analysis (COA), and institutional procurement terms for ${defaultProduct}.`
       : "",

@@ -192,7 +192,7 @@ function ProductPage() {
           </div>
 
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            {product.fullDescription}
+            {product.description}
           </p>
 
           <div className="mt-8 rounded-2xl border border-border/80 bg-surface/80 p-5 sm:p-6 shadow-2xs">
