@@ -126,34 +126,29 @@ export function SiteHeader() {
 
             {/* Formulations Dropdown Menu */}
             {productsDropdownOpen && (
-              <div className="absolute left-0 top-full w-80 border border-border bg-background shadow-xl p-2 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-
-                <div className="py-1">
+              <div className="absolute left-0 top-full w-96 rounded-xl border border-border bg-background shadow-2xl p-2.5 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="py-1 space-y-1">
                   {products.map((p) => (
                     <Link
                       key={p.id}
                       to="/product/$productId"
                       params={{ productId: p.id }}
                       onClick={() => setProductsDropdownOpen(false)}
-                      className="group flex items-start gap-2.5 px-3 py-2 transition-colors hover:bg-surface"
+                      className="group flex items-center gap-3 px-3 py-2 rounded-lg transition-colors hover:bg-surface"
                     >
-                      <div className="h-7 w-7 rounded bg-slate-50 border border-border/80 shrink-0 p-0.5 flex items-center justify-center overflow-hidden">
-                        {p.image ? (
-                          <img
-                            src={p.image}
-                            alt={p.name}
-                            className="h-full w-full object-contain"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <Pill className="h-3.5 w-3.5 text-teal" />
-                        )}
+                      <div className="h-10 w-10 rounded-lg bg-slate-50 border border-slate-200/80 shrink-0 p-1 flex items-center justify-center overflow-hidden shadow-2xs group-hover:border-teal/50 transition-colors">
+                        <img
+                          src={p.image}
+                          alt={p.name}
+                          className="h-full w-full object-contain transition-transform duration-200 group-hover:scale-105"
+                          loading="lazy"
+                        />
                       </div>
-                      <div className="flex-1">
-                        <p className="font-display text-xs font-bold text-navy group-hover:text-clinical leading-tight">
+                      <div className="flex-1 min-w-0">
+                        <p className="font-display text-xs font-bold text-navy group-hover:text-clinical leading-tight truncate">
                           {p.name}
                         </p>
-                        <p className="text-[10px] text-muted-foreground truncate">{p.strength} · {p.type}</p>
+                        <p className="mt-0.5 text-[11px] text-muted-foreground truncate">{p.strength} · {p.type}</p>
                       </div>
                     </Link>
                   ))}
@@ -296,19 +291,18 @@ export function SiteHeader() {
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex items-center gap-2 py-1 text-xs font-medium text-muted-foreground hover:text-navy"
                     >
-                      <div className="h-5 w-5 rounded bg-slate-50 border border-border/80 shrink-0 p-0.5 flex items-center justify-center overflow-hidden">
-                        {p.image ? (
-                          <img
-                            src={p.image}
-                            alt={p.name}
-                            className="h-full w-full object-contain"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <Pill className="h-3 w-3 text-teal" />
-                        )}
+                      <div className="h-9 w-9 rounded-lg bg-slate-50 border border-border/80 shrink-0 p-0.5 flex items-center justify-center overflow-hidden shadow-2xs">
+                        <img
+                          src={p.image}
+                          alt={p.name}
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                        />
                       </div>
-                      <span className="truncate">{p.name} <span className="text-[10px] text-teal">({p.strength})</span></span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-bold text-navy truncate">{p.name}</p>
+                        <p className="text-[10px] text-teal">{p.strength}</p>
+                      </div>
                     </Link>
                   ))}
                   <button
