@@ -102,6 +102,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "geo.placename", content: "Surat, Gujarat, India" },
       { name: "geo.position", content: "21.2036;72.8625" },
       { name: "ICBM", content: "21.2036, 72.8625" },
+      {
+        name: "google-site-verification",
+        content: "UvJArU-zzd-923hWq6y8iGjBT0boJYb8TG0IWs",
+      },
     ],
     links: [
       {
