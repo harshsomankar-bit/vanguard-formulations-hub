@@ -337,18 +337,18 @@ function Index() {
           </span>
         </div>
 
-        {/* Formulation Cards with Consistent Corporate Styling */}
-        <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
+        {/* Formulation Cards with Consistent Corporate Styling - 4 columns for perfect 2x4 balance with 8 products */}
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {products.map((p) => {
             return (
               <Link
                 key={p.id}
                 to="/product/$productId"
                 params={{ productId: p.id }}
-                className="group relative flex flex-col rounded-2xl border border-border/80 bg-gradient-to-b from-slate-50/50 via-white to-white p-4 transition-all duration-300 hover:border-teal/60 hover:shadow-lg hover:shadow-teal-900/5 hover:-translate-y-0.5"
+                className="group relative flex flex-col rounded-2xl border border-border/80 bg-gradient-to-b from-slate-50/50 via-white to-white p-5 transition-all duration-300 hover:border-teal/60 hover:shadow-lg hover:shadow-teal-900/5 hover:-translate-y-0.5"
               >
                 {/* Product Packshot Frame with Soft Pedestal */}
-                <div className="relative flex h-40 sm:h-44 w-full items-center justify-center p-2">
+                <div className="relative flex h-48 sm:h-52 w-full items-center justify-center p-2">
                   <div className="absolute inset-x-4 bottom-2 h-14 rounded-xl bg-slate-100/70 border border-border/50 -z-0" />
                   <img
                     src={p.image}
