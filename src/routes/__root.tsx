@@ -118,8 +118,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap",
       },
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=3" },
-      { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico?v=3" },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=10" },
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon.png?v=10" },
+      { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico?v=10" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png?v=10" },
     ],
   }),
 
@@ -133,9 +135,11 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
-        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=3" />
-        <link rel="shortcut icon" href="/favicon.ico?v=3" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png?v=10" />
+        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?v=10" />
+        <link rel="shortcut icon" href="/favicon.ico?v=10" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=10" />
         <HeadContent />
       </head>
       <body>

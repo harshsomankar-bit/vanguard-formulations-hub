@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ContactForm } from "@/components/site/ContactForm";
+import { ProductImageSlider } from "@/components/site/ProductImageSlider";
 import { Phone, Mail, MapPin, ShieldCheck, ArrowDown } from "lucide-react";
 import { company, getProduct, SITE_URL, type Product } from "@/data/products";
 
@@ -154,13 +155,11 @@ function ProductPage() {
       </nav>
 
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:gap-12 sm:px-6 sm:py-12 lg:grid-cols-2">
-        <div className="border border-border bg-surface p-4 sm:p-6">
-          <img
-            src={product.image}
-            alt={`${product.name} — ${product.composition}`}
-            width={1024}
-            height={1024}
-            className="aspect-square w-full object-contain"
+        <div>
+          <ProductImageSlider
+            images={product.images && product.images.length > 0 ? product.images : [product.image]}
+            productName={product.name}
+            composition={product.composition}
           />
         </div>
         <div>

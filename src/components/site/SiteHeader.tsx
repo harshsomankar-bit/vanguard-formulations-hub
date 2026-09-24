@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Phone, Mail, ChevronDown, FlaskConical, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown, Pill, ArrowRight } from "lucide-react";
 import { company, products } from "@/data/products";
 
 export function SiteHeader() {
@@ -74,19 +74,17 @@ export function SiteHeader() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 group"
+          aria-label="Redition Pharma Home"
         >
-          <span className="flex h-9 w-9 items-center justify-center border border-clinical bg-clinical text-clinical-foreground font-display text-lg font-extrabold shadow-xs">
-            R
-          </span>
-          <span className="leading-tight">
-            <span className="block font-display text-base font-extrabold tracking-tight text-navy">
-              REDITION PHARMA
-            </span>
-            <span className="block text-[11px] tracking-[0.18em] text-muted-foreground">
-              INSTITUTIONAL FORMULATIONS
-            </span>
-          </span>
+          <img
+            src="/images/redition-pharma-logo.png"
+            alt="Redition Pharma"
+            width={480}
+            height={124}
+            className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+            fetchPriority="high"
+          />
         </Link>
 
         {/* Desktop Navigation Matching User Request: Home · Products & Formulations v · About Us · Quality Policy · Contact */}
@@ -139,7 +137,18 @@ export function SiteHeader() {
                       onClick={() => setProductsDropdownOpen(false)}
                       className="group flex items-start gap-2.5 px-3 py-2 transition-colors hover:bg-surface"
                     >
-                      <FlaskConical className="h-4 w-4 text-clinical shrink-0 mt-0.5" />
+                      <div className="h-7 w-7 rounded bg-slate-50 border border-border/80 shrink-0 p-0.5 flex items-center justify-center overflow-hidden">
+                        {p.image ? (
+                          <img
+                            src={p.image}
+                            alt={p.name}
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <Pill className="h-3.5 w-3.5 text-teal" />
+                        )}
+                      </div>
                       <div className="flex-1">
                         <p className="font-display text-xs font-bold text-navy group-hover:text-clinical leading-tight">
                           {p.name}
@@ -285,9 +294,21 @@ export function SiteHeader() {
                       to="/product/$productId"
                       params={{ productId: p.id }}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block py-1 text-xs font-medium text-muted-foreground hover:text-navy"
+                      className="flex items-center gap-2 py-1 text-xs font-medium text-muted-foreground hover:text-navy"
                     >
-                      {p.name} <span className="text-[10px] text-teal">({p.strength})</span>
+                      <div className="h-5 w-5 rounded bg-slate-50 border border-border/80 shrink-0 p-0.5 flex items-center justify-center overflow-hidden">
+                        {p.image ? (
+                          <img
+                            src={p.image}
+                            alt={p.name}
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <Pill className="h-3 w-3 text-teal" />
+                        )}
+                      </div>
+                      <span className="truncate">{p.name} <span className="text-[10px] text-teal">({p.strength})</span></span>
                     </Link>
                   ))}
                   <button

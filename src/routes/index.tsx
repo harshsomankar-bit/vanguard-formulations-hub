@@ -13,7 +13,7 @@ const title =
 const description =
   "Institutional hospital supply and PCD distribution of WHO-GMP Schedule M certified formulations manufactured in Vadodara, Gujarat by Redition Pharma Ltd.";
 const keywords =
-  "redition pharma, pharmaceutical manufacturer, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Vadodara pharma company, oral liquid formulations, paracetamol syrup, iron bisglycinate chelate, levocarnitine syrup, bacillus clausii spores, betahistine tablets, melatonin CR, hospital tenders India, pharmaceutical exporter";
+  "redition pharma, adnosine 108 tablets, macsine 109 tablets, predy nt tablets, qlong gold, adenosine 5-monophosphate tablets, pregabalin sustained release nortriptyline, alpha lipoic acid benfotiamine, WHO-GMP Schedule M, hospital supply, PCD pharma franchise, Vadodara pharma company, neuropathic pain formulations, hospital tenders India, pharmaceutical exporter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -327,12 +327,12 @@ function Index() {
             </h2>
           </div>
           <span className="text-xs text-muted-foreground font-mono">
-            5 Active Institutional Lines
+            {products.length} Active Institutional Formulations
           </span>
         </div>
 
-        {/* 5-Column Formulation Cards with Consistent Corporate Styling */}
-        <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
+        {/* Formulation Cards with Consistent Corporate Styling */}
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
           {products.map((p) => {
             return (
               <Link
@@ -342,7 +342,7 @@ function Index() {
                 className="group relative flex flex-col rounded-2xl border border-border/80 bg-gradient-to-b from-slate-50/50 via-white to-white p-4 transition-all duration-300 hover:border-teal/60 hover:shadow-lg hover:shadow-teal-900/5 hover:-translate-y-0.5"
               >
                 {/* Product Packshot Frame with Soft Pedestal */}
-                <div className="relative flex h-36 sm:h-40 w-full items-center justify-center p-2">
+                <div className="relative flex h-40 sm:h-44 w-full items-center justify-center p-2">
                   <div className="absolute inset-x-4 bottom-2 h-14 rounded-xl bg-slate-100/70 border border-border/50 -z-0" />
                   <img
                     src={p.image}
@@ -352,6 +352,11 @@ function Index() {
                     height={400}
                     className="relative z-10 h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
                   />
+                  {p.images && p.images.length > 1 && (
+                    <span className="absolute top-2 right-2 z-20 rounded-full bg-navy/80 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur shadow-2xs">
+                      {p.images.length} Views
+                    </span>
+                  )}
                 </div>
 
                 {/* Product Details */}
@@ -509,22 +514,22 @@ function Index() {
 
           {/* Bottom Row: 2 Facility Photos Side-by-Side (Optimized Aspect Ratio & Spacing) */}
           <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Photo 1: Automated Liquid Bottling & Packaging Line */}
+            {/* Photo 1: Automated High-Speed Blister Packaging Line */}
             <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xs">
               <div className="relative aspect-16/9 w-full overflow-hidden bg-slate-100">
                 <img
                   src="/images/pharma-packaging-line.jpg"
-                  alt="Redition Pharma Automated Oral Liquid Bottling & Inspection Line"
+                  alt="Redition Pharma Automated Blister Packaging & Inspection Line"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
               </div>
               <div className="p-3 sm:p-3.5">
                 <p className="font-display text-xs font-bold text-navy">
-                  Automated High-Speed Oral Liquid Bottling &amp; Aseptic Packaging
+                  Automated High-Speed Blister Packaging &amp; Inspection Line
                 </p>
                 <p className="mt-0.5 text-[11px] text-muted-foreground leading-snug">
-                  GIDC Industrial Estate, Vadodara. Automated multi-head filling, capper, and computerized inline inspection line.
+                  Automated multi-station thermoforming, blister packing, and computerized optical inspection.
                 </p>
               </div>
             </div>

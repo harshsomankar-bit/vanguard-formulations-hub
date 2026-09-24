@@ -1,6 +1,6 @@
 # Redition Pharma Ltd.
 
-> WHO-GMP Schedule M certified pharmaceutical formulations manufacturer specializing in oral liquid solutions, modified-release tablets, and probiotic spore sachets for institutional hospital supply and pan-India PCD distribution.
+> WHO-GMP Schedule M certified pharmaceutical formulations manufacturer specializing in neurovascular formulations, neuropathic analgesics, metabolic remodeling complexes, and adult vitality tablets for institutional hospital supply and pan-India PCD distribution.
 
 ## Company Overview
 - **Legal Entity**: Redition Pharma Ltd.
@@ -9,7 +9,7 @@
 - **Quality Certifications**: WHO-GMP, Revised Schedule M, ISO 9001:2015, GLP (Good Laboratory Practice)
 - **Direct Trade Desk**: trade@reditionpharma.com
 - **Direct Dispatch Line**: +91 98250 12345
-- **Official Website**: https://vanguardtherapeutics.com
+- **Official Website**: https://reditionpharma.com
 
 ## Core Capabilities & Services
 - **Institutional Hospital Supply**: Rate contracts, hospital formulary tie-ups, multi-tier tenders, and dedicated institutional batch reserve.
@@ -19,48 +19,39 @@
 
 ## Core Pharmaceutical Formulations
 
-### 1. HemaChelate Oral Liquid
-- **Category**: Hematology & Iron Deficiency Anemia
-- **Composition**: Ferrous Bisglycinate (Equivalent to 30mg Elemental Iron) with L-Methylfolate 0.5mg & Methylcobalamin 500mcg per 5ml
-- **Dosage Form**: Sugar-Free Oral Solution (200 ml)
-- **MRP**: ₹185.00
-- **URL**: https://vanguardtherapeutics.com/product/hema-chelate-syrup
-- **Key Advantage**: 3-4x higher intestinal absorption than conventional ferrous sulfate with zero gastrointestinal irritation, metallic taste, or constipation. Safe during pregnancy and lactation.
+### 1. ADNOSINE-108 Tablets
+- **Category**: Neurovascular & Mitochondrial Bioenergetics
+- **Composition**: Adenosine 5-Monophosphate (AMP) 2.5mg, L-Arginine Decarboxylated 2.5mg & L-Carnosine 25.0mg
+- **Dosage Form**: Film-Coated Tablet (10 x 1 x 10 Tablets in Moisture-Barrier Blister Pack)
+- **MRP**: ₹1450.00
+- **URL**: https://reditionpharma.com/product/adnosine-108-tablets
+- **Key Advantage**: Tri-pathway neuro-mitochondrial formulation that replenishes cellular ATP reserves, enhances endothelial microvascular perfusion via decarboxylated L-arginine, and halts advanced glycation end-products (AGEs) along nerve fibers via L-carnosine.
 
-### 2. NeuroCarn Oral Solution
-- **Category**: Neuromuscular & Metabolic Support
-- **Composition**: Levocarnitine 500mg per 5ml
-- **Dosage Form**: Sugar-Free Oral Liquid (150 ml)
-- **MRP**: ₹240.00
-- **URL**: https://vanguardtherapeutics.com/product/neuro-carn-syrup
-- **Key Advantage**: Mitochondrial beta-oxidation enhancer for hemodialysis-induced carnitine deficiency, muscular dystrophy, chronic fatigue, and peripheral neuropathy.
+### 2. MACSINE-109 Tablets
+- **Category**: Diabetic Neuropathy & Axonal Myelin Remodeling
+- **Composition**: Alpha Lipoic Acid 100mg, Benfotiamine 100mg, Calcium Carbonate 500mg, Chromium Picolinate 200mcg, Folic Acid 1.5mg, Inositol 100mg, Methylcobalamin 1500mcg, Pyridoxine HCl 3mg & Vitamin D3 1000 IU
+- **Dosage Form**: Film-Coated Tablet (10 x 1 x 10 Blister Pack)
+- **MRP**: ₹1380.00
+- **URL**: https://reditionpharma.com/product/macsine-109-tablets
+- **Key Advantage**: Comprehensive 9-in-1 neurotrophic complex stimulating myelin basic protein synthesis, controlling neuropathic paresthesia, and protecting endoneurial microvessels.
 
-### 3. GastroSpore Sachet
-- **Category**: Gastroenterology & Microbiome Restoration
-- **Composition**: Bacillus clausii Spores 2 Billion CFU (2 x 10^9) with Zinc Gluconate 10mg
-- **Dosage Form**: Dry Powder Sachet for Oral Suspension (1 g x 10 Sachets)
-- **MRP**: ₹160.00
-- **URL**: https://vanguardtherapeutics.com/product/gastro-spore-sachet
-- **Key Advantage**: Acid-resistant and antibiotic-co-administrable probiotic spores. Restores gut flora during broad-spectrum antibiotic therapy and acute diarrhea.
+### 3. PREDY-NT 37.5/10 Tablets
+- **Category**: Neuropathic Analgesia & CNS Neuromodulation (Schedule H)
+- **Composition**: Pregabalin (Sustained Release) 37.5mg with Nortriptyline Hydrochloride 10mg Tablets
+- **Dosage Form**: Sustained-Release Film-Coated Tablet (10 x 10 Tablets)
+- **MRP**: ₹150.00
+- **URL**: https://reditionpharma.com/product/predy-nt-tablets
+- **Key Advantage**: Dual-action neuropathic analgesia combining sustained-release Pregabalin with Nortriptyline HCl for 24-hour relief of peripheral neuropathy, sciatica, and post-herpetic neuralgia with minimal sedation.
 
-### 4. VertiStop-MD Tablet
-- **Category**: Neuro-Otology & Vestibular Disorders
-- **Composition**: Betahistine Hydrochloride 16mg
-- **Dosage Form**: Mouth-Dissolving Sublingual Tablet (10 x 10 Blister Pack)
-- **MRP**: ₹145.00
-- **URL**: https://vanguardtherapeutics.com/product/vertistop-md-tablet
-- **Key Advantage**: Rapid-dissolving micro-matrix formulation that enhances microvascular labyrinthine blood flow for immediate relief in acute Meniere's disease and vestibular vertigo.
+### 4. QLONG-GOLD Tablets
+- **Category**: Endothelial Nitric Oxide & Adult Vitality
+- **Composition**: L-Arginine, L-Citrulline, Fenugreek Extract, Biopeprine, Tribulus Terrestris, Hypericum Perforatum, Pine Bark Extract, Mucuna Pruriens, Zinc and Vitamin D2
+- **Dosage Form**: Tablet (10 x 10 Tablets)
+- **MRP**: ₹1650.00
+- **URL**: https://reditionpharma.com/product/qlong-gold-tablets
+- **Key Advantage**: Dual nitric oxide precursors with Biopeprine-enhanced bioavailability for microvascular circulation, physical stamina, and adaptogenic vitality.
 
-### 5. SomnoPure-CR Tablet
-- **Category**: Neuropsychiatry & Chronobiology
-- **Composition**: Melatonin 3mg Controlled Release with Pyridoxine HCl (Vitamin B6) 10mg
-- **Dosage Form**: Dual-Layer Controlled-Release Tablet (10 x 10 Alu-Alu Pack)
-- **MRP**: ₹130.00
-- **URL**: https://vanguardtherapeutics.com/product/somnopure-cr-tablet
-- **Key Advantage**: Biphasic delivery: immediate release for rapid sleep induction combined with sustained nocturnal release over 7 hours to maintain restful sleep without morning grogginess.
-
-## Regulatory & Quality Contact
-For batch COAs, drug regulatory dossiers, hospital procurement proposals, and distributor onboarding:
-- Contact Email: trade@reditionpharma.com
-- Phone: +91 98250 12345
-- Postal Address: Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010, India
+## Institutional Inquiry Protocol
+- Rate contract quotations and tender dossiers are processed within 24 hours.
+- Contact: trade@reditionpharma.com | +91 98250 12345
+- Batch documentation (COA, method validation, stability data) available upon formal institutional verification.

@@ -17,5 +17,5 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://vanguardtherapeutics.com/sitemap.xml
+Sitemap: https://reditionpharma.com/sitemap.xml
 
