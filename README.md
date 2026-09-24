@@ -10,7 +10,7 @@ Build a modern, high-precision institutional medical and pharmaceutical product 
 - Primary Domain: **https://reditionpharma.com**
 - Business Focus: **WHO-GMP Schedule M Certified Formulations, Institutional Hospital Supply & PCD Distribution**
 - Manufacturing / Corporate Office: **Plot 42, GIDC Industrial Estate, Vadodara, Gujarat 390010, India**
-- Institutional Hotline / Trade Desk: **+91 98250 12345**
+- Institutional Hotline / Trade Desk: **+91 79877 79819**
 - Official Regulatory / Sales Email: **trade@reditionpharma.com**
 
 ---
