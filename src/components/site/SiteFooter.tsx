@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { company, products } from "@/data/products";
 
 export function SiteFooter() {
@@ -65,10 +65,6 @@ export function SiteFooter() {
                 <Mail className="h-3.5 w-3.5 text-teal shrink-0" />
                 <span>{company.email}</span>
               </a>
-            </li>
-            <li className="inline-flex items-center gap-2 text-navy-foreground/70">
-              <Clock className="h-3.5 w-3.5 text-teal shrink-0" />
-              <span>Mon–Sat · 09:30 – 18:30 IST</span>
             </li>
             <li className="pt-2">
               <a

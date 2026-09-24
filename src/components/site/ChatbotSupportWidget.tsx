@@ -90,13 +90,12 @@ export function ChatbotSupportWidget() {
 
           {/* Quick Operating Info */}
           <div className="flex items-center justify-between border-b border-border bg-surface px-4 py-2 text-[10px] sm:text-[11px] text-muted-foreground">
-            <span className="inline-flex items-center gap-1">
-              <Clock className="h-3 w-3 text-teal" />
-              09:30–18:30 IST · Mon–Sat
+            <span className="inline-flex items-center gap-1 text-teal font-medium">
+              <ShieldCheck className="h-3 w-3" />
+              Verified Institutional Supplier
             </span>
             <span className="inline-flex items-center gap-1 text-clinical font-semibold">
-              <ShieldCheck className="h-3 w-3" />
-              Fast 2-Hour Response
+              Fast 24h Quotation
             </span>
           </div>
 
