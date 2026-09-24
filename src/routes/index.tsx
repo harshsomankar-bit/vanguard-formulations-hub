@@ -357,11 +357,6 @@ function Index() {
                     height={400}
                     className="relative z-10 h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
                   />
-                  {p.images && p.images.length > 1 && (
-                    <span className="absolute top-2 right-2 z-20 rounded-full bg-navy/80 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur shadow-2xs">
-                      {p.images.length} Views
-                    </span>
-                  )}
                 </div>
 
                 {/* Product Details */}
