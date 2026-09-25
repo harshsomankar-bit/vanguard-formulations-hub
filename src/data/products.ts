@@ -37,7 +37,7 @@ export interface Product {
 export const SITE_URL = "https://reditionpharma.com";
 
 export const company = {
-  name: "Redition Pharma Ltd.",
+  name: "Redition Pharma",
   brand: "Redition Pharma",
   founder: "Durgesh Kumar",
   address: "101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India",

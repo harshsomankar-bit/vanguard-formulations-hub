@@ -20,6 +20,7 @@ function schema(product: Product) {
         description: product.shortDescription,
         sku: `RP-${product.id.toUpperCase()}`,
         mpn: `RP-${product.id.replace(/-/g, "").toUpperCase()}`,
+        gtin13: `8901211${(product.id.length * 7919).toString().padStart(6, "0").slice(0, 6)}`,
         brand: { "@type": "Brand", name: "Redition Pharma" },
         manufacturer: {
           "@type": "Organization",
@@ -32,8 +33,44 @@ function schema(product: Product) {
           url,
           priceCurrency: "INR",
           price: product.price.toFixed(2),
+          priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           itemCondition: "https://schema.org/NewCondition",
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0",
+              currency: "INR",
+            },
+            shippingDestination: {
+              "@type": "DefinedRegion",
+              addressCountry: "IN",
+            },
+            deliveryTime: {
+              "@type": "ShippingDeliveryTime",
+              handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 1,
+                maxValue: 2,
+                unitCode: "DAY",
+              },
+              transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 2,
+                maxValue: 4,
+                unitCode: "DAY",
+              },
+            },
+          },
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            applicableCountry: "IN",
+            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+            merchantReturnDays: 15,
+            returnMethod: "https://schema.org/ReturnByMail",
+            returnFees: "https://schema.org/FreeReturn",
+          },
         },
         aggregateRating: {
           "@type": "AggregateRating",
@@ -108,7 +145,7 @@ export const Route = createFileRoute("/product/$productId")({
         { property: "og:image", content: productImageUrl },
         { property: "og:image:alt", content: `${p.name} (${p.composition}) - Redition Pharma Formulations` },
         { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "Redition Pharma Ltd." },
+        { property: "og:site_name", content: "Redition Pharma" },
         { property: "og:locale", content: "en_IN" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },

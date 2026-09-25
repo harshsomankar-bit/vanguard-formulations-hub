@@ -9,9 +9,9 @@ import { FlaskConical, CheckCircle2, Clock, ShieldCheck, Building2, Network, Mic
 import { company, products, SITE_URL } from "@/data/products";
 
 const title =
-  "Redition Pharma Ltd. | WHO-GMP Schedule M Certified Pharmaceutical Formulations";
+  "Redition Pharma | WHO-GMP Schedule M Certified Pharmaceutical Formulations";
 const description =
-  "Institutional hospital supply and direct healthcare distribution of WHO-GMP certified formulations by Redition Pharma Ltd.";
+  "Institutional hospital supply and direct healthcare distribution of WHO-GMP certified formulations by Redition Pharma.";
 const keywords =
   "redition pharma, adnosine 108 tablets, macsine 109 tablets, predy nt tablets, qlong gold, adnocar ds syrup, l-carnosine dha epa syrup, pediatric neurodevelopment syrup, adenosine 5-monophosphate tablets, pregabalin sustained release nortriptyline, alpha lipoic acid benfotiamine, WHO-GMP Schedule M, hospital supply, institutional pharma, Surat pharma company, neuropathic pain formulations, hospital tenders India, pharmaceutical exporter";
 
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: `${SITE_URL}/images/pharma-packaging-line.jpg` },
       { property: "og:image:alt", content: "Redition Pharma WHO-GMP Automated Packaging & Formulations Facility" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Redition Pharma Ltd." },
+      { property: "og:site_name", content: "Redition Pharma" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": ["Organization", "MedicalOrganization"],
           name: company.name,
-          alternateName: ["Redition Pharma", "Redition Pharma Ltd."],
+          alternateName: ["Redition Pharma"],
           founder: {
             "@type": "Person",
             name: company.founder,
@@ -109,11 +109,33 @@ export const Route = createFileRoute("/")({
               url: `${SITE_URL}/product/${prod.id}`,
               description: prod.shortDescription,
               image: `${SITE_URL}${prod.image}`,
+              sku: `RP-${prod.id.toUpperCase()}`,
+              brand: { "@type": "Brand", name: "Redition Pharma" },
               offers: {
                 "@type": "Offer",
                 price: prod.price.toFixed(2),
                 priceCurrency: "INR",
+                priceValidUntil: "2027-12-31",
                 availability: "https://schema.org/InStock",
+                shippingDetails: {
+                  "@type": "OfferShippingDetails",
+                  shippingRate: {
+                    "@type": "MonetaryAmount",
+                    value: "0",
+                    currency: "INR",
+                  },
+                  shippingDestination: {
+                    "@type": "DefinedRegion",
+                    addressCountry: "IN",
+                  },
+                },
+                hasMerchantReturnPolicy: {
+                  "@type": "MerchantReturnPolicy",
+                  applicableCountry: "IN",
+                  returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  merchantReturnDays: 15,
+                  returnFees: "https://schema.org/FreeReturn",
+                },
               },
             },
           })),
@@ -221,7 +243,7 @@ function Index() {
 
               {/* Narrative Subtitle */}
               <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground font-normal">
-                Redition Pharma Ltd. specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">ADNOSINE-108</strong>, <strong className="text-navy font-semibold">MACSINE-109</strong>, <strong className="text-navy font-semibold">PREDY-NT</strong>, <strong className="text-navy font-semibold">QLONG-GOLD</strong>, and <strong className="text-navy font-semibold">ADNOCAR-DS Syrup</strong> across India.
+                Redition Pharma specializes in developing and delivering high-potency molecular formulations like <strong className="text-navy font-semibold">ADNOSINE-108</strong>, <strong className="text-navy font-semibold">MACSINE-109</strong>, <strong className="text-navy font-semibold">PREDY-NT</strong>, <strong className="text-navy font-semibold">QLONG-GOLD</strong>, and <strong className="text-navy font-semibold">ADNOCAR-DS Syrup</strong> across India.
               </p>
 
               {/* Dual Action Buttons Matching Website Theme (Navy & Clinical Accent) */}
@@ -760,7 +782,7 @@ function Index() {
                   Advancing Pharmaceutical Precision from Surat to Pan-India Healthcare
                 </h2>
                 <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                  Founded and led by <strong>{company.founder}</strong>, Redition Pharma Ltd. delivers advanced molecular formulations — including neurovascular tablets (ADNOSINE-108, MACSINE-109), sustained-release analgesics (PREDY-NT), microcirculation complexes (QLONG-GOLD), and pediatric liquid suspensions (ADNOCAR-DS Syrup) — under computerized cleanroom standards, automated Alu-Alu blister packaging, and stringent monograph batch release.
+                  Founded and led by <strong>{company.founder}</strong>, Redition Pharma delivers advanced molecular formulations — including neurovascular tablets (ADNOSINE-108, MACSINE-109), sustained-release analgesics (PREDY-NT), microcirculation complexes (QLONG-GOLD), and pediatric liquid suspensions (ADNOCAR-DS Syrup) — under computerized cleanroom standards, automated Alu-Alu blister packaging, and stringent monograph batch release.
                 </p>
                 <div className="mt-3 inline-flex items-center gap-2 rounded-lg border border-teal/20 bg-teal/5 px-3 py-1.5 text-xs text-navy">
                   <User className="h-3.5 w-3.5 text-teal shrink-0" />

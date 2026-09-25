@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Redition Pharma Ltd." },
+      { title: "Redition Pharma" },
       {
         name: "description",
         content:
@@ -89,12 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "pharmaceutical formulations, WHO-GMP certified, Schedule M manufacturer, hospital tenders, healthcare distribution, Surat pharma company, Gujarat, tablets, health supplements",
       },
-      { name: "author", content: "Redition Pharma Ltd." },
+      { name: "author", content: "Redition Pharma" },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { name: "theme-color", content: "#0f172a" },
       { name: "format-detection", content: "telephone=no" },
-      { property: "og:site_name", content: "Redition Pharma Ltd." },
+      { property: "og:site_name", content: "Redition Pharma" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
