@@ -63,15 +63,6 @@ export function SiteFooter() {
             </li>
             <li>
               <a
-                href={`tel:${company.phone2.replace(/\s/g, "")}`}
-                className="hover:text-teal inline-flex items-center gap-2 transition-colors"
-              >
-                <Phone className="h-3.5 w-3.5 text-teal shrink-0" />
-                <span>{company.phone2}</span>
-              </a>
-            </li>
-            <li>
-              <a
                 href={`mailto:${company.email}`}
                 className="hover:text-teal inline-flex items-center gap-2 transition-colors"
               >

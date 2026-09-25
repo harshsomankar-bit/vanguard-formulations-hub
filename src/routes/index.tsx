@@ -731,7 +731,7 @@ function Index() {
                 </a>
 
                 <a
-                  href={`https://wa.me/917987779819?text=${encodeURIComponent("Hello Redition Pharma, I would like to request a Quality Test Report (COA) and batch monograph dossier.")}`}
+                  href={`https://wa.me/919893597108?text=${encodeURIComponent("Hello Redition Pharma, I would like to request a Quality Test Report (COA) and batch monograph dossier.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-xs sm:text-sm font-semibold text-navy hover:border-[#25D366] hover:text-[#128C7E] transition-all"
@@ -919,10 +919,6 @@ function Index() {
                   <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Direct Sales &amp; Dispatch Line</p>
                   <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
                     {company.phone}
-                  </a>
-                  <span className="mx-2 text-border">|</span>
-                  <a href={`tel:${company.phone2.replace(/\s/g, "")}`} className="font-display text-sm font-bold text-navy hover:text-clinical transition-colors">
-                    {company.phone2}
                   </a>
                 </div>
               </div>

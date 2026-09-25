@@ -39,10 +39,9 @@ export const SITE_URL = "https://reditionpharma.com";
 export const company = {
   name: "Redition Pharma Ltd.",
   brand: "Redition Pharma",
-  founder: "Nilesh Kumar",
+  founder: "Durgesh Kumar",
   address: "101, 1st Floor, Bhumi Park Society, Punagam Chorasi Bombay Market, Surat, Gujarat 395010, India",
-  phone: "+91 79877 79819",
-  phone2: "+91 98935 97108",
+  phone: "+91 98935 97108",
   email: "reditionpharma@gmail.com",
   fssai: "12116801000249",
 };
@@ -68,7 +67,7 @@ export const products: Product[] = [
     pharmacopoeia: "In-House Validated Nutraceutical Monograph",
     therapeuticClass: "Neuro-Mitochondrial Cytoprotective & Cellular Bioenergetics Agent",
     legalStatus: "OTC Healthcare Formulation",
-    price: 1450.0,
+    price: 550.0,
     ratingValue: "4.95",
     reviewCount: "142",
     shortDescription:
@@ -146,7 +145,7 @@ export const products: Product[] = [
     pharmacopoeia: "In-House Validated Monograph",
     therapeuticClass: "Neurotrophic & Diabetic Microvascular Complex",
     legalStatus: "OTC Healthcare Formulation",
-    price: 1380.0,
+    price: 395.0,
     ratingValue: "4.92",
     reviewCount: "116",
     shortDescription:
@@ -208,28 +207,29 @@ export const products: Product[] = [
     type: "Botanical & Amino Acid Vitality Complex",
     category: "Endothelial Nitric Oxide & Adult Vitality",
     composition:
-      "L-Arginine, L-Citrulline, Fenugreek Extract, Biopeprine, Tribulus Terrestris Extract, Hypericum Perforatum Extract, Pine Bark Extract, Mucuna Pruriens, Zinc and Vitamin D2 Tablets",
+      "Each film coated tablet contains: L-Arginine 250mg, L-Citrulline 250mg, Fenugreek Extract 100mg, Piper nigrum Extract (Black Pepper) 10mg, Tribulus terrestris Extract 75mg, Hypericum perforatum Extract 50mg, Mucuna pruriens Extract 75mg, Pine Bark Extract 50mg, Zinc (as Zinc Oxide) 7.5mg & Vitamin D3 15mcg",
     activeIngredient:
-      "L-Arginine, L-Citrulline, Pine Bark Extract, Fenugreek, Tribulus Terrestris, Mucuna Pruriens, Biopeprine, Zinc, Vitamin D2",
-    dosageForm: "Tablet",
-    pharmacopoeia: "Standardized Botanical & Mineral Complex",
+      "L-Arginine (250mg), L-Citrulline (250mg), Fenugreek (100mg), Piper nigrum (10mg), Tribulus terrestris (75mg), Hypericum perforatum (50mg), Mucuna pruriens (75mg), Pine Bark Extract (50mg), Zinc (7.5mg), Vitamin D3 (15mcg)",
+    dosageForm: "Film-Coated Tablet",
+    pharmacopoeia: "Standardized Botanical & Mineral Monograph",
     therapeuticClass: "Nitric Oxide Precursor & Adaptogenic Endothelial Health",
     legalStatus: "OTC Healthcare Formulation",
-    price: 1650.0,
+    price: 550.0,
     ratingValue: "4.9",
     reviewCount: "98",
     shortDescription:
-      "Dual nitric oxide booster and adaptogenic vitality complex combining L-Arginine, L-Citrulline, Pine Bark Extract, Fenugreek, and Biopeprine to optimize endothelial microvascular circulation and cellular stamina.",
+      "Dual nitric oxide booster and adaptogenic vitality complex combining L-Arginine 250mg, L-Citrulline 250mg, Pine Bark Extract 50mg, Fenugreek 100mg, and Piper nigrum to optimize endothelial microvascular circulation and cellular stamina.",
     description:
-      "QLONG-GOLD is a multi-action adult formulation engineered to stimulate endogenous nitric oxide (NO) generation and vascular endothelial tone. The dual L-Arginine and L-Citrulline matrix provides sustained blood flow optimization, while standardized botanical extracts of Pine Bark, Fenugreek, Tribulus, and Mucuna Pruriens work synergistically with Biopeprine for enhanced absorption, vitality, and cellular endurance.",
+      "QLONG-GOLD is a multi-action adult formulation engineered to stimulate endogenous nitric oxide (NO) generation and vascular endothelial tone. The dual L-Arginine (250mg) and L-Citrulline (250mg) matrix provides sustained blood flow optimization, while standardized botanical extracts of Pine Bark (50mg), Fenugreek (100mg), Tribulus terrestris (75mg), Hypericum perforatum (50mg), and Mucuna pruriens (75mg) work synergistically with Piper nigrum extract (10mg) for enhanced absorption, vitality, and cellular endurance.",
     keywords:
       "qlong gold tablets, l-arginine l-citrulline tablets, pine bark extract fenugreek, nitric oxide supplement, endothelial blood flow, adult vitality tablets, redition pharma qlong",
     bulletPoints: [
-      "Dual Nitric Oxide Precursors: L-Arginine and L-Citrulline promote continuous endothelial vasodilation.",
-      "Bio-Enhanced with Biopeprine (Piperine): Maximizes nutrient intestinal permeability and active absorption.",
-      "Pine Bark Extract: Potent source of oligomeric proanthocyanidins (OPCs) supporting vascular elasticity.",
-      "Standardized Adaptogenic Phytotherapy: Includes Tribulus Terrestris, Mucuna Pruriens, and Fenugreek for cellular stamina.",
+      "Dual Nitric Oxide Precursors: L-Arginine (250mg) and L-Citrulline (250mg) promote continuous endothelial vasodilation.",
+      "Bio-Enhanced with Piper nigrum Extract (10mg): Maximizes nutrient intestinal permeability and active absorption.",
+      "Pine Bark Extract (50mg): Potent source of oligomeric proanthocyanidins (OPCs) supporting vascular elasticity.",
+      "Standardized Adaptogenic Phytotherapy: Includes Tribulus terrestris (75mg), Mucuna pruriens (75mg), and Fenugreek (100mg) for cellular stamina.",
       "Target Consumer: Adults seeking cardiovascular microperfusion, physical vitality, and cellular recovery.",
+      "Authentic Pack: 10 x 10 Tablets Mono-Carton with complete Supplement Facts verification.",
     ],
     indications: [
       "Endothelial Microvascular Insufficiency",
@@ -241,10 +241,10 @@ export const products: Product[] = [
     packaging:
       "10 Strips x 10 Tablets (100 Tablets Box / Master Shipper: 40 Boxes)",
     storage:
-      "Store in a cool, dry place. Protect from heat, light, and moisture.",
+      "Store in a cool, dry place protected from light and moisture. Keep out of reach of children.",
     shelfLife: "24 Months from manufacturing date",
     mechanism:
-      "L-Arginine is the direct substrate for nitric oxide synthase (NOS), yielding nitric oxide (NO) which activates soluble guanylyl cyclase (sGC) to induce cyclic GMP (cGMP) synthesis and smooth muscle relaxation. L-Citrulline bypasses first-pass hepatic metabolism and is recycled into L-Arginine in the kidneys for prolonged NO production. Pine Bark proanthocyanidins scavenge free radicals that degrade NO, while Biopeprine enhances gastrointestinal absorption.",
+      "L-Arginine is the direct substrate for nitric oxide synthase (NOS), yielding nitric oxide (NO) which activates soluble guanylyl cyclase (sGC) to induce cyclic GMP (cGMP) synthesis and smooth muscle relaxation. L-Citrulline bypasses first-pass hepatic metabolism and is recycled into L-Arginine in the kidneys for prolonged NO production. Pine Bark proanthocyanidins scavenge free radicals that degrade NO, while Piper nigrum extract enhances gastrointestinal absorption.",
     dosageGuide:
       "Adults: 1 tablet twice daily after meals with water, or as recommended by a healthcare professional.",
     faqs: [
@@ -253,8 +253,11 @@ export const products: Product[] = [
         a: "QLONG-GOLD is targeted for adults seeking to support microvascular circulation, physical vitality, endurance, and cellular energy.",
       },
     ],
-    image: "/images/qlong-gold-pack.jpg",
-    images: ["/images/qlong-gold-pack.jpg"],
+    image: "/images/products/qlong-gold-1.jpg",
+    images: [
+      "/images/products/qlong-gold-1.jpg",
+      "/images/products/qlong-gold-2.jpg",
+    ],
   },
   {
     id: "predy-nt-tablets",
@@ -420,7 +423,7 @@ export const products: Product[] = [
     pharmacopoeia: "FSSAI Dietary Supplement / In-House Validated Monograph",
     therapeuticClass: "Neurotrophic, Cognitive Development & Mitochondrial Antioxidant Supplement",
     legalStatus: "OTC Healthcare Formulation",
-    price: 890.0,
+    price: 1100.0,
     ratingValue: "4.96",
     reviewCount: "118",
     shortDescription:
@@ -566,7 +569,7 @@ export const products: Product[] = [
     pharmacopoeia: "IP / In-House Validated Monograph",
     therapeuticClass: "Cardiovascular Nutraceutical & Antioxidant",
     legalStatus: "OTC Healthcare Formulation",
-    price: 180.0,
+    price: 550.0,
     ratingValue: "4.85",
     reviewCount: "62",
     shortDescription:

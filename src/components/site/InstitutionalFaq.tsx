@@ -12,7 +12,7 @@ export const institutionalFaqs: FaqItem[] = [
     id: "bulk-inquiry",
     question: "How do I place a bulk medicine supply inquiry with Redition Pharma?",
     answer:
-      "You can place a bulk medicine supply or hospital rate contract inquiry directly via our Trade Desk inquiry form below, by emailing us at trade@reditionpharma.com, or by calling our commercial desk at +91 79877 79819. Please mention the desired formulation names (ADNOSINE-108, MACSINE-109, PREDY-NT, QLONG-GOLD, or ADNOCAR-DS Syrup), required batch quantity, delivery destination, and entity type. Our institutional trade team issues formal quotation dossiers within 24 business hours.",
+      "You can place a bulk medicine supply or hospital rate contract inquiry directly via our Trade Desk inquiry form below, by emailing us at reditionpharma@gmail.com, or by calling our commercial desk at +91 98935 97108. Please mention the desired formulation names (ADNOSINE-108, MACSINE-109, PREDY-NT, QLONG-GOLD, or ADNOCAR-DS Syrup), required batch quantity, delivery destination, and entity type. Our institutional trade team issues formal quotation dossiers within 24 business hours.",
   },
   {
     id: "who-gmp-standards",

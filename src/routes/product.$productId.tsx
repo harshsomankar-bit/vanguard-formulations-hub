@@ -247,7 +247,7 @@ function ProductPage() {
                 <span>{company.phone}</span>
               </a>
               <a
-                href={`https://wa.me/917987779819?text=${encodeURIComponent(`Hello Redition Pharma, I would like to request a quotation and batch COA for ${product.name}.`)}`}
+                href={`https://wa.me/919893597108?text=${encodeURIComponent(`Hello Redition Pharma, I would like to request a quotation and batch COA for ${product.name}.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto rounded-xl border border-[#25D366]/40 bg-[#25D366]/5 px-6 py-3 text-center text-sm font-semibold text-navy transition-colors hover:bg-[#25D366] hover:text-white inline-flex items-center justify-center gap-2"
