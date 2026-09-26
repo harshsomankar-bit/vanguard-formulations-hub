@@ -34,7 +34,7 @@ export interface Product {
   images: string[];
 }
 
-export const SITE_URL = "https://reditionpharma.com";
+export const SITE_URL = "https://www.reditionpharma.com";
 
 export const company = {
   name: "Redition Pharma",

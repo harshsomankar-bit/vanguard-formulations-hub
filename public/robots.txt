@@ -17,5 +17,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://reditionpharma.com/sitemap.xml
-
+Sitemap: https://www.reditionpharma.com/sitemap.xml
