@@ -509,7 +509,7 @@ export const products: Product[] = [
       "Centrally-Acting Muscle Relaxant (Thiocolchicoside 4mg): GABA-A and glycine receptor agonist providing rapid skeletal muscle relaxation without CNS sedation.",
       "Dual-Target Mechanism: Simultaneously addresses inflammatory pain cascades and reflex muscle spasm for comprehensive musculoskeletal relief.",
       "Convenient Once/Twice Daily Dosing: Etoricoxib's long 22-hour half-life enables sustained therapeutic coverage with fewer daily doses.",
-      "Authentic Batch Verification: Batch No. RTG225139, Mfg. Lic. No. 1538-B & 1538-OSP with complete regulatory Certificate of Analysis (COA) compliance.",
+      "Authentic Batch Verification: Batch No. BCT2400139, Mfg. Lic. No. 1538-B & 1586-OSP with complete regulatory Certificate of Analysis (COA) compliance.",
       "10 x 27 Tablets Packaging: Alu-Alu moisture-barrier blister foils inside UV-resistant clinical mono-carton for institutional supply.",
     ],
     indications: [
