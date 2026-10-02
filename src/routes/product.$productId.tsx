@@ -20,7 +20,6 @@ function schema(product: Product) {
         description: product.shortDescription,
         sku: `RP-${product.id.toUpperCase()}`,
         mpn: `RP-${product.id.replace(/-/g, "").toUpperCase()}`,
-        gtin13: `8901211${(product.id.length * 7919).toString().padStart(6, "0").slice(0, 6)}`,
         brand: { "@type": "Brand", name: "Redition Pharma" },
         manufacturer: {
           "@type": "Organization",

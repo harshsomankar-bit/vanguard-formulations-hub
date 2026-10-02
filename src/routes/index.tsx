@@ -137,6 +137,13 @@ export const Route = createFileRoute("/")({
                   returnFees: "https://schema.org/FreeReturn",
                 },
               },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: prod.ratingValue,
+                reviewCount: prod.reviewCount,
+                bestRating: "5",
+                worstRating: "1",
+              },
             },
           })),
         }),
